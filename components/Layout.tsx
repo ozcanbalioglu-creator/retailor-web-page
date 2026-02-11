@@ -137,8 +137,14 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* Dynamic Page Header */}
       {location.pathname !== '/' && (
-        <div className="w-full h-[200px] md:h-[300px] bg-[url('assets/header.webp')] bg-cover bg-center mt-20 md:mt-0">
-          <div className="w-full h-full flex items-center justify-center">
+        <div className="w-full h-[200px] md:h-[300px] relative mt-20 md:mt-0 overflow-hidden">
+          <img
+            src="assets/header.webp"
+            alt="Header Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-[2px]"></div>
+          <div className="relative w-full h-full flex items-center justify-center z-10">
             <h2 className="text-3xl md:text-5xl font-heading text-white uppercase tracking-tighter text-center px-6 drop-shadow-lg">
               {getPageTitle(location.pathname)}
             </h2>
