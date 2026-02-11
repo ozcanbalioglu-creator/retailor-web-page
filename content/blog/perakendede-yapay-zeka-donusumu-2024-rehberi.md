@@ -3,7 +3,7 @@ title: "Perakendede Yapay Zeka Dönüşümü: 2024 Rehberi"
 date: "2024-05-15"
 excerpt: "Perakende sektöründe yapay zeka kullanımının satışları nasıl artırdığını ve müşteri deneyimini nasıl iyileştirdiğini keşfedin."
 category: "Teknoloji"
-image: "/assets/freepik__35mm-film-photography-abstract-neural-network-visu__5396.webp"
+image: "assets/freepik__35mm-film-photography-abstract-neural-network-visu__5396.webp"
 ---
 
 # Perakendede Yapay Zeka Dönüşümü

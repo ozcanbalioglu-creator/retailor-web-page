@@ -3,7 +3,7 @@ title: "Müşteri Deneyiminde AI: Satışları Katlamanın Yolu"
 date: "2026-01-10"
 excerpt: "Yapay zekanın müşteri deneyimini nasıl kişiselleştirdiğini ve sadakati nasıl artırdığını inceleyin."
 category: "Strateji"
-image: "/assets/freepik__35mm-film-photography-professional-business-traini__10266.webp"
+image: "assets/freepik__35mm-film-photography-professional-business-traini__10266.webp"
 ---
 
 # Müşteri Deneyiminde AI
