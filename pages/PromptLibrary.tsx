@@ -102,7 +102,7 @@ const PromptLibrary = () => {
 
   useEffect(() => {
     // Not: JSON dosyanı public/data/prompts.json içine koyduğunu varsayıyoruz
-    fetch('data/prompts.json')
+    fetch(`${import.meta.env.BASE_URL}data/prompts.json`)
       .then(res => {
         if (!res.ok) throw new Error('Network response was not ok');
         return res.json();

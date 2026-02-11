@@ -14,6 +14,7 @@ const blogFiles = import.meta.glob('../content/blog/*.md', { query: '?raw', impo
 
 export const getAllPosts = async (): Promise<BlogPost[]> => {
     const posts: BlogPost[] = [];
+    console.log('Blog files found by import.meta.glob:', Object.keys(blogFiles));
 
     for (const path in blogFiles) {
         try {
@@ -21,6 +22,12 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
 
             const slug = path.split('/').pop()?.replace('.md', '') || '';
             const content = await (blogFiles[path]() as Promise<string>);
+
+            if (!content) {
+                console.warn(`Empty content for blog post at ${path}`);
+                continue;
+            }
+
             const { data, content: body } = matter(content);
 
             posts.push({
@@ -37,6 +44,7 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
         }
     }
 
+    console.log(`Total posts loaded: ${posts.length}`);
     return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 

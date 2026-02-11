@@ -39,7 +39,7 @@ const GlossaryIndex = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('data/glossary.json')
+    fetch(`${import.meta.env.BASE_URL}data/glossary.json`)
       .then(res => {
         if (!res.ok) throw new Error('Network response was not ok');
         return res.json();
@@ -114,8 +114,8 @@ const GlossaryIndex = () => {
         <button
           onClick={() => setSelectedLetter('')}
           className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider transition-all ${selectedLetter === ''
-              ? 'bg-[#0c4a6e] text-white shadow-lg'
-              : 'text-[#475569] hover:bg-slate-100'
+            ? 'bg-[#0c4a6e] text-white shadow-lg'
+            : 'text-[#475569] hover:bg-slate-100'
             }`}
         >
           Tümü
@@ -128,10 +128,10 @@ const GlossaryIndex = () => {
               onClick={() => hasTerms && setSelectedLetter(letter === selectedLetter ? '' : letter)}
               disabled={!hasTerms}
               className={`w-9 h-9 rounded-full text-sm font-semibold transition-all flex items-center justify-center ${selectedLetter === letter
-                  ? 'bg-[#0ea5e9] text-white shadow-lg shadow-[#0ea5e9]/20'
-                  : hasTerms
-                    ? 'text-[#475569] hover:bg-slate-100 hover:text-[#0c4a6e]'
-                    : 'text-slate-300 cursor-not-allowed'
+                ? 'bg-[#0ea5e9] text-white shadow-lg shadow-[#0ea5e9]/20'
+                : hasTerms
+                  ? 'text-[#475569] hover:bg-slate-100 hover:text-[#0c4a6e]'
+                  : 'text-slate-300 cursor-not-allowed'
                 }`}
             >
               {letter}
@@ -196,7 +196,7 @@ const GlossaryDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('data/glossary.json')
+    fetch(`${import.meta.env.BASE_URL}data/glossary.json`)
       .then(res => {
         if (!res.ok) throw new Error('Network response was not ok');
         return res.json();
