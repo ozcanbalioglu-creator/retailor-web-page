@@ -10,10 +10,15 @@ const BlogIndex = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Hepsi');
 
   useEffect(() => {
-    getAllPosts().then(data => {
-      setPosts(data);
-      setLoading(false);
-    });
+    getAllPosts()
+      .then(data => {
+        setPosts(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Blog posts load error:', err);
+        setLoading(false);
+      });
   }, []);
 
   const categories = ['Hepsi', ...new Set(posts.map(post => post.category))];
@@ -90,10 +95,15 @@ const BlogPostDetail = () => {
 
   useEffect(() => {
     if (slug) {
-      getPostBySlug(slug).then(data => {
-        setPost(data);
-        setLoading(false);
-      });
+      getPostBySlug(slug)
+        .then(data => {
+          setPost(data);
+          setLoading(false);
+        })
+        .catch(err => {
+          console.error('Blog post detail load error:', err);
+          setLoading(false);
+        });
     }
   }, [slug]);
 

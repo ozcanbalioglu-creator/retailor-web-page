@@ -16,21 +16,25 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
     const posts: BlogPost[] = [];
 
     for (const path in blogFiles) {
-        if (path.split('/').pop()?.startsWith('._')) continue;
+        try {
+            if (path.split('/').pop()?.startsWith('._')) continue;
 
-        const slug = path.split('/').pop()?.replace('.md', '') || '';
-        const content = await (blogFiles[path]() as Promise<string>);
-        const { data, content: body } = matter(content);
+            const slug = path.split('/').pop()?.replace('.md', '') || '';
+            const content = await (blogFiles[path]() as Promise<string>);
+            const { data, content: body } = matter(content);
 
-        posts.push({
-            slug,
-            title: data.title || 'Başlıksız Yazı',
-            date: data.date || '',
-            excerpt: data.excerpt || '',
-            category: data.category || 'Genel',
-            image: data.image || 'assets/retailorHero.webp',
-            content: body,
-        });
+            posts.push({
+                slug,
+                title: data.title || 'Başlıksız Yazı',
+                date: data.date || '',
+                excerpt: data.excerpt || '',
+                category: data.category || 'Genel',
+                image: data.image || 'assets/retailorHero.webp',
+                content: body,
+            });
+        } catch (error) {
+            console.error(`Error loading blog post at ${path}:`, error);
+        }
     }
 
     return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

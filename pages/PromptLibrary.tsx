@@ -102,8 +102,11 @@ const PromptLibrary = () => {
 
   useEffect(() => {
     // Not: JSON dosyanı public/data/prompts.json içine koyduğunu varsayıyoruz
-    fetch('/data/prompts.json')
-      .then(res => res.json())
+    fetch('data/prompts.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
       .then(data => {
         const commonQs = data.common_questions || [];
         const catSpecificQs = data.category_specific_questions || {};
@@ -121,6 +124,10 @@ const PromptLibrary = () => {
         });
         setAllPrompts(flatPrompts);
         setFilteredPrompts(flatPrompts);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Prompt loading error:', err);
         setLoading(false);
       });
   }, []);

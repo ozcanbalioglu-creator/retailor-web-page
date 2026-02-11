@@ -28,7 +28,7 @@ interface GlossaryTerm {
   relatedTerms: string[];
 }
 
-const TURKISH_LETTERS = ['A','B','C','Ç','D','E','F','G','H','I','İ','J','K','L','M','N','O','Ö','P','R','S','Ş','T','U','Ü','V','Y','Z'];
+const TURKISH_LETTERS = ['A', 'B', 'C', 'Ç', 'D', 'E', 'F', 'G', 'H', 'I', 'İ', 'J', 'K', 'L', 'M', 'N', 'O', 'Ö', 'P', 'R', 'S', 'Ş', 'T', 'U', 'Ü', 'V', 'Y', 'Z'];
 
 // ─── INDEX ───────────────────────────────────────────────────────
 const GlossaryIndex = () => {
@@ -39,12 +39,19 @@ const GlossaryIndex = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/glossary.json')
-      .then(res => res.json())
+    fetch('data/glossary.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
       .then(data => {
         const sorted = (data.terms as GlossaryTerm[]).sort((a, b) => a.term.localeCompare(b.term, 'tr'));
         setAllTerms(sorted);
         setFilteredTerms(sorted);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Glossary load error:', err);
         setLoading(false);
       });
   }, []);
@@ -106,11 +113,10 @@ const GlossaryIndex = () => {
       <div className="flex flex-wrap justify-center gap-1.5 mb-12">
         <button
           onClick={() => setSelectedLetter('')}
-          className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider transition-all ${
-            selectedLetter === ''
+          className={`px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider transition-all ${selectedLetter === ''
               ? 'bg-[#0c4a6e] text-white shadow-lg'
               : 'text-[#475569] hover:bg-slate-100'
-          }`}
+            }`}
         >
           Tümü
         </button>
@@ -121,13 +127,12 @@ const GlossaryIndex = () => {
               key={letter}
               onClick={() => hasTerms && setSelectedLetter(letter === selectedLetter ? '' : letter)}
               disabled={!hasTerms}
-              className={`w-9 h-9 rounded-full text-sm font-semibold transition-all flex items-center justify-center ${
-                selectedLetter === letter
+              className={`w-9 h-9 rounded-full text-sm font-semibold transition-all flex items-center justify-center ${selectedLetter === letter
                   ? 'bg-[#0ea5e9] text-white shadow-lg shadow-[#0ea5e9]/20'
                   : hasTerms
                     ? 'text-[#475569] hover:bg-slate-100 hover:text-[#0c4a6e]'
                     : 'text-slate-300 cursor-not-allowed'
-              }`}
+                }`}
             >
               {letter}
             </button>
@@ -191,13 +196,20 @@ const GlossaryDetail = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/data/glossary.json')
-      .then(res => res.json())
+    fetch('data/glossary.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
       .then(data => {
         const terms = data.terms as GlossaryTerm[];
         setAllTerms(terms);
         const found = terms.find(t => t.slug === slug);
         setTerm(found || null);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Glossary detail load error:', err);
         setLoading(false);
       });
   }, [slug]);
