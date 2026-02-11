@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Sparkles, ChevronDown } from 'lucide-react'; // Removed Copy, CheckCircle2, RotateCcw, Loader2 as they are no longer used for the prompt generation part
-import promptsJson from '../data/prompts.json'; // Import the full JSON object
 
 interface CategoryItem {
   id: string;
@@ -11,9 +10,20 @@ interface CategoryItem {
 }
 
 const PromptGenerator: React.FC = () => {
-  const categoriesData = promptsJson.categories as CategoryItem[]; // Access the categories array
-  const [category, setCategory] = useState(categoriesData[0]?.name || ''); // Set initial category from 'name' property
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [categoriesData, setCategoriesData] = useState<CategoryItem[]>([]);
+  const [category, setCategory] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/prompts.json`)
+      .then(res => res.json())
+      .then(data => {
+        const cats = data.categories as CategoryItem[];
+        setCategoriesData(cats);
+        if (cats.length > 0) setCategory(cats[0].name);
+      })
+      .catch(err => console.error('Error loading prompts for generator:', err));
+  }, []);
 
   // No longer need context, result, loading, copied states as the generate functionality is removed
   // No longer need handleGenerate, copyToClipboard functions
