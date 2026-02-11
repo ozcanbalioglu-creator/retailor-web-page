@@ -1,4 +1,27 @@
-import matter from 'gray-matter';
+// Manual frontmatter parser to avoid node.js dependencies in the browser
+function parseFrontmatter(content: string) {
+    const regex = /^---[\s\S]*?---/;
+    const match = content.match(regex);
+    if (!match) return { data: {} as any, content };
+
+    const frontmatter = match[0].replace(/---/g, '').trim();
+    const body = content.replace(regex, '').trim();
+    const data: any = {};
+
+    frontmatter.split('\n').forEach(line => {
+        const [key, ...valueParts] = line.split(':');
+        if (key && valueParts.length > 0) {
+            let value = valueParts.join(':').trim();
+            // Remove quotes if present
+            if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+                value = value.slice(1, -1);
+            }
+            data[key.trim()] = value;
+        }
+    });
+
+    return { data, content: body };
+}
 
 export interface BlogPost {
     slug: string;
@@ -16,6 +39,8 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
     const posts: BlogPost[] = [];
     console.log('Blog files found by import.meta.glob:', Object.keys(blogFiles));
 
+    const baseUrl = import.meta.env.BASE_URL;
+
     for (const path in blogFiles) {
         try {
             if (path.split('/').pop()?.startsWith('._')) continue;
@@ -28,7 +53,16 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
                 continue;
             }
 
-            const { data, content: body } = matter(content);
+            const { data, content: body } = parseFrontmatter(content);
+
+            // Ensure image path is relative to base
+            let imagePath = data.image || 'assets/retailorHero.webp';
+            if (imagePath.startsWith('/')) {
+                imagePath = imagePath.slice(1);
+            }
+            if (!imagePath.startsWith('http')) {
+                imagePath = `${baseUrl}${imagePath}`;
+            }
 
             posts.push({
                 slug,
@@ -36,7 +70,7 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
                 date: data.date || '',
                 excerpt: data.excerpt || '',
                 category: data.category || 'Genel',
-                image: data.image || 'assets/retailorHero.webp',
+                image: imagePath,
                 content: body,
             });
         } catch (error) {
