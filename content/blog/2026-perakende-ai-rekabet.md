@@ -3,7 +3,7 @@ title: "2026'da Perakendede Yapay Zeka ile Rekabet Avantajı Yakalayın"
 date: "2026-02-06"
 excerpt: "Perakendede hayatta kalmanın yolu yapay zekadan geçiyor. 2026'da öne çıkmanızı sağlayacak 7 kritik alanı keşfedin."
 category: "Strateji"
-image: "/assets/2026-perakende-ai-rekabet.webp"
+image: "assets/2026-perakende-ai-rekabet.webp"
 ---
 
 ## Rakibiniz bugün AI ile müşteri verilerini analiz ederken, siz hala geçen ayın raporlarına bakıyorsunuz. 2026'da bu fark, iş modelinizi değiştirebilir ya da bitirebilir.

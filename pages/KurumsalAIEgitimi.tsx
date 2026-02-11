@@ -10,8 +10,8 @@ import {
 const KurumsalAIEgitimi = () => {
     const [currentImgIndex, setCurrentImgIndex] = useState(0);
     const images = [
-        '/assets/freepik__35mm-film-photography-abstract-neural-network-visu__5396.webp',
-        '/assets/retailorHero.webp'
+        'assets/freepik__35mm-film-photography-abstract-neural-network-visu__5396.webp',
+        'assets/retailorHero.webp'
     ];
 
     useEffect(() => {

@@ -3,7 +3,7 @@ title: "Mağaza İçi AI: Geleceğin Alışveriş Deneyimi"
 date: "2024-07-05"
 excerpt: "Fiziksel mağazaların dijitalleşmesi ve AI ile nasıl daha akıllı hale geldiğini keşfedin."
 category: "İnovasyon"
-image: "/assets/freepik__35mm-film-photography-isometric-step-3-visualizati__5390.webp"
+image: "assets/freepik__35mm-film-photography-isometric-step-3-visualizati__5390.webp"
 ---
 
 # Mağaza İçi AI

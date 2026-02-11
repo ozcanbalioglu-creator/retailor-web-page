@@ -11,8 +11,8 @@ import {
 const SalesMentorAI = () => {
     const [currentImgIndex, setCurrentImgIndex] = useState(0);
     const images = [
-        '/assets/freepik__35mm-film-photography-professional-business-traini__10266.webp',
-        '/assets/retailorHero.webp'
+        'assets/freepik__35mm-film-photography-professional-business-traini__10266.webp',
+        'assets/retailorHero.webp'
     ];
 
     useEffect(() => {

@@ -28,7 +28,7 @@ export const getAllPosts = async (): Promise<BlogPost[]> => {
             date: data.date || '',
             excerpt: data.excerpt || '',
             category: data.category || 'Genel',
-            image: data.image || '/assets/retailorHero.webp',
+            image: data.image || 'assets/retailorHero.webp',
             content: body,
         });
     }
