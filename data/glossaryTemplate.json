@@ -1,0 +1,52 @@
+{
+    "version": "2.0",
+    "last_updated": "2025-06-01",
+    "terms": [
+        {
+            "slug": "abc-analizi",
+            "term": "ABC Analizi",
+            "termEn": "ABC Analysis",
+            "abbr": "",
+            "letter": "A",
+            "category": "Envanter Yönetimi",
+            "shortDefinition": "Ürünleri satış hacmine göre A, B ve C gruplarına ayırarak stok yönetimini optimize eden sınıflandırma yöntemi.",
+            "definition": "ABC Analizi, envanter kalemlerini önem derecelerine göre üç gruba ayıran bir stok yönetim tekniğidir. Pareto ilkesine (80/20 kuralı) dayanır.\n\n**A Grubu:** Toplam satışın %70-80'ini oluşturan, az sayıdaki yüksek değerli ürünler (%10-20 kalem)\n\n**B Grubu:** Toplam satışın %15-25'ini oluşturan orta değerli ürünler (%30 kalem)\n\n**C Grubu:** Toplam satışın %5-10'unu oluşturan, çok sayıda düşük değerli ürünler (%50 kalem)\n\nBu sınıflandırma sayesinde her gruba farklı sipariş politikaları, güvenlik stoku seviyeleri ve raf alanı tahsisi uygulanarak envanter yönetimi daha verimli hale getirilir.",
+            "whyImportant": "Perakendeciler binlerce SKU ile çalışır ve tüm ürünlere aynı düzeyde kaynak ayırmak verimsizdir. ABC Analizi, cironun büyük bölümünü oluşturan A grubu ürünlere öncelikli stok, raf alanı ve tedarik planlaması yapmanızı sağlar. Böylece sermaye bağlama maliyetleri düşer, stokta bulunma oranı artar ve satış kaybı riski minimize edilir.",
+            "realLifeExample": "Bir süpermarket zincirinin 8.000 SKU'luk ürün portföyüne ABC Analizi uyguladığında şu sonuçları elde ettiğini düşünelim: 600 ürün (A grubu) toplam cironun %75'ini, 2.400 ürün (B grubu) %20'sini, 5.000 ürün (C grubu) ise sadece %5'ini oluşturuyor. Mağaza müdürü, A grubu ürünlerin stok kontrolünü haftalıktan günlüğe çıkarıyor, tedarikçilerle daha sık sipariş anlaşması yapıyor ve bu ürünlere göz seviyesinde raf alanı tahsis ediyor. C grubu ürünlerde ise minimum sipariş miktarlarını gözden geçirip düşük performanslıları listeden çıkarıyor.",
+            "formula": "Her ürünün toplam satış içindeki payı hesaplanır ve büyükten küçüğe sıralanarak kümülatif yüzde dağılımı çıkarılır.\n\nÜrün Satış Payı (%) = (Ürün Satış Geliri / Toplam Satış Geliri) × 100\n\nKümülatif pay %70-80'e ulaşana kadar → A Grubu\nKümülatif pay %80-95 arası → B Grubu\nKümülatif pay %95-100 arası → C Grubu",
+            "formulaExample": "Toplam yıllık satış: 10.000.000 TL\n\n| Ürün | Yıllık Satış | Pay | Kümülatif | Grup |\n|------|-------------|-----|-----------|------|\n| Süt 1L | 1.500.000 TL | %15 | %15 | A |\n| Ekmek | 1.200.000 TL | %12 | %27 | A |\n| Su 5L | 900.000 TL | %9 | %36 | A |\n| ... | ... | ... | %78 | A |\n| Makarna | 250.000 TL | %2.5 | %80.5 | B |\n| ... | ... | ... | %95 | B |\n| İthal Sos | 15.000 TL | %0.15 | %95.15 | C |",
+            "managerTip": "ABC Analizi'ni yılda en az 2 kez güncelleyin. Mevsimsel değişimler ve yeni ürün lansmanları sınıflandırmayı değiştirebilir. Ayrıca sadece satış cirosuna değil, brüt kâr katkısına göre de ayrı bir ABC analizi yapın; bazen düşük cirolu ama yüksek marjlı ürünler gözden kaçabilir.",
+            "segments": [
+                "Gıda",
+                "Moda",
+                "Elektronik",
+                "Kozmetik",
+                "Genel Perakende"
+            ],
+            "departments": [
+                "Satın Alma",
+                "Kategori Yönetimi",
+                "Operasyon",
+                "Finans"
+            ],
+            "confusedTerms": [
+                {
+                    "term": "Pareto Analizi",
+                    "diff": "Pareto Analizi genel bir 80/20 kuralı uygulamasıdır ve herhangi bir alana uygulanabilir. ABC Analizi ise Pareto ilkesinin envanter yönetimine özgü, üç katmanlı (A-B-C) uygulamasıdır."
+                },
+                {
+                    "term": "XYZ Analizi",
+                    "diff": "ABC Analizi satış değerine göre sınıflandırırken, XYZ Analizi talep tahmin edilebilirliğine (değişkenliğe) göre sınıflandırır. İkisi birlikte kullanıldığında ABC-XYZ Matrisi oluşturulur."
+                }
+            ],
+            "relatedTerms": [
+                "dead-stock",
+                "gmroi",
+                "sku",
+                "fifo",
+                "kategori-yonetimi",
+                "talep-tahmini"
+            ]
+        },
+    ]
+}

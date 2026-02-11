@@ -1,0 +1,1891 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-06-01",
+  "terms": [
+    {
+      "slug": "abc-analizi",
+      "term": "ABC Analizi",
+      "termEn": "ABC Analysis",
+      "abbr": "",
+      "letter": "A",
+      "category": "Envanter Yönetimi",
+      "shortDefinition": "Ürünleri satış hacmine göre A, B ve C gruplarına ayırarak stok yönetimini optimize eden sınıflandırma yöntemi.",
+      "definition": "ABC Analizi, envanter kalemlerini önem derecelerine göre üç gruba ayıran bir stok yönetim tekniğidir. Pareto ilkesine (80/20 kuralı) dayanır.\n\n**A Grubu:** Toplam satışın %70-80'ini oluşturan, az sayıdaki yüksek değerli ürünler (%10-20 kalem)\n\n**B Grubu:** Toplam satışın %15-25'ini oluşturan orta değerli ürünler (%30 kalem)\n\n**C Grubu:** Toplam satışın %5-10'unu oluşturan, çok sayıda düşük değerli ürünler (%50 kalem)\n\nBu sınıflandırma sayesinde her gruba farklı sipariş politikaları, güvenlik stoku seviyeleri ve raf alanı tahsisi uygulanarak envanter yönetimi daha verimli hale getirilir.",
+      "whyImportant": "Perakendeciler binlerce SKU ile çalışır ve tüm ürünlere aynı düzeyde kaynak ayırmak verimsizdir. ABC Analizi, cironun büyük bölümünü oluşturan A grubu ürünlere öncelikli stok, raf alanı ve tedarik planlaması yapmanızı sağlar. Böylece sermaye bağlama maliyetleri düşer, stokta bulunma oranı artar ve satış kaybı riski minimize edilir.",
+      "realLifeExample": "Bir süpermarket zincirinin 8.000 SKU'luk ürün portföyüne ABC Analizi uyguladığında şu sonuçları elde ettiğini düşünelim: 600 ürün (A grubu) toplam cironun %75'ini, 2.400 ürün (B grubu) %20'sini, 5.000 ürün (C grubu) ise sadece %5'ini oluşturuyor. Mağaza müdürü, A grubu ürünlerin stok kontrolünü haftalıktan günlüğe çıkarıyor, tedarikçilerle daha sık sipariş anlaşması yapıyor ve bu ürünlere göz seviyesinde raf alanı tahsis ediyor. C grubu ürünlerde ise minimum sipariş miktarlarını gözden geçirip düşük performanslıları listeden çıkarıyor.",
+      "formula": "Her ürünün toplam satış içindeki payı hesaplanır ve büyükten küçüğe sıralanarak kümülatif yüzde dağılımı çıkarılır.\n\nÜrün Satış Payı (%) = (Ürün Satış Geliri / Toplam Satış Geliri) × 100\n\nKümülatif pay %70-80'e ulaşana kadar → A Grubu\nKümülatif pay %80-95 arası → B Grubu\nKümülatif pay %95-100 arası → C Grubu",
+      "formulaExample": "Toplam yıllık satış: 10.000.000 TL\n\n| Ürün | Yıllık Satış | Pay | Kümülatif | Grup |\n|------|-------------|-----|-----------|------|\n| Süt 1L | 1.500.000 TL | %15 | %15 | A |\n| Ekmek | 1.200.000 TL | %12 | %27 | A |\n| Su 5L | 900.000 TL | %9 | %36 | A |\n| ... | ... | ... | %78 | A |\n| Makarna | 250.000 TL | %2.5 | %80.5 | B |\n| ... | ... | ... | %95 | B |\n| İthal Sos | 15.000 TL | %0.15 | %95.15 | C |",
+      "managerTip": "ABC Analizi'ni yılda en az 2 kez güncelleyin. Mevsimsel değişimler ve yeni ürün lansmanları sınıflandırmayı değiştirebilir. Ayrıca sadece satış cirosuna değil, brüt kâr katkısına göre de ayrı bir ABC analizi yapın; bazen düşük cirolu ama yüksek marjlı ürünler gözden kaçabilir.",
+      "segments": [
+        "Gıda",
+        "Moda",
+        "Elektronik",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Satın Alma",
+        "Kategori Yönetimi",
+        "Operasyon",
+        "Finans"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Pareto Analizi",
+          "diff": "Pareto Analizi genel bir 80/20 kuralı uygulamasıdır ve herhangi bir alana uygulanabilir. ABC Analizi ise Pareto ilkesinin envanter yönetimine özgü, üç katmanlı (A-B-C) uygulamasıdır."
+        },
+        {
+          "term": "XYZ Analizi",
+          "diff": "ABC Analizi satış değerine göre sınıflandırırken, XYZ Analizi talep tahmin edilebilirliğine (değişkenliğe) göre sınıflandırır. İkisi birlikte kullanıldığında ABC-XYZ Matrisi oluşturulur."
+        }
+      ],
+      "relatedTerms": [
+        "dead-stock",
+        "gmroi",
+        "sku",
+        "fifo",
+        "kategori-yonetimi",
+        "talep-tahmini"
+      ]
+    },
+    {
+      "slug": "aov",
+      "term": "AOV (Ortalama Sipariş Değeri)",
+      "termEn": "Average Order Value",
+      "abbr": "AOV",
+      "letter": "A",
+      "category": "Satış",
+      "shortDefinition": "Müşterilerin her alışverişte harcadığı ortalama tutar; toplam gelirin sipariş sayısına bölünmesiyle hesaplanır.",
+      "definition": "AOV (Average Order Value — Ortalama Sipariş Değeri), belirli bir dönemde gerçekleşen toplam gelirin toplam sipariş sayısına bölünmesiyle elde edilen temel satış metriğidir.\n\nAOV, müşterilerin her bir alışverişte ortalama ne kadar harcadığını gösterir. Hem fiziksel mağaza hem de e-ticaret kanallarında takip edilen bu metrik; fiyatlandırma stratejisi, promosyon etkinliği ve çapraz satış başarısının doğrudan göstergesidir.\n\nAOV'yi artırmak, mevcut müşteri trafiğinden daha fazla gelir elde etmenin en maliyet-etkin yollarından biridir.",
+      "whyImportant": "Yeni müşteri kazanmak, mevcut müşteriye daha fazla satış yapmaktan 5-7 kat daha maliyetlidir. AOV'yi artırarak aynı müşteri trafiğinden daha yüksek ciro elde edebilirsiniz. Ayrıca AOV, pazarlama kampanyalarının, ürün paketleme stratejilerinin ve ücretsiz kargo eşiği gibi taktiklerin etkisini ölçmenin en hızlı yoludur.",
+      "realLifeExample": "Bir online kozmetik mağazası, AOV'sinin 180 TL olduğunu tespit ediyor. Ücretsiz kargo eşiğini 150 TL'den 250 TL'ye çıkarıyor ve 220 TL üzeri siparişlere mini hediye ürün veriyor. Ayrıca ürün sayfalarına \"Bu ürünle birlikte en çok tercih edilenler\" bölümü ekleniyor. Üç ay sonunda AOV 245 TL'ye yükseliyor — sipariş sayısı aynı kalırken toplam gelir %36 artıyor.",
+      "formula": "AOV = Toplam Gelir / Toplam Sipariş Sayısı",
+      "formulaExample": "Bir mağazanın aylık verileri:\n- Toplam gelir: 500.000 TL\n- Toplam sipariş sayısı: 2.500\n\nAOV = 500.000 / 2.500 = **200 TL**\n\nYorum: Her müşteri ortalama 200 TL harcama yapıyor. Hedef AOV'yi 230 TL'ye çıkarmak için cross-selling ve bundle stratejileri planlanabilir.",
+      "managerTip": "AOV'yi artırmak için en etkili üç taktik: (1) Ücretsiz kargo eşiğini mevcut AOV'nin %20-30 üzerine koyun, (2) Kasa önüne veya checkout sayfasına düşük fiyatlı tamamlayıcı ürünler ekleyin, (3) \"2 al 3 öde\" gibi paket teklifleriyle sepet büyüklüğünü teşvik edin. AOV'yi kanal ve müşteri segmenti bazında ayrı ayrı izleyin — genel ortalamanın arkasındaki farklılıklar asıl fırsat alanlarını gösterir.",
+      "segments": [
+        "Gıda",
+        "Moda",
+        "Elektronik",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Satış",
+        "Pazarlama",
+        "Finans",
+        "Kategori Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "ATV (Average Transaction Value)",
+          "diff": "ATV ve AOV çoğu zaman birbirinin yerine kullanılır ancak teknik olarak ATV tüm işlemleri (iadeler dahil) kapsar; AOV yalnızca net satış siparişlerini baz alır."
+        },
+        {
+          "term": "CLV (Müşteri Yaşam Boyu Değeri)",
+          "diff": "AOV tek bir alışverişin ortalama değerini ölçerken, CLV bir müşterinin tüm ilişki süresi boyunca yaratacağı toplam değeri hesaplar."
+        }
+      ],
+      "relatedTerms": [
+        "cross-selling",
+        "upselling",
+        "basket-analizi",
+        "conversion-rate",
+        "clv",
+        "kpi"
+      ]
+    },
+    {
+      "slug": "barkod",
+      "term": "Barkod",
+      "termEn": "Barcode",
+      "abbr": "",
+      "letter": "B",
+      "category": "Operasyon",
+      "shortDefinition": "Ürün bilgilerini tarayıcılarla okunabilir çizgi veya kare desenlere kodlayan otomatik tanımlama sistemi.",
+      "definition": "Barkod, ürün bilgilerini optik olarak okunabilir çizgi desenleri (1D) veya kare matris (2D/QR) formatında kodlayan bir otomatik tanımlama teknolojisidir.\n\nPerakendede en yaygın barkod türleri şunlardır:\n- **EAN-13:** Uluslararası standart perakende barkodu (13 haneli)\n- **UPC-A:** Kuzey Amerika standardı (12 haneli)\n- **QR Kod:** 2 boyutlu, daha fazla veri kapasitesine sahip\n- **Code 128:** Lojistik ve depo yönetiminde kullanılır\n- **DataMatrix:** Küçük ürünler için kompakt 2D kod\n\nBarkod sistemi, ürün tanımlama, fiyatlandırma, stok takibi ve kasa işlemlerinin temelini oluşturur. Modern perakendeciliğin vazgeçilmez altyapı bileşenidir.",
+      "whyImportant": "Barkod olmadan modern perakende operasyonu düşünülemez. Kasa hızını %40-60 artırır, fiyat okuma hatalarını neredeyse sıfıra indirir ve gerçek zamanlı stok takibi sağlar. Ayrıca tedarik zincirinde uçtan uca izlenebilirlik, doğru satış verisi toplama ve otomatik sipariş tetikleme gibi kritik süreçlerin temelini oluşturur.",
+      "realLifeExample": "Bir market zincirinde kasiyerler eskiden ürün fiyatlarını manuel giriyordu; sık sık fiyat hataları oluşuyor ve kasa başı ortalama bekleme süresi 8 dakikayı buluyordu. Barkod sistemi kurulduktan sonra kasa işlem hızı 3 dakikaya düştü, fiyat hata oranı %4'ten %0,1'e geriledi. Ayrıca POS'tan gelen barkod verileri sayesinde her ürünün satış hızı anlık izleniyor ve otomatik sipariş önerileri oluşturuluyor.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Mağazanızda barkod okunamama oranını izleyin; %2'nin üzerindeyse etiket kalitesi veya tarayıcı bakımında sorun var demektir. Ayrıca QR kodları müşteriye yönelik bilgi (alerjen, menşei, tarif) sunmak için kullanarak müşteri deneyimini zenginleştirebilirsiniz. RFID'e geçiş planlıyorsanız bile barkod altyapınızı güçlü tutun — iki sistem uzun süre birlikte çalışacaktır.",
+      "segments": [
+        "Gıda",
+        "Moda",
+        "Elektronik",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Operasyon",
+        "Bilgi Teknolojileri",
+        "Satın Alma",
+        "Kategori Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "RFID",
+          "diff": "Barkod optik tarama gerektirir ve görüş hattında olmalıdır; RFID ise radyo dalgalarıyla çalışır, görüş hattı gerekmez ve aynı anda yüzlerce ürünü okuyabilir."
+        },
+        {
+          "term": "SKU",
+          "diff": "Barkod, ürünü fiziksel olarak tanımlayan optik bir koddur. SKU ise işletmenin kendi iç envanter takip kodudur. Bir ürünün barkodu global standarttayken, SKU'su işletmeye özeldir."
+        }
+      ],
+      "relatedTerms": [
+        "rfid",
+        "sku",
+        "pos",
+        "esl",
+        "tedarik-zinciri"
+      ]
+    },
+    {
+      "slug": "basket-analizi",
+      "term": "Basket Analizi (Sepet Analizi)",
+      "termEn": "Market Basket Analysis",
+      "abbr": "",
+      "letter": "B",
+      "category": "Pazarlama",
+      "shortDefinition": "Müşterilerin birlikte satın aldığı ürün kombinasyonlarını tespit ederek çapraz satış fırsatlarını belirleyen analiz tekniği.",
+      "definition": "Basket Analizi (Market Basket Analysis), veri madenciliği tekniklerinden biri olan birliktelik kuralları analizini kullanarak müşterilerin aynı sepette birlikte satın aldığı ürünleri tespit eder.\n\nÜç temel metrik kullanılır:\n- **Destek (Support):** İki ürünün birlikte satın alınma sıklığı\n- **Güven (Confidence):** A ürünü alındığında B'nin de alınma olasılığı\n- **Lift:** Birlikteliğin rastgelelikten ne kadar güçlü olduğu (1'den büyükse anlamlı)\n\nBu analiz sayesinde raf düzeni optimize edilir, promosyon eşleştirmeleri belirlenir ve e-ticarette kişiselleştirilmiş ürün önerileri sunulur.",
+      "whyImportant": "Basket Analizi, perakendecilere müşteri davranışını anlama ve buna göre aksiyon alma imkanı verir. Birlikte alınan ürünleri yakın raflara yerleştirerek alışveriş kolaylığı sağlar, çapraz promosyonlarla sepet büyüklüğünü artırır ve e-ticarette \"birlikte alınanlar\" önerileri ile AOV'yi yükseltir. Kampanya planlamasında hangi ürünlerin indirime girmesi gerektiğini ve hangi ürünlerin trafik çekici olduğunu belirlemede kritik rol oynar.",
+      "realLifeExample": "Bir süpermarket zinciri, basket analizi sonucunda bebek bezi alan müşterilerin %68'inin aynı sepette ıslak mendil ve bebek losyonu da aldığını tespit ediyor. Bu bulguyla bebek bezi reyonunun hemen yanına ıslak mendil ve losyon rafı yerleştiriliyor, üçlü paket promosyonu tasarlanıyor. Sonuç: Bebek kategorisinde çapraz satış oranı %23 artıyor ve sepet ortalaması 45 TL yükseliyor.",
+      "formula": "Destek (Support) = P(A ∩ B) = (A ve B birlikte alınma sayısı) / (Toplam işlem sayısı)\n\nGüven (Confidence) = P(B|A) = (A ve B birlikte alınma sayısı) / (A alınma sayısı)\n\nLift = Güven / P(B) = P(A ∩ B) / (P(A) × P(B))",
+      "formulaExample": "Toplam 10.000 sepet işlemi:\n- Makarna alınan sepet sayısı: 3.000\n- Domates sosu alınan sepet sayısı: 2.000\n- Makarna VE domates sosu birlikte: 1.500\n\nDestek = 1.500 / 10.000 = **%15**\nGüven = 1.500 / 3.000 = **%50** (makarna alanların yarısı sos da alıyor)\nLift = 0,50 / 0,20 = **2,5** (birlikte alınma olasılığı rastgeleden 2,5 kat yüksek)\n\nYorum: Lift > 1 olduğu için anlamlı bir birliktelik var. Bu iki ürünü yakın raflara koymak ve birlikte promosyon yapmak mantıklıdır.",
+      "managerTip": "Basket analizini sadece genel müşteri kitlesi için değil, farklı müşteri segmentleri (örneğin sabah alışverişi yapanlar vs. akşam, sadakat kartı sahipleri vs. olmayanlar) için ayrı ayrı çalıştırın. Farklı segmentlerin sepet kompozisyonları birbirinden çok farklı olabilir. Ayrıca sonuçları her çeyrekte güncelleyin; mevsimsel değişimler birliktelik kurallarını doğrudan etkiler.",
+      "segments": [
+        "Gıda",
+        "Kozmetik",
+        "Elektronik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Pazarlama",
+        "Kategori Yönetimi",
+        "Bilgi Teknolojileri",
+        "Satış"
+      ],
+      "confusedTerms": [
+        {
+          "term": "RFM Analizi",
+          "diff": "Basket Analizi ürünler arası birlikteliği incelerken, RFM Analizi müşterilerin alışveriş davranışlarını (sıklık, tutar, son alışveriş) temel alarak müşteri segmentasyonu yapar."
+        },
+        {
+          "term": "Cross-Selling",
+          "diff": "Basket Analizi hangi ürünlerin birlikte alındığını tespit eden analiz tekniğidir; cross-selling ise bu bulgulara dayanarak müşteriye aktif ürün önerisi yapma stratejisidir."
+        }
+      ],
+      "relatedTerms": [
+        "cross-selling",
+        "rfm-analizi",
+        "crm",
+        "planogram",
+        "aov",
+        "impulse-buying"
+      ]
+    },
+    {
+      "slug": "churn-rate",
+      "term": "Churn Rate (Müşteri Kayıp Oranı)",
+      "termEn": "Churn Rate",
+      "abbr": "",
+      "letter": "C",
+      "category": "Müşteri Deneyimi",
+      "shortDefinition": "Belirli bir dönemde alışverişi bırakan veya aboneliğini iptal eden müşterilerin toplam müşteri sayısına oranı.",
+      "definition": "Churn Rate, belirli bir zaman diliminde kaybedilen müşteri sayısının dönem başındaki toplam müşteri sayısına oranıdır. Müşteri sadakatinin ve elde tutma (retention) performansının temel göstergelerinden biridir.\n\nPerakendede \"kayıp müşteri\" tanımı iş modeline göre değişir: abonelik bazlı modellerde iptal eden müşteri; geleneksel perakendede ise belirli bir süre (örneğin 6 ay veya 12 ay) boyunca hiç alışveriş yapmayan müşteri olarak tanımlanır.\n\nYeni müşteri kazanmanın maliyeti, mevcut müşteriyi elde tutmaktan 5-7 kat fazla olduğundan, churn rate'i düşürmek doğrudan karlılığı artırır.",
+      "whyImportant": "Müşteri tabanınız ne kadar büyürse büyüsün, yüksek churn rate sürdürülebilir büyümenin önündeki en büyük engeldir. Churn rate'i %1 bile düşürmek, yıllık bazda ciddi gelir farkı yaratır. Ayrıca kayıp müşterilerin neden gittiğini anlamak, ürün, hizmet ve deneyim iyileştirmeleri için kritik bir geri bildirim kaynağıdır. Mağaza yöneticileri bu metriği izleyerek erken uyarı alabilir ve proaktif müdahale edebilir.",
+      "realLifeExample": "Bir online market platformu, aylık churn rate'inin %8 olduğunu fark ediyor. CRM verilerini analiz ettiklerinde, kayıp müşterilerin %60'ının üçüncü siparişten sonra ayrıldığını ve en büyük şikayetin teslimat gecikmesi olduğunu görüyorlar. Teslimat altyapısını iyileştirip, 3. siparişte %15 indirim kuponu vererek win-back kampanyası başlatıyorlar. 6 ay sonunda aylık churn rate %4,5'e düşüyor.",
+      "formula": "Churn Rate = (Dönem İçinde Kaybedilen Müşteri Sayısı / Dönem Başı Toplam Müşteri Sayısı) × 100",
+      "formulaExample": "Bir sadakat programının Ocak ayı verileri:\n- Dönem başı aktif üye sayısı: 50.000\n- Ocak ayında alışverişi bırakan üye sayısı: 2.000\n\nChurn Rate = (2.000 / 50.000) × 100 = **%4**\n\nYorum: Aylık %4 churn rate perakende ortalamasında kabul edilebilir düzeydedir. Ancak yıllık bazda müşteri tabanının neredeyse yarısının değiştiği anlamına gelir; bu nedenle retention stratejilerine yatırım yapılmalıdır.",
+      "managerTip": "Churn rate'i tek bir sayı olarak izlemek yetmez; müşteri segmentlerine göre kırılım yapın. En değerli müşterilerinizin (A segmenti) churn rate'i, genel ortalamanın çok altında olmalıdır. AI destekli churn tahminleme modelleri kullanarak \"kayıp riski yüksek\" müşterileri önceden tespit edin ve kişiselleştirilmiş kampanyalarla harekete geçin — müşteri kaybettikten sonra geri kazanmak çok daha zor ve pahalıdır.",
+      "segments": [
+        "Gıda",
+        "Moda",
+        "Elektronik",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Pazarlama",
+        "Satış",
+        "Finans",
+        "Bilgi Teknolojileri"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Retention Rate (Elde Tutma Oranı)",
+          "diff": "Churn rate kaybedilen müşteri yüzdesini gösterirken, retention rate elde tutulan müşteri yüzdesini gösterir. İkisi birbirinin tamamlayıcısıdır: Retention Rate = 100% - Churn Rate."
+        },
+        {
+          "term": "NPS (Net Tavsiye Skoru)",
+          "diff": "NPS müşteri memnuniyetini ve tavsiye eğilimini ölçen bir algı metriğidir; churn rate ise gerçek müşteri kaybını ölçen bir davranış metriğidir. NPS düşüşü genellikle gelecekte churn artışının habercisidir."
+        }
+      ],
+      "relatedTerms": [
+        "nps",
+        "crm",
+        "loyalty-programi",
+        "clv",
+        "rfm-analizi",
+        "kpi"
+      ]
+    },
+    {
+      "slug": "crm",
+      "term": "CRM (Müşteri İlişkileri Yönetimi)",
+      "termEn": "Customer Relationship Management",
+      "abbr": "CRM",
+      "letter": "C",
+      "category": "Dijital/AI",
+      "shortDefinition": "Müşteri verilerini merkezi bir sistemde toplayarak satış, pazarlama ve hizmet süreçlerini optimize eden teknoloji ve strateji bütünü.",
+      "definition": "CRM (Customer Relationship Management), müşterilerle olan tüm etkileşimleri tek bir platformda yöneten strateji ve teknoloji bütünüdür.\n\nÜç temel bileşeni vardır:\n- **Operasyonel CRM:** Satış, pazarlama ve müşteri hizmet süreçlerinin otomasyonu\n- **Analitik CRM:** Müşteri verisi analizi, segmentasyon ve tahminleme\n- **İşbirlikçi CRM:** Departmanlar arası müşteri bilgi paylaşımı\n\nModern CRM sistemleri, fiziksel mağaza, e-ticaret, mobil uygulama ve sosyal medya gibi tüm kanallardan gelen verileri birleştirerek 360 derece müşteri görünümü oluşturur. Yapay zeka entegrasyonuyla CLV tahmini, churn risk skorlaması ve kişiselleştirilmiş ürün önerileri otomatik olarak üretilebilir.",
+      "whyImportant": "CRM, müşterilerinizi tanımanın ve bu bilgiyle aksiyon almanın en sistematik yoludur. Müşteri verisi silolanmış departmanlarda kalırsa, tutarlı bir deneyim sunmak imkansızdır. CRM sayesinde satış ekibi müşterinin geçmiş alışverişlerini görür, pazarlama ekibi doğru segmente doğru kampanyayı gönderir, müşteri hizmetleri ise geçmiş şikayetleri bilerek hizmet verir. Doğru uygulanan CRM, müşteri memnuniyetini ve sadakatini ölçülebilir şekilde artırır.",
+      "realLifeExample": "Bir moda perakendecisi CRM sistemi kurarak mağaza, online ve mobil kanal verilerini birleştiriyor. Müşterinin mağazada deneyip almadığı ürünü online sepetine eklediğini gördüklerinde, 24 saat içinde kişiselleştirilmiş bir e-posta ile %10 indirim kuponu gönderiyorlar. RFM segmentasyonu ile VIP müşterilere yeni koleksiyon erken erişimi sunuyorlar. CRM uygulamasının ilk yılında tekrar alışveriş oranı %28 arttı, müşteri başına yıllık harcama %18 yükseldi.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "CRM sistemini bir yazılım projesi olarak değil, bir kültür değişimi olarak ele alın. Mağaza çalışanlarının müşteri verisi girişini ciddiye alması, satış ekibinin CRM verisiyle aksiyon alması gerekir. Veri kalitesi her şeydir — eksik veya yanlış müşteri verisi olan bir CRM, hiç CRM olmamaktan daha tehlikelidir. Mağaza düzeyinde CRM kullanım oranını bir KPI olarak takip edin.",
+      "segments": [
+        "Moda",
+        "Elektronik",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Pazarlama",
+        "Satış",
+        "Bilgi Teknolojileri",
+        "Operasyon"
+      ],
+      "confusedTerms": [
+        {
+          "term": "ERP (Kurumsal Kaynak Planlama)",
+          "diff": "CRM müşteri ilişkilerine odaklanır (satış, pazarlama, müşteri hizmeti); ERP ise tedarik zinciri, finans, stok ve üretim gibi iç operasyonları yönetir. Birçok işletme ikisini entegre şekilde kullanır."
+        },
+        {
+          "term": "CDP (Müşteri Veri Platformu)",
+          "diff": "CRM etkileşim yönetimi üzerine kuruluyken, CDP farklı kaynaklardan müşteri verisini birleştirip tek bir profil oluşturmaya odaklanan veri platformudur. CDP, CRM'i besleyen bir veri katmanı olarak düşünülebilir."
+        }
+      ],
+      "relatedTerms": [
+        "rfm-analizi",
+        "clv",
+        "churn-rate",
+        "loyalty-programi",
+        "omnichannel",
+        "nps"
+      ]
+    },
+    {
+      "slug": "dead-stock",
+      "term": "Dead Stock (Ölü Stok)",
+      "termEn": "Dead Stock",
+      "abbr": "",
+      "letter": "D",
+      "category": "Envanter Yönetimi",
+      "shortDefinition": "Uzun süre satılmayan, raf ömrünü yitirmiş veya modası geçmiş ürünlerden oluşan, sermayeyi bağlayan stok.",
+      "definition": "Dead Stock (Ölü Stok), belirli bir süre boyunca hiç satılmamış veya çok düşük satış performansı gösteren ürün stokudur. Bu ürünler depo alanı kaplar, sermayeyi bağlar ve ek maliyet oluşturur.\n\nÖlü stok nedenleri arasında yanlış talep tahmini ve aşırı sipariş, mevsimsel ürünlerin zamanında satılamaması, modası geçen ürünler (özellikle tekstil ve elektronik), bozulma riski olan ürünlerin son kullanma tarihi geçmesi ve tedarikçi minimum sipariş zorunlulukları yer alır.\n\nDead stock sadece satın alma maliyeti değil, depolama, sigorta, güvenlik ve en önemlisi fırsat maliyeti yaratır — o raf alanında veya sermayeyle çok daha kârlı ürünler satılabilirdi.",
+      "whyImportant": "Dead stock, perakendenin en sinsi karlılık düşmanlarından biridir. Görünürde satış kaybı olarak algılanır ancak gerçek maliyeti çok daha derindir: depolama ücreti, bağlanan nakit, raf alanının verimsiz kullanımı ve nihayetinde zorunlu markdown ile düşük marjla satış ya da tamamen zarar yazma. Orta ölçekli bir perakendecide dead stock, toplam envanterin %15-25'ini oluşturabilir — bu da ciddi bir sermaye kaybı demektir.",
+      "realLifeExample": "Bir elektronik mağazası, geçen yıl piyasaya çıkan bir akıllı saat modelinden 500 adet sipariş veriyor. Ancak yeni model lansmanıyla birlikte eski modele talep düşüyor ve 300 adet satılmadan depoda kalıyor. Ürün başına 800 TL maliyet ile 240.000 TL sermaye bağlanmış durumda. Mağaza müdürü, ABC analizinde bu ürünü C grubuna düşürüyor, %40 markdown uygulayarak outlet kanalında satışa sunuyor ve kalan stok için online pazaryerleriyle anlaşma yapıyor. Gelecek dönem için tedarikçiyle daha esnek sipariş koşulları müzakere ediyor.",
+      "formula": "Dead Stock Oranı = (Belirli Sürede Satılmayan SKU Sayısı / Toplam SKU Sayısı) × 100\n\nDead Stock Maliyeti = Satılmayan Birim Sayısı × Birim Maliyeti + Depolama Maliyeti + Fırsat Maliyeti",
+      "formulaExample": "Bir mağazanın envanter verisi:\n- Toplam SKU sayısı: 5.000\n- 90 gündür hiç satılmayan SKU sayısı: 750\n- Satılmayan stok değeri: 450.000 TL\n- 90 günlük depolama maliyeti: 35.000 TL\n\nDead Stock Oranı = (750 / 5.000) × 100 = **%15**\nToplam maliyet etkisi: 450.000 + 35.000 = **485.000 TL**\n\nYorum: Envanterin %15'i ölü stok durumunda. Bu oran %10'un altına çekilmelidir.",
+      "managerTip": "Dead stock yönetiminde en önemli kural erken müdahaledir. Bir ürün satış hızı düşmeye başladığı anda (henüz dead stock olmadan) dinamik fiyatlandırma ile küçük indirimler uygulayın. 60 gün boyunca satılmayan ürünleri otomatik olarak uyarı listesine alan bir sistem kurun. Ayrıca tedarikçi sözleşmelerinize iade veya değişim koşulları eklemeyi ihmal etmeyin — bu, dead stock riskini paylaşmanın en etkili yoludur.",
+      "segments": [
+        "Moda",
+        "Elektronik",
+        "Gıda",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Satın Alma",
+        "Kategori Yönetimi",
+        "Finans",
+        "Operasyon"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Slow-Moving Stock (Yavaş Hareket Eden Stok)",
+          "diff": "Dead stock hiç satılmayan veya satış olmayan ürünlerdir; slow-moving stock ise satış yapan ancak beklenen hızın çok altında kalan ürünlerdir. Slow-moving ürün zamanla dead stock'a dönüşebilir."
+        },
+        {
+          "term": "Shrinkage (Envanter Kaybı)",
+          "diff": "Dead stock fiziksel olarak depoda mevcut ama satılamayan ürünlerdir; shrinkage ise hırsızlık, hasar veya hata nedeniyle kaybolan, fiziksel olarak bulunamayan stoktur."
+        }
+      ],
+      "relatedTerms": [
+        "abc-analizi",
+        "markdown",
+        "dinamik-fiyatlandirma",
+        "fifo",
+        "gmroi",
+        "shrinkage",
+        "talep-tahmini"
+      ]
+    },
+    {
+      "slug": "dinamik-fiyatlandirma",
+      "term": "Dinamik Fiyatlandırma",
+      "termEn": "Dynamic Pricing",
+      "abbr": "",
+      "letter": "D",
+      "category": "Satış",
+      "shortDefinition": "Talep, rekabet, stok durumu ve zamanlama gibi faktörlere göre fiyatları gerçek zamanlı olarak ayarlayan strateji.",
+      "definition": "Dinamik Fiyatlandırma, ürün veya hizmet fiyatlarının sabit kalmak yerine pazar koşullarına göre sürekli güncellenmesidir.\n\nFiyatları etkileyen başlıca faktörler şunlardır:\n- **Talep seviyesi:** Yüksek talep dönemlerinde fiyat artışı\n- **Rekabet:** Rakip fiyatlarına göre pozisyonlama\n- **Stok durumu:** Azalan stokta fiyat artışı potansiyeli\n- **Zaman:** Gün içi, hafta sonu, mevsim farkları\n- **Müşteri segmenti:** Kişiselleştirilmiş fiyatlandırma\n\nModern perakendede makine öğrenmesi modelleri, fiyat elastikiyetini analiz ederek optimal fiyat noktasını belirler ve hem satış hacmini hem kâr marjını optimize eder. ESL (Elektronik Raf Etiketi) teknolojisiyle fiziksel mağazalarda da anlık fiyat güncellemesi mümkün hale gelmiştir.",
+      "whyImportant": "Sabit fiyatlandırma stratejisi, değişen pazar koşullarına uyum sağlayamaz ve ya kâr marjını ya da satış hacmini feda eder. Dinamik fiyatlandırma, doğru ürüne doğru zamanda doğru fiyatı vererek ikisini birden optimize eder. Özellikle son kullanma tarihi yaklaşan ürünlerde fire azaltma, yoğun saatlerde gelir maksimizasyonu ve rekabetçi fiyat pozisyonlama açısından kritik bir araçtır.",
+      "realLifeExample": "Bir süpermarket zinciri, ESL altyapısıyla dinamik fiyatlandırma uyguluyor. Taze meyve-sebze reyonunda son kullanma tarihine 2 gün kala otomatik %20 indirim, 1 gün kala %40 indirim uygulanıyor. Akşam 18:00-20:00 arası hazır yemek reyonunda kademeli indirimler devreye giriyor. Ayrıca rakip fiyat takip sistemi, ana rakibin süt fiyatını düşürdüğünü algıladığında otomatik fiyat eşleme önerisi sunuyor. Bu sistem ile gıda fire oranı %3,2'den %1,8'e düşerken, brüt kâr marjı %0,4 puan artıyor.",
+      "formula": "Optimal Fiyat = Maliyet / (1 + (1 / Fiyat Elastikiyeti))\n\nFiyat Elastikiyeti = (% Talep Değişimi) / (% Fiyat Değişimi)",
+      "formulaExample": "Bir ürünün maliyet ve talep verisi:\n- Birim maliyet: 50 TL\n- Fiyat elastikiyeti: -2,5 (fiyat %1 artınca talep %2,5 düşer)\n\nOptimal Fiyat = 50 / (1 + (1 / -2,5))\nOptimal Fiyat = 50 / (1 - 0,4)\nOptimal Fiyat = 50 / 0,6 = **83,33 TL**\n\nYorum: Bu ürünün optimal fiyat noktası yaklaşık 83 TL'dir. Bu fiyatın altında kâr marjı düşer, üstünde talep kaybı başlar.",
+      "managerTip": "Dinamik fiyatlandırmayı tüm ürünlere aynı anda uygulamaya çalışmayın. Önce fiyat hassasiyeti yüksek KVI (Known Value Item — müşterinin fiyatını bildiği ürünler) ile başlayın, ardından kademeli genişletin. Müşteri güvenini korumak için fiyat değişim sıklığına ve büyüklüğüne sınır koyun. Ayrıca dinamik fiyatlandırmanın ESL altyapısı olmadan fiziksel mağazada uygulaması çok zordur — önce altyapı yatırımını planlayın.",
+      "segments": [
+        "Gıda",
+        "Elektronik",
+        "Moda",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Satış",
+        "Kategori Yönetimi",
+        "Finans",
+        "Bilgi Teknolojileri"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Markdown (İndirimli Fiyatlandırma)",
+          "diff": "Markdown, fiyatı kalıcı veya kampanya bazlı olarak düşürmektir ve genellikle stok eritme amacı taşır. Dinamik fiyatlandırma ise fiyatı her iki yönde (artış ve azalış) sürekli optimize eden algoritmik bir yaklaşımdır."
+        },
+        {
+          "term": "Kişiselleştirilmiş Fiyatlandırma",
+          "diff": "Dinamik fiyatlandırma tüm müşteriler için pazar koşullarına göre fiyat ayarlarken, kişiselleştirilmiş fiyatlandırma her müşteriye farklı fiyat sunmayı ifade eder. İkincisi etik ve yasal tartışmalara konu olabilir."
+        }
+      ],
+      "relatedTerms": [
+        "esl",
+        "markdown",
+        "dead-stock",
+        "talep-tahmini",
+        "conversion-rate",
+        "gmroi"
+      ]
+    },
+    {
+      "slug": "esl",
+      "term": "ESL (Elektronik Raf Etiketi)",
+      "termEn": "Electronic Shelf Label",
+      "abbr": "ESL",
+      "letter": "E",
+      "category": "Operasyon",
+      "shortDefinition": "Raf fiyatlarını merkezi sistemden kablosuz olarak güncelleyen dijital etiket teknolojisi.",
+      "definition": "ESL (Electronic Shelf Label), geleneksel kağıt fiyat etiketlerinin yerini alan, merkezi bir sunucudan kablosuz olarak güncellenen dijital etiket sistemidir.\n\nSistem şu bileşenlerden oluşur:\n- **E-ink (elektronik mürekkep) ekran:** Düşük enerji tüketimli, güneş ışığında okunabilir\n- **Kablosuz iletişim:** Wi-Fi, Bluetooth Low Energy veya RF protokolü\n- **Merkezi yazılım:** POS/ERP entegrasyonu ile otomatik fiyat senkronizasyonu\n- **Uzun pil ömrü:** 5-10 yıl (e-ink'in düşük enerji avantajı)\n\nESL, fiyat tutarlılığı (kasa ve raf her zaman eşleşir), işgücü tasarrufu, dinamik fiyatlandırma altyapısı ve çevresel sürdürülebilirlik (kağıt israfı önleme) gibi temel avantajlar sağlar.",
+      "whyImportant": "Büyük bir süpermarkette 20.000-40.000 arası fiyat etiketi bulunur. Geleneksel kağıt etiketlerle her fiyat değişikliğinde çalışanlar saatlerce etiket değiştirir, bu süreçte %5-10 oranında hata yapılır ve kasa ile raf fiyatı arasındaki tutarsızlık müşteri şikayetlerine neden olur. ESL tüm bu sorunları ortadan kaldırır, dinamik fiyatlandırma stratejilerinin altyapısını oluşturur ve mağaza personelinin zamanını müşteri hizmetine ayırmasını sağlar.",
+      "realLifeExample": "Bir süpermarket zinciri, 120 mağazasına toplam 2,4 milyon ESL kurulumu gerçekleştiriyor. Fiyat değişiklikleri artık merkezi ofisten tek tuşla tüm mağazalara anlık olarak yayılıyor. Haftada ortalama 3.000 fiyat değişikliği yapılıyor — kağıt etiketle bu iş mağaza başına 40 adam-saat gerektirirken ESL ile sıfıra iniyor. Ayrıca akşam 19:00'dan sonra taze ürünlerde otomatik indirim devreye girerek gıda fire oranı %22 düşüyor. Yatırım, 20 ayda kendini amorti ediyor.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "ESL yatırımını sadece etiket değiştirme tasarrufu olarak değerlendirmeyin. Asıl getiri, dinamik fiyatlandırma, anlık promosyon yönetimi ve fiyat doğruluğu sağlama kapasitesindedir. Pilot olarak en çok fiyat değişikliği yapılan departmandan (genellikle taze gıda veya promosyon ağırlıklı kategoriler) başlayın. Ayrıca ESL ekranlarında QR kod, kampanya bilgisi ve stok durumu gibi ek bilgiler göstererek müşteri deneyimini zenginleştirebilirsiniz.",
+      "segments": [
+        "Gıda",
+        "Elektronik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Operasyon",
+        "Bilgi Teknolojileri",
+        "Satış",
+        "Finans"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Dijital Tabela (Digital Signage)",
+          "diff": "ESL raf kenarında ürün bazlı fiyat ve bilgi gösteren küçük ekranlardır; dijital tabela ise mağaza içi büyük ekranlarda genel reklam ve bilgilendirme amaçlı kullanılan görsel iletişim aracıdır."
+        },
+        {
+          "term": "POS Sistemi",
+          "diff": "ESL raftaki fiyat bilgisini gösterir ve günceller; POS sistemi ise kasada satış işlemini gerçekleştirir. İkisi entegre çalışarak fiyat tutarlılığını sağlar."
+        }
+      ],
+      "relatedTerms": [
+        "dinamik-fiyatlandirma",
+        "barkod",
+        "pos",
+        "planogram",
+        "gondol",
+        "zero-waste"
+      ]
+    },
+    {
+      "slug": "endcap",
+      "term": "Endcap (Gondol Başı)",
+      "termEn": "Endcap",
+      "abbr": "",
+      "letter": "E",
+      "category": "Pazarlama",
+      "shortDefinition": "Raf koridorlarının sonunda yer alan, yüksek görünürlüğe sahip ürün sergileme alanı.",
+      "definition": "Endcap (Gondol Başı), süpermarket veya mağaza raflarının koridorla birleştiği uç noktalardaki premium sergileme alanıdır. Tüm müşterilerin ana koridorda yürürken görebildiği bu pozisyon, normal raf konumuna göre %30-40 daha fazla satış sağlar.\n\nEndcap alanları şu amaçlarla kullanılır:\n- **Yeni ürün lansmanı:** İlk tanıtım ve farkındalık\n- **Sezonluk ürünler:** Bayram, yılbaşı, okul sezonu temalı sergiler\n- **Promosyon ürünleri:** İndirimli veya kampanyalı ürün sunumu\n- **Cross-merchandising:** İlişkili ürünlerin birlikte sergilenmesi\n\nEndcap alanları genellikle tedarikçilere ücretli olarak kiralanır ve perakendeciler için önemli bir ek gelir kaynağıdır (raf bedeli / slotting fee).",
+      "whyImportant": "Endcap, mağaza içi en yüksek görünürlüğe sahip alandır — müşterilerin %100'ünün görüş alanındadır. Impulse buying davranışını doğrudan tetikler ve marka farkındalığını artırır. Aynı zamanda tedarikçilerden alınan raf kirası (slotting fee) ile önemli bir gelir kaynağı oluşturur. Doğru yönetilen endcap stratejisi, hem satış hem kârlılık hem de tedarikçi ilişkilerine olumlu etki yapar.",
+      "realLifeExample": "Bir süpermarket, yaz sezonu başlangıcında ana koridorun iki ucundaki endcap alanlarını \"Mangal Keyfi\" temasıyla düzenliyor: bir tarafta kömür, çakmak ve mangal ekipmanları; diğer tarafta marineler, soslar ve tek kullanımlık tabak-bardak seti. Tedarikci firma, bu endcap alanı için aylık 15.000 TL raf bedeli ödüyor. İki haftalık süreçte mangal kategorisi satışları normal raf pozisyonuna göre %45 artıyor, çapraz satış oranı %32 yükseliyor.",
+      "formula": "Endcap Satış Kaldıraç Oranı = (Endcap Dönemi Satışı / Normal Raf Dönemi Satışı - 1) × 100\n\nEndcap ROI = (Endcap Ek Brüt Kârı - Endcap Maliyeti) / Endcap Maliyeti × 100",
+      "formulaExample": "Bir ürünün endcap performansı:\n- Normal raf pozisyonunda haftalık satış: 200 adet\n- Endcap pozisyonunda haftalık satış: 310 adet\n- Birim brüt kâr: 8 TL\n- Haftalık endcap alanı maliyeti: 500 TL\n\nSatış Kaldıracı = (310 / 200 - 1) × 100 = **%55 artış**\nEk brüt kâr = (310 - 200) × 8 = 880 TL\nEndcap ROI = (880 - 500) / 500 × 100 = **%76**",
+      "managerTip": "Endcap alanlarını rotasyon programıyla yönetin — aynı ürünün 3 haftadan fazla aynı endcap'te kalması dikkat çekiciliğini kaybettirir. Her endcap değişikliğinden önce ve sonra fotoğraf çekin ve satış verilerini karşılaştırın; bu veri, gelecek endcap planlamaları ve tedarikçi müzakereleri için altın değerindedir. Cross-merchandising temalı endcap'ler (ör. kahvaltı seti, mangal seti) her zaman tek ürünlü endcap'lerden daha yüksek sepet kaldıracı sağlar.",
+      "segments": [
+        "Gıda",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Pazarlama",
+        "Kategori Yönetimi",
+        "Satış",
+        "Operasyon"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Gondol",
+          "diff": "Gondol, mağazadaki çift taraflı raf ünitesinin tamamıdır. Endcap ise gondolun uç noktasındaki (koridora bakan) özel sergileme alanıdır — gondolun bir parçasıdır."
+        },
+        {
+          "term": "Planogram",
+          "diff": "Planogram, ürünlerin raf üzerindeki yerleşimini gösteren görsel plandır. Endcap ise fiziksel bir sergileme alanıdır. Endcap'lerin de planogramları olabilir."
+        }
+      ],
+      "relatedTerms": [
+        "gondol",
+        "planogram",
+        "visual-merchandising",
+        "impulse-buying",
+        "merchandising",
+        "cross-selling"
+      ]
+    },
+    {
+      "slug": "fifo",
+      "term": "FIFO (İlk Giren İlk Çıkar)",
+      "termEn": "First In, First Out",
+      "abbr": "FIFO",
+      "letter": "F",
+      "category": "Envanter Yönetimi",
+      "shortDefinition": "Depoya ilk giren ürünün ilk satışa sunulmasını sağlayan stok rotasyon yöntemi.",
+      "definition": "FIFO (First In, First Out), envanter yönetiminde en eski stokun ilk satışa sunulması prensibine dayanan stok rotasyon yöntemidir.\n\nUygulamada:\n- Yeni gelen ürünler rafın arkasına, eski ürünler öne yerleştirilir\n- Depo çıkışlarında en eski parti numarası öncelikli sevk edilir\n- Bozulabilir ürünlerde son kullanma tarihine göre sıralama yapılır\n\nFIFO, özellikle gıda perakendesi, ilaç ve kozmetik gibi raf ömrü sınırlı ürünlerin yönetiminde kritik öneme sahiptir. Doğru uygulandığında bozulma ve fire oranını %15-25 oranında düşürebilir. Ayrıca muhasebede envanter değerlemesi için de kullanılan bir yöntemdir (enflasyon dönemlerinde daha gerçekçi maliyet yansıtır).",
+      "whyImportant": "FIFO disiplini, perakendecileri ürün bozulmasından, son kullanma tarihi geçen ürünlerin oluşturduğu fireden ve müşteri sağlık risklerinden korur. Gıda perakendecilerinde fire oranı doğrudan kârlılığı etkiler — FIFO'nun iyi uygulandığı mağazalar ile gevşek uygulandığı mağazalar arasında fire oranı farkı 2-4 puan olabilir. Bu da büyük ölçekli bir süpermarket için yılda yüzbinlerce liralık tasarruf anlamına gelir.",
+      "realLifeExample": "Bir süpermarkette süt reyonunda FIFO denetimi yapılıyor. Denetimde, bazı çalışanların yeni gelen süt kasalarını öndeki ürünlerin üzerine yerleştirdiği (LIFO hatası) tespit ediliyor. Bu hata yüzünden arkada kalan eski sütler bozuluyor ve aylık fire oranı %4,5'e çıkmış. Mağaza müdürü, FIFO eğitimi düzenliyor, rafların arkasına \"ÖNCELİKLE ARKA SIRAYI KULLAN\" uyarıları koyduruyor ve haftalık FIFO kontrol çizelgesi başlatıyor. 2 ay sonra süt fire oranı %1,8'e düşüyor, yıllık bazda 120.000 TL tasarruf sağlanıyor.",
+      "formula": "FIFO Envanter Değeri = Son alınan birimlerin maliyeti × Kalan stok miktarı\n\nSatılan Malın Maliyeti (SMM) = İlk alınan birimlerin maliyetleri toplamı\n\nFire Oranı = (Bozulan/Atılan Ürün Değeri / Toplam Stok Değeri) × 100",
+      "formulaExample": "Süt kategorisi FIFO değerlemesi:\n- 1. tedarik (5 Ocak): 500 adet × 18 TL = 9.000 TL\n- 2. tedarik (12 Ocak): 500 adet × 19 TL = 9.500 TL\n- 15 Ocak'a kadar 600 adet satıldı\n\nFIFO'ya göre SMM: (500 × 18) + (100 × 19) = 9.000 + 1.900 = **10.900 TL**\nKalan stok değeri: 400 × 19 = **7.600 TL**\n\nFIFO sayesinde eski ve düşük maliyetli ürünler önce satılıyor, envanter değeri güncel maliyeti yansıtıyor.",
+      "managerTip": "FIFO'yu sadece bir kural olarak değil, günlük operasyonel alışkanlık olarak yerleştirin. Raf dolumu sırasında \"arkaya koy, önden al\" prensibini her çalışana öğretin ve düzenli denetim yapın. Özellikle gıda perakendecilerinde, son kullanma tarihine göre renk kodlu etiketleme sistemi (örneğin bu hafta: kırmızı, gelecek hafta: sarı) FIFO uyumunu görsel olarak kolaylaştırır. Depo yönetim sisteminizde (WMS) FIFO kuralını otomatik olarak uygulatan bir yapı kurun.",
+      "segments": [
+        "Gıda",
+        "Kozmetik",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Operasyon",
+        "Satın Alma",
+        "Kategori Yönetimi",
+        "Finans"
+      ],
+      "confusedTerms": [
+        {
+          "term": "LIFO (Last In, First Out)",
+          "diff": "FIFO'da en eski ürün önce satılırken, LIFO'da en yeni ürün önce satılır. Perakendede FIFO standart uygulamadır; LIFO ise bazı ülkelerde muhasebe avantajı için tercih edilir ancak bozulabilir ürünlerde kesinlikle uygulanmamalıdır."
+        },
+        {
+          "term": "FEFO (First Expired, First Out)",
+          "diff": "FIFO giriş tarihine göre sıralama yaparken, FEFO son kullanma tarihine göre sıralama yapar. Gıda ve ilaç sektöründe bazen aynı tarihte gelen ürünlerin son kullanma tarihleri farklı olabilir — bu durumda FEFO daha doğru bir yöntemdir."
+        }
+      ],
+      "relatedTerms": [
+        "dead-stock",
+        "shrinkage",
+        "abc-analizi",
+        "zero-waste",
+        "tedarik-zinciri",
+        "loss-prevention"
+      ]
+    },
+    {
+      "slug": "franchise",
+      "term": "Franchise (Bayilik)",
+      "termEn": "Franchise",
+      "abbr": "",
+      "letter": "F",
+      "category": "Operasyon",
+      "shortDefinition": "Bir markanın iş modelini, bilgi birikimini ve ticari haklarını belirli koşullarla üçüncü taraflara lisansladığı iş yapısı.",
+      "definition": "Franchise, bir işletmenin (franchisor/franchise veren) ticari markasını, iş modelini ve operasyonel bilgi birikimini belirli bir bedel karşılığında başka girişimcilere (franchisee/franchise alan) lisansladığı iş yapısıdır.\n\nÜç temel franchise modeli vardır:\n- **Ürün franchise:** Belirli bir markanın ürünlerini satma hakkı\n- **İşletme franchise:** Tam iş modeli transferi (en yaygın model)\n- **Master franchise:** Bölgesel alt franchise verme hakkı\n\nPerakende sektörü, franchise modelin en yaygın kullanıldığı alandır: süpermarket zincirleri, giyim mağazaları, fast-food zincirleri ve teknoloji marketleri bu modelle hızla büyür. Franchisor hızlı büyüme ve ölçek ekonomisi; franchisee ise kanıtlanmış iş modeli, marka bilinirliği ve operasyonel destek elde eder.",
+      "whyImportant": "Franchise modeli, perakende markalarının sermaye riski almadan hızla büyümesinin en etkili yoludur. Franchisor için her yeni franchise noktası, düşük yatırım riskiyle yeni bir gelir kaynağıdır. Franchisee için ise sıfırdan iş kurmanın riskini minimuma indiren, hazır müşteri kitlesi ve operasyonel altyapı sunan bir modeldir. Mağaza yöneticileri için franchise standartlarına uyum, hem marka tutarlılığı hem de kendi mağazalarının başarısı açısından kritiktir.",
+      "realLifeExample": "Bir Türk kahve zinciri, 50 şubelik kendi mağaza ağını genişletmek için franchise modeline geçiyor. Franchise paketi şunları içeriyor: marka kullanım hakkı, standart mağaza tasarımı, merkezi tedarik sistemi, personel eğitimi ve pazarlama desteği. Giriş bedeli 250.000 TL, aylık royalty %5 ve reklam katkı payı %2. İlk yılda 30 franchise noktası açılıyor, franchisor'un toplam satış ağı 80 mağazaya ulaşıyor — kendi sermayesiyle bu büyüme 3-4 yıl sürecekti.",
+      "formula": "Franchise Toplam Maliyet = Giriş Bedeli + (Aylık Ciro × Royalty Oranı × 12 ay) + (Aylık Ciro × Reklam Katkı Oranı × 12 ay) + İlk Yatırım Maliyeti\n\nFranchisee Yatırım Geri Dönüş Süresi = Toplam İlk Yatırım / Yıllık Net Kâr",
+      "formulaExample": "Bir franchise yatırım hesabı:\n- Giriş bedeli: 200.000 TL\n- Mağaza kurulum maliyeti: 500.000 TL\n- Aylık ortalama ciro: 300.000 TL\n- Royalty: %5 → 15.000 TL/ay\n- Reklam katkısı: %2 → 6.000 TL/ay\n- Aylık net kâr (royalty ve katkı sonrası): 35.000 TL\n\nToplam ilk yatırım: 200.000 + 500.000 = 700.000 TL\nYıllık net kâr: 35.000 × 12 = 420.000 TL\nGeri dönüş süresi: 700.000 / 420.000 = **~20 ay**",
+      "managerTip": "Franchise mağaza yöneticisiyseniz, franchisor'un belirlediği operasyonel standartlara (görsel kimlik, ürün çeşitliliği, hizmet kalitesi) tam uyum sağlayın — marka tutarlılığı müşteri güveninin temelidir. Ancak yerel pazar dinamiklerini de franchisor'a aktarın; bazı lokal uyarlamalar (mevsimsel ürün, yerel kampanya) performansı artırabilir. Franchise sözleşmesindeki bölge münhasırlığı, yenileme koşulları ve çıkış maddeleri gibi detaylara dikkat edin.",
+      "segments": [
+        "Gıda",
+        "Moda",
+        "Genel Perakende"
+      ],
+      "departments": [
+        "Operasyon",
+        "Finans",
+        "Pazarlama",
+        "İnsan Kaynakları"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Şube (Branch)",
+          "diff": "Franchise, bağımsız bir girişimci tarafından işletilen ve lisans bedeli ödenen modeldir. Şube ise şirketin kendi sermayesi ve çalışanlarıyla açıp doğrudan yönettiği mağazadır."
+        },
+        {
+          "term": "Bayilik (Distribütörlük)",
+          "diff": "Geleneksel bayilik genellikle sadece ürün satış hakkını kapsar ve operasyonel standart zorunluluğu düşüktür. Franchise ise tam iş modeli, marka kimliği ve operasyonel standartların aktarıldığı daha kapsamlı bir yapıdır."
+        }
+      ],
+      "relatedTerms": [
+        "kpi",
+        "loss-prevention",
+        "visual-merchandising",
+        "omnichannel",
+        "loyalty-programi"
+      ]
+    },
+    {
+      "slug": "gondol",
+      "term": "Gondol (Raf Ünitesi)",
+      "termEn": "Gondola Shelving",
+      "abbr": "",
+      "letter": "G",
+      "category": "Operasyon",
+      "shortDefinition": "Mağaza içinde ürünlerin sergilendiği çift taraflı raf sistemi; perakende mağazacılığın temel donanımı.",
+      "definition": "## Gondol Nedir?\n\nGondol, perakende mağazalarında kullanılan, genellikle çift taraflı ve bağımsız durabilen standart raf ünitesidir. Mağaza içi ürün sergilemenin temel yapı taşı olup, farklı yükseklik ve genişliklerde üretilebilir.\n\n## Gondol Bileşenleri\n\n- **Sırt panel:** Rafları birleştiren dikey taşıyıcı; delikli (pegboard) veya düz olabilir\n- **Raf tablaları:** Farklı yüksekliklerde ayarlanabilir yatay yüzeyler\n- **Fiyat rayları:** Etiket ve fiyat bilgisi taşıyan plastik kanallar\n- **Gondol başı (endcap):** Koridorun uç noktasındaki yüksek görünürlüklü sergileme alanı\n- **Sepet askıları ve kancalar:** Küçük ürünler için ek sergileme aksesuarları\n- **Ayak ve taban:** Stabilite sağlayan alt yapı\n\n## Raf Yönetimi Kavramları\n\n- **Planogram:** Ürünlerin gondol üzerinde optimal yerleşim haritası\n- **Göz seviyesi (eye level):** En yüksek satış performansı gösteren raf yüksekliği (yaklaşık 120-150 cm)\n- **Raf payı (shelf share):** Bir markanın toplam raf alanı içindeki oranı\n- **Facing:** Ürünün raf ön yüzünden görünen adet sayısı\n\n## Standart Gondol Ölçüleri\n\n- Yükseklik: 150-240 cm\n- Genişlik: 90-120 cm\n- Derinlik: 40-60 cm (tek taraf)\n\n## Dijital Dönüşüm\n\nAkıllı gondollar artık ağırlık sensörleri, kameralar ve ESL (Elektronik Raf Etiketi) entegrasyonu ile stok seviyesini otomatik takip edebilmekte, planogram uyumunu doğrulayabilmekte ve müşteri etkileşim verisini toplayabilmektedir.",
+      "whyImportant": "Gondol, mağaza içi ürün sunumunun temel altyapısıdır; doğru gondol planlaması müşteri deneyimini, raf verimliliğini ve metrekare başına satışı doğrudan etkiler. Raf yüksekliği, derinliği ve aralık mesafeleri müşterinin ürüne erişimini ve satın alma kararını şekillendirir. Yanlış gondol konfigürasyonu hem satış kaybına hem de operasyonel verimsizliğe yol açar.",
+      "realLifeExample": "Bir süpermarket zinciri, süt ürünleri koridorundaki gondol yüksekliğini 180 cm'den 210 cm'ye çıkararak raf kapasitesini %17 artırdı ve bu değişiklik sayesinde yeni ürün lansmanları için ek alan açtı. Aynı zamanda alt raflara eğilme gerektiren ürünleri orta raflara taşıyarak ilgili kategoride %12 satış artışı elde etti. Gondol başlarını ise haftalık dönen promosyon ürünleriyle doldurarak impulse buying oranını %25 yükseltti.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Gondol başlarını (endcap) her hafta taze tutun; aynı ürünü 2 haftadan fazla gondol başında bırakmak müşteride \"körlük\" yaratır ve etki gücünü düşürür.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Eczane",
+        "Yapı Market",
+        "Elektronik Market",
+        "Convenience Store"
+      ],
+      "departments": [
+        "Mağaza Operasyonları",
+        "Visual Merchandising",
+        "Kategori Yönetimi",
+        "Satın Alma"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Endcap (Gondol Başı)",
+          "diff": "Endcap, gondolün uç noktasındaki premium sergileme alanıdır; gondol ise tüm raf ünitesini ifade eder."
+        },
+        {
+          "term": "Planogram",
+          "diff": "Planogram, ürünlerin gondol üzerindeki yerleşim haritasıdır; gondol ise fiziksel raf donanımının kendisidir."
+        }
+      ],
+      "relatedTerms": [
+        "endcap",
+        "planogram",
+        "merchandising",
+        "visual-merchandising",
+        "esl",
+        "kategori-yonetimi"
+      ]
+    },
+    {
+      "slug": "gmroi",
+      "term": "GMROI (Stok Yatırımının Brüt Kâr Getirisi)",
+      "termEn": "Gross Margin Return on Inventory Investment",
+      "abbr": "GMROI",
+      "letter": "G",
+      "category": "Finans",
+      "shortDefinition": "Stok yatırımının ne kadar brüt kâr ürettiğini gösteren, perakendede en kritik karlılık metriği.",
+      "definition": "## GMROI Nedir?\n\nGMROI (Gross Margin Return on Inventory Investment), perakendede envanter yatırımının verimliliğini ölçen temel karlılık metriğidir. Stoğa bağlanan her bir liranın ne kadar brüt kâr ürettiğini gösterir.\n\n## Hesaplama\n\n**GMROI = Brüt Kâr / Ortalama Stok Maliyeti**\n\nAlternatif olarak:\n\n**GMROI = Brüt Kâr Marjı (%) × Stok Devir Hızı**\n\nBu alternatif formül, GMROI'nin aslında iki kritik değişkenin çarpımı olduğunu ortaya koyar: ne kadar marjla sattığınız ve stoku ne kadar hızlı döndürdüğünüz.\n\n## Yorumlama\n\n- **GMROI > 3.0:** Mükemmel performans — stok yatırımı çok verimli kullanılıyor\n- **GMROI 2.0-3.0:** İyi performans — sektör ortalamasının üzerinde\n- **GMROI 1.0-2.0:** Geliştirilmesi gereken — stok verimliliği düşük\n- **GMROI < 1.0:** Zarar eden stok yatırımı — acil müdahale gerekli\n\n## Sektörel Ortalamalar\n\n- Gıda perakendesi: 1.5-2.5\n- Giyim: 2.0-4.0\n- Elektronik: 3.0-5.0\n- Kozmetik: 3.5-6.0\n\n## GMROI İyileştirme Yolları\n\n- Brüt marjı artırma (fiyatlandırma optimizasyonu, tedarikçi müzakeresi)\n- Stok devir hızını yükseltme (dead stock azaltma, talep tahmini iyileştirme)\n- ABC analizi ile stok portföy optimizasyonu\n- Markdown optimizasyonu ile marj erozyonunu minimize etme\n- Dinamik fiyatlandırma ile fiyat-talep dengesini optimize etme",
+      "whyImportant": "GMROI, perakendecinin sınırlı sermayesini envantere ne kadar verimli bağladığını gösteren tek metriktir; düşük GMROI, paranın stokta hapsolduğu ve yeterli getiri üretemediği anlamına gelir. Kategori yöneticileri bu metrikle hangi ürün gruplarına daha fazla yatırım yapılacağına karar verir. Özellikle nakit akışı sınırlı perakendeciler için GMROI, hayatta kalma ile büyüme arasındaki farkı belirler.",
+      "realLifeExample": "Bir giyim perakendecisi, kot pantolon kategorisinde GMROI'nin 1.8, aksesuar kategorisinde ise 4.2 olduğunu tespit etti. Bu analiz sonucunda kot pantolon SKU sayısını %20 azaltıp, serbest kalan sermaye ve raf alanını aksesuar kategorisine aktardı. Sonuçta toplam mağaza GMROI'si 2.4'ten 3.1'e yükseldi ve aynı sermaye ile %29 daha fazla brüt kâr elde etti.",
+      "formula": "GMROI = Brüt Kâr / Ortalama Stok Maliyeti (maliyet bedeli üzerinden)",
+      "formulaExample": "Yıllık brüt kâr: 600.000 TL, Ortalama stok maliyeti: 200.000 TL → GMROI = 600.000 / 200.000 = 3.0 → Stoğa yatırılan her 1 TL, 3 TL brüt kâr üretmiştir.",
+      "managerTip": "GMROI'yi yalnızca mağaza genelinde değil, kategori ve hatta SKU bazında takip edin; en düşük GMROI'li %20 ürünü her çeyrekte gözden geçirip ya fiyatlandırma ya da çeşitlilik kararı alın.",
+      "segments": [
+        "Giyim",
+        "Süpermarket",
+        "Elektronik",
+        "Kozmetik",
+        "Yapı Market",
+        "E-Ticaret"
+      ],
+      "departments": [
+        "Finans",
+        "Kategori Yönetimi",
+        "Satın Alma",
+        "Üst Yönetim"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Brüt Kâr Marjı",
+          "diff": "Brüt kâr marjı satış fiyatı ile maliyet arasındaki yüzdesel farkı gösterir; GMROI ise bu kârın stok yatırımına oranını ölçer."
+        },
+        {
+          "term": "Stok Devir Hızı",
+          "diff": "Stok devir hızı stokun kaç kez satılıp yenilendiğini gösterir; GMROI ise devir hızını marj ile birleştirerek karlılığı ölçer."
+        }
+      ],
+      "relatedTerms": [
+        "abc-analizi",
+        "dead-stock",
+        "markdown",
+        "dinamik-fiyatlandirma",
+        "kpi",
+        "kategori-yonetimi"
+      ]
+    },
+    {
+      "slug": "hedef-kitle",
+      "term": "Hedef Kitle",
+      "termEn": "Target Audience",
+      "abbr": "",
+      "letter": "H",
+      "category": "Pazarlama",
+      "shortDefinition": "Bir markanın ürün ve hizmetlerini yönlendirdiği, demografik ve psikografik özelliklerle tanımlanan tüketici grubu.",
+      "definition": "## Hedef Kitle Nedir?\n\nHedef kitle, bir perakendecinin ürün ve hizmetlerini sunmak istediği, belirli özelliklerle tanımlanmış tüketici segmentidir. Tüm pazarlama, ürün çeşitliliği ve mağaza deneyimi kararlarının çıkış noktasıdır.\n\n## Segmentasyon Kriterleri\n\n### Demografik\nYaş, cinsiyet, gelir düzeyi, eğitim seviyesi, meslek, medeni durum, hane büyüklüğü\n\n### Coğrafi\nŞehir, bölge, iklim, nüfus yoğunluğu, kentsel/kırsal yerleşim\n\n### Psikografik\nYaşam tarzı, kişilik özellikleri, değerler, ilgi alanları, tutumlar\n\n### Davranışsal\nSatın alma sıklığı, marka sadakati, kanal tercihi, fiyat hassasiyeti, arama davranışı\n\n## Hedef Kitle Belirleme Yöntemleri\n\n- Mevcut müşteri verisi analizi (CRM/POS verileri)\n- Pazar araştırması, anket ve odak grupları\n- Rakip analizi ve pazar boşluğu tespiti\n- Sosyal medya dinleme (social listening)\n- AI destekli müşteri segmentasyonu ve kümeleme\n\n## Persona Oluşturma\n\nHedef kitle analizinin somut çıktısı olan müşteri personaları şunları içerir:\n- Demografik profil ve temsili isim\n- Günlük rutinleri ve alışveriş alışkanlıkları\n- Motivasyonları ve satın alma engelleri\n- Tercih ettiği iletişim kanalları\n- Fiyat hassasiyeti ve değer algısı\n\n## Neden Tek Hedef Kitle Yetmez?\n\nBüyük perakendeciler birden fazla persona tanımlar: birincil hedef kitle (core target), ikincil hedef kitle (secondary target) ve fırsat segmentleri (opportunity segments) ayrı ayrı ele alınır.",
+      "whyImportant": "Doğru hedef kitle tanımı, pazarlama bütçesinin verimli kullanılmasını, ürün çeşitliliğinin optimize edilmesini ve mağaza deneyiminin tutarlı olmasını sağlar. Hedef kitlesi net olmayan bir perakendeci herkese satmaya çalışır ve sonuçta kimseye tam olarak hitap edemez. Hedef kitle kararları, mağaza lokasyonundan raf düzenine, fiyatlandırmadan iletişim tonuna kadar her şeyi şekillendirir.",
+      "realLifeExample": "Bir spor giyim mağazası başlangıçta 18-45 yaş tüm sporseverleri hedefliyordu. CRM verilerini analiz ettiklerinde en karlı segmentin 25-35 yaş, kentsel, yoga ve koşu yapan kadınlar olduğunu keşfettiler. Ürün çeşitliliğini, mağaza atmosferini ve sosyal medya içeriklerini bu segmente odakladıklarında, dönüşüm oranı %35 artarken pazarlama maliyeti %20 düştü.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Hedef kitle tanımınızı yılda en az bir kez POS ve CRM verilerinizle doğrulayın; müşteri profiliniz zamanla değişebilir ve eski varsayımlara dayalı kararlar satışlarınızı baltalayabilir.",
+      "segments": [
+        "Giyim",
+        "Kozmetik",
+        "Elektronik",
+        "Gıda",
+        "E-Ticaret",
+        "Lüks Perakende",
+        "Spor"
+      ],
+      "departments": [
+        "Pazarlama",
+        "Üst Yönetim",
+        "Kategori Yönetimi",
+        "Mağaza Geliştirme",
+        "CRM"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Pazar Segmenti",
+          "diff": "Pazar segmenti, toplam pazarın bölünmüş alt gruplarını ifade eder; hedef kitle ise bu segmentler arasından bilinçli olarak seçilmiş odak grubudur."
+        },
+        {
+          "term": "Müşteri Persona",
+          "diff": "Persona, hedef kitle içindeki tipik bir bireyin kurgusal ama veri temelli detaylı profiliyken, hedef kitle daha geniş bir grup tanımıdır."
+        }
+      ],
+      "relatedTerms": [
+        "crm",
+        "rfm-analizi",
+        "basket-analizi",
+        "nps",
+        "loyalty-programi",
+        "clv"
+      ]
+    },
+    {
+      "slug": "impulse-buying",
+      "term": "Impulse Buying (Anlık Satın Alma)",
+      "termEn": "Impulse Buying",
+      "abbr": "",
+      "letter": "İ",
+      "category": "Müşteri Deneyimi",
+      "shortDefinition": "Müşterinin önceden planlamadığı, mağaza içi uyaranlarla tetiklenen spontan satın alma davranışı.",
+      "definition": "## Impulse Buying Nedir?\n\nImpulse Buying, tüketicinin mağazaya girmeden önce satın almayı planlamadığı bir ürünü, anlık bir dürtüyle satın almasıdır. Araştırmalara göre fiziksel mağaza alışverişlerinin %40-70'i tamamen veya kısmen impulse buying kaynaklıdır.\n\n## Impulse Buying Türleri\n\n- **Pure Impulse (Saf Dürtü):** Tamamen spontan, alışılmamış bir satın alma\n- **Reminder Impulse (Hatırlatma):** Ürünü görünce ihtiyacı hatırlama\n- **Suggestion Impulse (Öneri):** İlk kez gördüğü bir ürüne ihtiyaç hissetme\n- **Planned Impulse (Planlı):** Alışverişe çıkılır ama ne alınacağına mağazada karar verilir\n\n## Tetikleyici Faktörler\n\n- **Görsel çekicilik:** Ürün sunumu, ambalaj tasarımı, renk düzeni\n- **Fiyat avantajı algısı:** İndirim etiketleri, \"2 al 1 öde\" kampanyalar\n- **Stratejik konum:** Kasa önü, gondol başı, giriş alanı, geçiş noktaları\n- **Duygusal durum:** Stres, mutluluk, kendini ödüllendirme arzusu\n- **Sosyal etki:** Diğer müşterilerin davranışları, kalabalık etkisi\n- **Duyusal uyaranlar:** Koku (fırın kokusu), müzik temposu, aydınlatma\n\n## Mağaza İçi Impulse Stratejileri\n\n- **Kasa önü ürünler:** Şekerleme, dergi, pil, küçük aksesuarlar\n- **Gondol başı sergileme:** Promosyon ve yeni ürünler\n- **Deneme stantları:** Tattırma ve ürün demonstrasyonu\n- **Sınırlı süreli teklifler:** Aciliyet hissi yaratma\n- **Çapraz yerleştirme:** Cips reyonunda salsa sos, bira reyonunda atıştırmalık\n\n## Dijital Impulse Buying\n\nE-ticarette aynı mekanizmanın dijital versiyonları:\n- \"Son 2 ürün kaldı\" uyarıları\n- \"Bugüne özel\" zamanlı kampanyalar\n- Kişiselleştirilmiş ürün önerileri\n- Tek tıkla satın alma kolaylığı\n- Sosyal medya canlı satışları",
+      "whyImportant": "Impulse buying, perakende satışların önemli bir bölümünü oluşturur ve doğru yönetildiğinde sepet değerini dramatik şekilde artırabilir. Mağaza düzeni, ürün yerleştirme ve promosyon stratejileri impulse satışları doğrudan etkiler. Impulse buying mekanizmalarını anlayan yöneticiler, mağaza içi deneyimi bu davranışı destekleyecek şekilde tasarlayarak ek gelir yaratır.",
+      "realLifeExample": "Bir süpermarket zinciri, kasa önü bekleme alanını yeniden tasarlayarak ürün çeşitliliğini artırdı ve \"son dakika fırsatları\" dijital ekranı ekledi. Bu değişiklik sonrasında kasa önü impulse satışları %40 arttı. Özellikle çikolata barlarını göz hizasına, dergileri alt rafa taşıma ve telefon aksesuarlarını ekleme gibi basit düzenlemeler, kasa başına günlük ortalama 85 TL ek gelir yarattı.",
+      "formula": "Impulse Buying Oranı = (Plansız Satın Alınan Ürün Adedi / Toplam Satın Alınan Ürün Adedi) × 100",
+      "formulaExample": "Bir müşteri sepetinde 20 ürün var, bunların 8'i alışveriş listesinde yoktu → Impulse Buying Oranı = (8 / 20) × 100 = %40",
+      "managerTip": "Kasa kuyruğu bekleme süresini müşterinin etrafını inceleyeceği optimum seviyede tutun (2-4 dakika); çok kısa kuyruk impulse fırsatını kaçırır, çok uzun kuyruk ise müşteri memnuniyetsizliğine yol açar.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Giyim",
+        "Kozmetik",
+        "Convenience Store",
+        "E-Ticaret"
+      ],
+      "departments": [
+        "Mağaza Operasyonları",
+        "Visual Merchandising",
+        "Pazarlama",
+        "Kategori Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Cross-Selling (Çapraz Satış)",
+          "diff": "Cross-selling, satış personeli veya algoritma tarafından bilinçli olarak yapılan ek ürün önerisidir; impulse buying ise müşterinin kendi içsel dürtüsüyle tetiklenir."
+        },
+        {
+          "term": "Upselling (Üst Satış)",
+          "diff": "Upselling, müşteriyi daha pahalı bir versiyona yönlendirmektir; impulse buying ise tamamen plansız yeni bir ürün eklemeyi ifade eder."
+        }
+      ],
+      "relatedTerms": [
+        "endcap",
+        "visual-merchandising",
+        "merchandising",
+        "gondol",
+        "conversion-rate",
+        "aov",
+        "cross-selling"
+      ]
+    },
+    {
+      "slug": "kategori-yonetimi",
+      "term": "Kategori Yönetimi",
+      "termEn": "Category Management",
+      "abbr": "",
+      "letter": "K",
+      "category": "Operasyon",
+      "shortDefinition": "Ürün kategorilerini bağımsız iş birimleri olarak ele alarak stratejik satın alma, fiyatlandırma ve raf yönetimi yapan süreç.",
+      "definition": "## Kategori Yönetimi Nedir?\n\nKategori Yönetimi, ürün kategorilerini ayrı ayrı stratejik iş birimleri (SBU) olarak yöneten, perakendeci ve tedarikçi işbirliğiyle müşteri değeri oluşturan disiplinli bir iş sürecidir. 1990'larda The Partnering Group ve AC Nielsen tarafından formalize edilmiştir.\n\n## 8 Adımlı Kategori Yönetimi Süreci\n\n1. **Kategori tanımlama:** Ürünlerin mantıksal sınıflandırması ve alt kategorilere ayrılması\n2. **Kategori rolü belirleme:** Her kategorinin mağaza stratejisindeki işlevi (trafik, kâr, heyecan, kolaylık)\n3. **Kategori değerlendirme:** Mevcut performans analizi, pazar payı ve trend inceleme\n4. **Puan kartı oluşturma:** KPI hedeflerinin belirlenmesi (satış, marj, devir hızı, pazar payı)\n5. **Strateji geliştirme:** Büyüme, koruma, düzeltme veya kısma kararı\n6. **Taktik belirleme:** Çeşitlilik (assortment), fiyatlandırma, promosyon ve raf alanı taktikleri\n7. **Uygulama:** Planogram oluşturma, fiyat değişikliği, promosyon takvimi\n8. **Revizyon:** Periyodik performans gözden geçirme ve iyileştirme döngüsü\n\n## Kategori Rolleri\n\n- **Destination (Hedef):** Müşteriyi mağazaya çeken ana kategoriler (ör: taze meyve-sebze)\n- **Routine (Rutin):** Düzenli alışveriş kalemleri (ör: süt, ekmek, deterjan)\n- **Seasonal (Mevsimsel):** Dönemsel yüksek talep (ör: güneş kremi, okul malzemeleri)\n- **Convenience (Kolaylık):** Tamamlayıcı, impulse ürünler (ör: sakız, pil)\n\n## Tedarikçi İlişkisi: Kategori Kaptanlığı\n\nKategori Kaptanlığı (Category Captain), kategorinin en güçlü tedarikçisinin perakendeciyle işbirliği yaparak kategori planlamasına liderlik etmesidir. Bu model veri paylaşımı ve ortak büyüme hedefi gerektirir.\n\n## AI Etkisi\n\nYapay zeka teknolojileri ile kategori yönetimi veriye dayalı hale gelmektedir:\n- Otomatik talep tahmini ve sipariş optimizasyonu\n- Dinamik fiyatlandırma ve promosyon planlama\n- Planogram optimizasyonu ve uyum kontrolü\n- Pazar sepeti analiziyle çapraz kategori fırsatları",
+      "whyImportant": "Kategori yönetimi, perakendecinin ürün çeşitliliğini, fiyatlandırmasını ve raf alanını stratejik bir çerçevede yönetmesini sağlar; bu olmadan kararlar sezgisel kalır ve fırsatlar kaçırılır. Doğru kategori yönetimi müşteri memnuniyetini artırırken, stok maliyetini düşürür ve marjı optimize eder. Özellikle binlerce SKU yöneten büyük perakendeciler için kategori yönetimi olmazsa olmaz bir disiplindir.",
+      "realLifeExample": "Bir hipermarket zinciri, temizlik kategorisinde kapsamlı bir kategori yönetimi projesi yürüttü. Kategorideki 800 SKU'yu analiz ederek düşük performanslı 150 SKU'yu çıkardı, kalan ürünlerin raf alanını optimize etti ve fiyatlandırmayı revize etti. Sonuçta kategorinin toplam satışı %8 artarken, GMROI 1.9'dan 2.7'ye yükseldi ve stokta bulunma oranı %92'den %97'ye çıktı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Her kategoriye bir \"rol\" atayın (trafik, kâr, heyecan, kolaylık) ve kararlarınızı bu role göre şekillendirin; trafik kategorisinde marj düşük olsa bile mağazaya çektiği müşteri değeri nedeniyle stratejik öneme sahiptir.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Eczane",
+        "Yapı Market",
+        "Elektronik Market",
+        "Giyim"
+      ],
+      "departments": [
+        "Kategori Yönetimi",
+        "Satın Alma",
+        "Ticari Planlama",
+        "Mağaza Operasyonları",
+        "Pazarlama"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Merchandising (Mağazacılık)",
+          "diff": "Merchandising, ürünlerin mağaza içi sunumuna odaklanırken; kategori yönetimi, satın almadan fiyatlandırmaya ve raf planlamasına kadar tüm kategori stratejisini kapsar."
+        },
+        {
+          "term": "Satın Alma",
+          "diff": "Satın alma, tedarikçilerden ürün temin etme işlevidir; kategori yönetimi ise satın alma dahil tüm kategori kararlarını bütünsel olarak yöneten stratejik çerçevedir."
+        }
+      ],
+      "relatedTerms": [
+        "planogram",
+        "abc-analizi",
+        "gmroi",
+        "gondol",
+        "merchandising",
+        "dead-stock",
+        "sku",
+        "talep-tahmini"
+      ]
+    },
+    {
+      "slug": "kpi",
+      "term": "KPI (Anahtar Performans Göstergesi)",
+      "termEn": "Key Performance Indicator",
+      "abbr": "KPI",
+      "letter": "K",
+      "category": "Finans",
+      "shortDefinition": "İşletmenin stratejik hedeflerine ulaşma performansını ölçen sayısal göstergeler.",
+      "definition": "## KPI Nedir?\n\nKPI (Key Performance Indicator), işletmenin stratejik hedeflerini ne ölçüde gerçekleştirdiğini izlemek için kullanılan ölçülebilir, hedeflenebilir ve aksiyona dönüştürülebilir sayısal değerlerdir.\n\n## Perakendede Temel KPI Kategorileri\n\n### Satış KPI'ları\n- Metrekare başına satış (Sales per sqm)\n- Sepet ortalaması (AOV)\n- Müşteri dönüşüm oranı (Conversion Rate)\n- Yıldan yıla satış büyümesi (YoY)\n- Çalışan başına satış\n\n### Envanter KPI'ları\n- Stok devir hızı (Inventory Turnover)\n- GMROI (Stok yatırım getirisi)\n- Fire/shrinkage oranı\n- Stokta bulunma oranı (In-stock Rate)\n- Dead stock yüzdesi\n\n### Müşteri KPI'ları\n- NPS (Net Promoter Score)\n- Müşteri yaşam boyu değeri (CLV)\n- Müşteri kayıp oranı (Churn Rate)\n- Tekrar alışveriş oranı (Repeat Purchase Rate)\n- Müşteri kazanım maliyeti (CAC)\n\n### Operasyonel KPI'lar\n- Kasa bekleme süresi\n- Sipariş karşılama oranı (Fill Rate)\n- Teslimat süresi (e-ticaret)\n- Çalışan devir hızı\n- Mağaza ziyaret-satın alma oranı\n\n## KPI Belirleme İlkeleri — SMART\n\n- **S**pecific (Belirli): Net ve açık tanımlanmış\n- **M**easurable (Ölçülebilir): Sayısal olarak izlenebilir\n- **A**chievable (Ulaşılabilir): Gerçekçi hedefler\n- **R**elevant (İlgili): Stratejik hedeflerle bağlantılı\n- **T**ime-bound (Zamanlı): Belirli bir dönem için tanımlanmış\n\n## KPI Hiyerarşisi\n\nKPI'lar organizasyon seviyesine göre kademeli olarak dağılır:\n- **C-Level:** Toplam gelir, EBITDA, pazar payı\n- **Direktör:** Kategori bazlı satış, müşteri metrikleri\n- **Mağaza Müdürü:** Mağaza satışı, dönüşüm, NPS\n- **Departman/Ekip:** Raf doluluk, kasa hızı, stok sayım doğruluğu",
+      "whyImportant": "KPI'lar olmadan perakendeci hangi alanda başarılı olduğunu, hangi alanda gerilediğini objektif olarak bilemez; sezgisel yönetim yerine veriye dayalı karar alma kültürü KPI disiplini ile başlar. Doğru seçilmiş az sayıda KPI, tüm organizasyonu aynı hedeflere yönlendirir ve departmanlar arası uyumu sağlar. Yanlış veya çok fazla KPI ise ekipleri yanlış yönlendirir veya odağı dağıtır.",
+      "realLifeExample": "Bir elektronik market zinciri, 50'den fazla KPI izliyordu ancak yöneticiler hangisine odaklanacağını bilemiyordu. KPI sayısını mağaza müdürü seviyesinde 5 temel metriğe indirdiler: günlük satış, dönüşüm oranı, AOV, NPS ve stokta bulunma oranı. Bu odaklanma sonrasında mağaza müdürleri net hedeflere yöneldi; 6 ay içinde ortalama dönüşüm oranı %18'den %23'e, NPS ise 32'den 45'e yükseldi.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Mağaza müdürü seviyesinde 5-7'den fazla KPI izlemeyin; az sayıda doğru KPI, ekibinizi net hedeflere odaklar, fazla KPI ise dikkat dağınıklığı yaratır.",
+      "segments": [
+        "Tüm Perakende Segmentleri"
+      ],
+      "departments": [
+        "Üst Yönetim",
+        "Finans",
+        "Operasyon",
+        "Pazarlama",
+        "İnsan Kaynakları",
+        "Mağaza Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Metrik",
+          "diff": "Metrik, ölçülebilen herhangi bir değerdir (ör: toplam ziyaretçi sayısı); KPI ise stratejik hedefe doğrudan bağlı, kritik öneme sahip seçilmiş metriklerdir."
+        },
+        {
+          "term": "OKR (Objectives and Key Results)",
+          "diff": "OKR, hedef belirleme çerçevesidir ve iddialı niteliksel hedefler ile bunların ölçütlerini tanımlar; KPI ise sürekli izlenen operasyonel performans göstergeleridir."
+        }
+      ],
+      "relatedTerms": [
+        "gmroi",
+        "conversion-rate",
+        "nps",
+        "aov",
+        "churn-rate",
+        "clv",
+        "yil-ustu-yil-buyume",
+        "shrinkage"
+      ]
+    },
+    {
+      "slug": "loss-prevention",
+      "term": "Loss Prevention (Kayıp Önleme)",
+      "termEn": "Loss Prevention",
+      "abbr": "LP",
+      "letter": "L",
+      "category": "Operasyon",
+      "shortDefinition": "Mağaza hırsızlığı, çalışan suistimali, operasyonel hatalar ve tedarikçi sahtekarlığından kaynaklanan kayıpları azaltan süreç.",
+      "definition": "## Loss Prevention Nedir?\n\nLoss Prevention (Kayıp Önleme), perakende işletmelerde envanter kaybını (shrinkage) ve operasyonel kayıpları minimize etmeye yönelik strateji, teknoloji, eğitim ve süreçlerin bütünüdür.\n\n## Kayıp Kaynakları ve Oranları\n\n- **Müşteri hırsızlığı (Shoplifting):** Toplam kaybın yaklaşık %35-40'ı\n- **Çalışan suistimali (Internal Theft):** %25-30 — en maliyetli vaka başına kayıp\n- **Operasyonel ve idari hatalar:** %15-20 (yanlış sayım, hatalı fiyatlama, hasar)\n- **Tedarikçi sahtekarlığı (Vendor Fraud):** %5-10 (eksik teslimat, kalite sapması)\n- **Organize perakende suçları (ORC):** Artan bir tehdit, profesyonel hırsızlık çeteleri\n\n## Önleme Teknolojileri\n\n- **EAS (Electronic Article Surveillance):** Ürün güvenlik etiketleri ve kapı sensörleri\n- **CCTV ve Video Analitik:** AI destekli şüpheli davranış tespiti\n- **RFID:** Gerçek zamanlı envanter izleme ve sapma tespiti\n- **POS Analitik:** Anormal işlem kalıplarını tespit (sürekli iade, iptal, indirim)\n- **Self-Checkout Kontrol:** AI destekli ürün doğrulama ve ağırlık kontrolü\n- **Erişim Kontrolü:** Depo ve kasa erişim kısıtlamaları\n\n## İnsan Faktörü\n\n- Çalışan eğitim ve farkındalık programları\n- İhbar hatları ve anonim bildirim mekanizmaları\n- Düzenli ve sürpriz envanter sayımları\n- Güçlü işe alım süreçleri (referans kontrolü)\n- Pozitif iş kültürü oluşturma (suistimali azaltan en güçlü faktör)\n\n## Shrinkage Oranları\n\nGlobal ortalama shrinkage oranı %1.4-1.8 arasındadır. Türkiye'de bu oran %1.5-2.5 seviyelerindedir. Yüksek değerli ürünlerde (elektronik, kozmetik, alkol) oran daha yüksek olabilir.",
+      "whyImportant": "Loss prevention doğrudan kâr marjını korur; %1'lik shrinkage azaltımı, milyonlarca liralık ek kâr anlamına gelebilir. Kayıp önleme yalnızca güvenlik değil, operasyonel mükemmellik ve süreç disiplinidir. Her 1 TL'lik loss prevention yatırımının ortalama 10-20 TL kayıp önleme getirisi sağladığı raporlanmaktadır.",
+      "realLifeExample": "Bir süpermarket zinciri, self-checkout kasalarında AI destekli görüntü tanıma sistemi kurdu. Sistem, müşterinin taradığı ürün ile görüntüdeki ürünü karşılaştırarak uyumsuzlukları tespit ediyor. İlk 6 ayda self-checkout kayıp oranı %3.8'den %1.2'ye düştü. Ayrıca POS analitiği ile yüksek iade oranına sahip 12 çalışan tespit edildi ve yapılan incelemede 4 çalışanın sistematik suistimal yaptığı ortaya çıktı.",
+      "formula": "Shrinkage Oranı = (Kayıp Stok Değeri / Net Satış) × 100",
+      "formulaExample": "Yıllık net satış: 50.000.000 TL, Envanter sayımında tespit edilen kayıp: 750.000 TL → Shrinkage Oranı = (750.000 / 50.000.000) × 100 = %1.5",
+      "managerTip": "Shrinkage'ın en büyük kaynağı çoğu zaman dış hırsızlık değil, iç süreçlerdir; POS iptal/iade raporlarını haftalık inceleyin ve anormal kalıpları erken tespit edin.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Giyim",
+        "Elektronik",
+        "Eczane",
+        "Lüks Perakende"
+      ],
+      "departments": [
+        "Kayıp Önleme/Güvenlik",
+        "Mağaza Operasyonları",
+        "İç Denetim",
+        "IT",
+        "İnsan Kaynakları"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Shrinkage (Envanter Kaybı)",
+          "diff": "Shrinkage, envanter kaybının sonucunu ölçen metriktir; loss prevention ise bu kaybı önlemek için uygulanan strateji ve süreçlerin bütünüdür."
+        },
+        {
+          "term": "Güvenlik (Security)",
+          "diff": "Güvenlik, genel anlamda fiziksel koruma ve erişim kontrolünü ifade eder; loss prevention ise güvenliğin yanı sıra süreç iyileştirme, veri analizi ve eğitimi de kapsayan daha geniş bir disiplindir."
+        }
+      ],
+      "relatedTerms": [
+        "shrinkage",
+        "rfid",
+        "pos",
+        "kpi",
+        "barkod",
+        "zero-waste"
+      ]
+    },
+    {
+      "slug": "loyalty-programi",
+      "term": "Loyalty Programı (Sadakat Programı)",
+      "termEn": "Loyalty Program",
+      "abbr": "",
+      "letter": "L",
+      "category": "Müşteri Deneyimi",
+      "shortDefinition": "Müşterilerin tekrarlayan alışverişlerini ödüllendirerek marka bağlılığını artıran yapılandırılmış teşvik sistemi.",
+      "definition": "## Loyalty Programı Nedir?\n\nLoyalty (Sadakat) Programı, müşterilerin alışveriş yapma, marka ile etkileşim kurma veya belirli davranışları gerçekleştirme karşılığında ödül kazandığı sistematik bir müşteri tutma ve bağlılık stratejisidir.\n\n## Program Türleri\n\n### Puan Bazlı\nHer harcamaya puan kazandırılır, puanlar alışveriş veya hediyeye dönüştürülür. En yaygın modeldir. Örnek: Her 1 TL = 1 puan, 1000 puan = 10 TL indirim.\n\n### Kademe Bazlı (Tier)\nHarcama arttıkça VIP statüler açılır, her kademede artan ayrıcalıklar sunulur. Örnek: Bronz (0-5000 TL/yıl), Gümüş (5000-15000), Altın (15000+).\n\n### Cashback\nHarcama tutarının belirli yüzdesi hesaba geri iade edilir. Basit ve anlaşılır olması avantajdır.\n\n### Abonelik (Subscription)\nÜcretli üyelik karşılığı ayrıcalıklar sunulur. Örnek: Amazon Prime, Costco üyeliği.\n\n### Koalisyon\nBirden fazla markanın ortak programıdır. Müşteri farklı markalarda aynı puanı kullanır.\n\n## Perakendede Sadakat Programı Etkileri\n\n- Üyeler, üye olmayanlara göre **%12-18 daha fazla** harcama yapar\n- Tekrar ziyaret oranı **%20-30** artar\n- Üyeler ortalama **%25 daha yüksek AOV** gösterir\n- Sadakat programı üyeleri **%50 daha düşük** churn oranına sahiptir\n\n## Veri Değeri — Asıl Hazine\n\nSadakat programlarının en büyük stratejik değeri topladığı müşteri verisidir:\n- Satın alma geçmişi ve ürün tercihleri\n- Ziyaret sıklığı ve zamanlaması\n- Kampanya tepki oranları\n- Kanal tercihleri (mağaza vs online)\n- RFM segmentasyonu ve CLV tahmini verisi\n\n## AI Entegrasyonu\n\nModern sadakat programları yapay zeka ile güçlendiriliyor:\n- Kişiselleştirilmiş teklifler ve ödüller\n- Dinamik puan çarpanları (yağmurlu günde 2x puan)\n- Churn tahmini ve proaktif müdahale\n- Gerçek zamanlı segment güncelleme",
+      "whyImportant": "Sadakat programları, yeni müşteri kazanma maliyetinin mevcut müşteriyi elde tutmaktan 5-7 kat daha yüksek olduğu perakendede kritik bir strateji aracıdır. Program sayesinde toplanan veri, kişiselleştirme ve hedefli pazarlama için altın değerinde bir kaynaktır. İyi tasarlanmış bir sadakat programı hem müşteri tutma hem de sepet değeri artışı sağlayarak çifte getiri üretir.",
+      "realLifeExample": "Bir kozmetik zinciri, klasik puan bazlı sadakat programını kademe bazlı sisteme dönüştürdü. Altın üyelere ücretsiz makyaj danışmanlığı, erken erişim ve özel indirimler sunuldu. Altın segmentindeki müşterilerin yıllık harcaması %35 artarken, genel churn oranı %8'den %4.5'e düştü. Program ayrıca CRM verisi sayesinde doğum günü kampanyalarıyla %72 açılma oranı elde etti.",
+      "formula": "Sadakat Programı ROI = (Program Kaynaklı Ek Gelir - Program Maliyeti) / Program Maliyeti × 100",
+      "formulaExample": "Program kaynaklı ek yıllık gelir: 2.000.000 TL, Program maliyeti (ödüller + teknoloji + operasyon): 600.000 TL → ROI = (2.000.000 - 600.000) / 600.000 × 100 = %233",
+      "managerTip": "Sadakat programınızın gerçek değeri puan dağıtmak değil, veri toplamaktır; her müşteri etkileşimini kişiselleştirme fırsatına çevirecek şekilde veri stratejinizi programla entegre edin.",
+      "segments": [
+        "Süpermarket",
+        "Giyim",
+        "Kozmetik",
+        "Eczane",
+        "Elektronik",
+        "E-Ticaret",
+        "Havayolu",
+        "Otel"
+      ],
+      "departments": [
+        "CRM/Müşteri İlişkileri",
+        "Pazarlama",
+        "IT",
+        "Finans",
+        "Mağaza Operasyonları"
+      ],
+      "confusedTerms": [
+        {
+          "term": "CRM (Müşteri İlişkileri Yönetimi)",
+          "diff": "CRM, müşteri verilerini yönetmek ve ilişkileri takip etmek için kullanılan teknoloji ve stratejidir; loyalty programı ise CRM'in bir aracı olarak müşterileri ödüllendirme mekanizmasıdır."
+        },
+        {
+          "term": "Promosyon",
+          "diff": "Promosyon, kısa vadeli satış artışı için yapılan indirim veya kampanyadır; loyalty programı ise uzun vadeli müşteri bağlılığı oluşturmayı hedefleyen sürekli bir yapıdır."
+        }
+      ],
+      "relatedTerms": [
+        "crm",
+        "churn-rate",
+        "clv",
+        "rfm-analizi",
+        "nps",
+        "hedef-kitle",
+        "omnichannel"
+      ]
+    },
+    {
+      "slug": "markdown",
+      "term": "Markdown (İndirimli Fiyatlandırma)",
+      "termEn": "Markdown",
+      "abbr": "",
+      "letter": "M",
+      "category": "Satış",
+      "shortDefinition": "Ürün fiyatının, stok eritme veya talep artırma amacıyla orijinal satış fiyatının altına düşürülmesi.",
+      "definition": "## Markdown Nedir?\n\nMarkdown, bir ürünün orijinal perakende satış fiyatının (initial markup price) kalıcı veya geçici olarak düşürülmesidir. Perakendede en yaygın fiyatlandırma taktiklerinden biri olup, stok yönetimi ve nakit akışı ile doğrudan ilişkilidir.\n\n## Markdown Türleri\n\n### Zamanlama Açısından\n- **Planlı Markdown:** Sezon sonu, yeni koleksiyon öncesi — bütçede önceden yer ayrılır\n- **Plansız Markdown:** Beklenmedik düşük talep, rekabet baskısı veya operasyonel zorunlulukla ortaya çıkar\n\n### Süre Açısından\n- **Kalıcı (Permanent):** Fiyat bir daha eski seviyeye dönmez\n- **Geçici (Temporary/Promotional):** Kampanya dönemi sonunda fiyat eski seviyesine döner\n\n## Markdown Nedenleri\n\n- Mevsim veya sezon değişimi (özellikle moda perakende)\n- Yeni model/koleksiyon girişi için yer açma\n- Düşük performanslı ürünlerin stok eritilmesi\n- Rekabet baskısı ve fiyat eşleştirme\n- Son kullanma tarihine yaklaşma (gıda perakende)\n- Hasarlı veya kusurlu ürün satışı\n\n## Markdown Optimizasyonu — AI Yaklaşımı\n\nYapay zeka destekli markdown optimizasyonu dört temel soruyu yanıtlar:\n- **Zamanlama:** İndirimi ne zaman başlatmalı? (Çok erken → gereksiz marj kaybı, çok geç → stok kalır)\n- **Derinlik:** İndirim yüzdesi ne olmalı? (%10, %20, %30 veya daha fazla)\n- **Kademe:** Kaç aşamada indirim yapılmalı? (Tek seferde %50 mi, kademeli mi?)\n- **Lokasyon:** Hangi mağazalarda farklı strateji uygulanmalı?\n\n## Markdown Maliyeti\n\nMarkdown, brüt kâr marjını doğrudan aşındırır. Giyim perakendede ortalama markdown oranı %25-35'tir ve bu oran, sektördeki en büyük kâr erozyonu kaynaklarından biridir.",
+      "whyImportant": "Markdown, perakendede kaçınılmaz bir gerçektir ancak kontrol edilmezse kârlılığı ciddi şekilde aşındırır; doğru zamanda doğru derinlikte yapılan markdown hem stok maliyetini düşürür hem nakit akışını korur. Markdown kararları, talep tahmini ve satın alma kalitesiyle doğrudan bağlantılıdır. Markdown oranının yüksek olması, genellikle satın alma aşamasında yapılan hataların bir sonucudur.",
+      "realLifeExample": "Bir giyim perakendecisi, AI destekli markdown optimizasyon yazılımı kullanmaya başladı. Yazılım, her ürünün satış hızını, stok miktarını ve fiyat elastikiyetini analiz ederek kademeli indirim stratejisi önerdi. Eski sistemde sezon sonu toptan %50 indirim yapılırken, yeni sistem 3 kademelik (%15 → %30 → %50) zamanlama önerdi. Sonuçta aynı sezon toplam markdown tutarı %18 azalırken, stok eritme oranı aynı kaldı.",
+      "formula": "Markdown Yüzdesi = (Toplam Markdown Tutarı / Orijinal Perakende Satış Değeri) × 100",
+      "formulaExample": "Bir ürün grubunun orijinal perakende değeri: 1.000.000 TL, Toplam uygulanan markdown tutarı: 300.000 TL → Markdown Yüzdesi = (300.000 / 1.000.000) × 100 = %30",
+      "managerTip": "Markdown kararlarını geciktirmeyin; erken ve küçük bir indirim çoğu zaman geç ve derin bir indirimden daha az marj kaybına yol açar — \"ilk indirim en ucuz indirimdir\" kuralını benimseyin.",
+      "segments": [
+        "Giyim",
+        "Ayakkabı",
+        "Elektronik",
+        "Ev Tekstili",
+        "Kozmetik",
+        "Süpermarket"
+      ],
+      "departments": [
+        "Ticari Planlama",
+        "Satın Alma",
+        "Mağaza Operasyonları",
+        "Finans",
+        "Kategori Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Promosyon (Geçici İndirim)",
+          "diff": "Promosyon, belirli bir kampanya döneminde geçici fiyat düşüşüdür ve dönem sonunda fiyat geri döner; markdown ise genellikle kalıcıdır ve stok eritme amacı taşır."
+        },
+        {
+          "term": "Dinamik Fiyatlandırma",
+          "diff": "Dinamik fiyatlandırma, fiyatın talep ve rekabete göre hem yukarı hem aşağı gerçek zamanlı ayarlanmasıdır; markdown ise yalnızca aşağı yönlü kalıcı fiyat düşüşüdür."
+        }
+      ],
+      "relatedTerms": [
+        "dinamik-fiyatlandirma",
+        "dead-stock",
+        "gmroi",
+        "kategori-yonetimi",
+        "talep-tahmini",
+        "shrinkage"
+      ]
+    },
+    {
+      "slug": "merchandising",
+      "term": "Merchandising (Mağazacılık)",
+      "termEn": "Merchandising",
+      "abbr": "",
+      "letter": "M",
+      "category": "Pazarlama",
+      "shortDefinition": "Ürünlerin mağaza içinde satışı artıracak şekilde sunulması, sergilenmesi ve yönetilmesi süreci.",
+      "definition": "## Merchandising Nedir?\n\nMerchandising, perakendeciliğin \"5 Doğru\" kuralıyla tanımlanan temel disiplinidir: **doğru ürünü, doğru yerde, doğru zamanda, doğru fiyatla ve doğru miktarda** sunma sanatı ve bilimi.\n\n## Merchandising Türleri\n\n### Visual Merchandising\nMağazanın görsel çekiciliğini artırmaya odaklanan alan: vitrin tasarımı, mağaza içi sunum, aydınlatma, renk koordinasyonu, mannequin kullanımı ve POP (Point of Purchase) malzemeleri.\n\n### Retail Merchandising\nÜrün çeşitliliği planlaması, stok yönetimi, raf alanı tahsisi ve tedarikçi ilişkileri yönetimini kapsayan operasyonel boyut.\n\n### Digital Merchandising\nE-ticaret sitesinde sayfa düzeni, ürün sıralama algoritmaları, banner yerleşimi, arama sonuçları optimizasyonu ve kişiselleştirilmiş ürün önerileri.\n\n### Omnichannel Merchandising\nTüm satış kanallarında tutarlı ürün deneyimi sunma: mağaza, web, mobil uygulama ve sosyal medya mağazalarında uyumlu sunum.\n\n## Visual Merchandising Öğeleri\n\n- **Vitrin tasarımı:** Mağaza çekiciliğinin ilk ve en güçlü noktası\n- **Mağaza düzeni (Layout):** Grid, loop, free-flow — müşteri akış yönlendirmesi\n- **Renk koordinasyonu:** Ürün gruplandırma, mevsimsel temalar\n- **Aydınlatma:** Ürün vurgulama, atmosfer yaratma, satın alma psikolojisi\n- **POP malzemeleri:** Stand, poster, dijital ekran, fiyat kartı\n- **Odak noktaları (Focal Points):** Müşterinin dikkatini çeken stratejik alanlar\n\n## AI ve Merchandising\n\n- Otomatik planogram oluşturma ve uyum kontrolü\n- Isı haritaları ve kamera analitiği ile müşteri hareketlerini analiz etme\n- A/B test ile optimal ürün yerleşimi belirleme\n- Dijital ekranlarda kişiselleştirilmiş içerik sunma\n- Sanal gerçeklik ile mağaza tasarımı prototipleme",
+      "whyImportant": "Merchandising, müşterinin mağaza deneyimini ve satın alma kararını doğrudan şekillendirir; iyi merchandising ile aynı ürünler %10-30 daha fazla satılabilir. Fiziksel ve dijital kanalların bütünleşik yönetimi, omnichannel çağında rekabet avantajının anahtarıdır. Merchandising aynı zamanda marka algısını, müşteri sadakatini ve impulse buying oranını belirleyen temel disiplindir.",
+      "realLifeExample": "Bir ev dekorasyon mağazası, ürünlerini geleneksel kategori bazlı düzenden (tüm vazolar bir arada, tüm mumlar bir arada) yaşam alanı bazlı düzene (oturma odası köşesi, yatak odası köşesi) geçirdi. Bu cross-merchandising yaklaşımıyla müşteriler ürünleri kendi evlerinde hayal edebildi. Sonuçta ortalama sepet büyüklüğü 2.8 üründen 4.3 ürüne çıktı ve AOV %55 arttı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Mağazanızı her hafta bir müşteri gözüyle gezin; giriş kapısından kasaya kadar olan yolculukta ürün keşfedilebilirliğini ve görsel tutarlılığı değerlendirin, 3 iyileştirme noktası belirleyin.",
+      "segments": [
+        "Giyim",
+        "Süpermarket",
+        "Ev Dekorasyon",
+        "Elektronik",
+        "Kozmetik",
+        "Kitapçı",
+        "E-Ticaret"
+      ],
+      "departments": [
+        "Visual Merchandising",
+        "Kategori Yönetimi",
+        "Mağaza Operasyonları",
+        "Pazarlama",
+        "E-Ticaret"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Visual Merchandising",
+          "diff": "Visual merchandising, merchandising'in görsel sunum boyutuna odaklanan alt disiplinidir; merchandising ise ürün çeşitliliği, stok ve fiyat yönetimini de kapsayan daha geniş kavramdır."
+        },
+        {
+          "term": "Kategori Yönetimi",
+          "diff": "Kategori yönetimi, tek bir kategorinin stratejik olarak planlanmasıdır; merchandising ise tüm kategorilerin mağaza genelinde sunum ve sergilenmesini kapsayan uygulamalı disiplindir."
+        }
+      ],
+      "relatedTerms": [
+        "visual-merchandising",
+        "gondol",
+        "endcap",
+        "planogram",
+        "kategori-yonetimi",
+        "impulse-buying",
+        "omnichannel"
+      ]
+    },
+    {
+      "slug": "nps",
+      "term": "NPS (Net Tavsiye Skoru)",
+      "termEn": "Net Promoter Score",
+      "abbr": "NPS",
+      "letter": "N",
+      "category": "Müşteri Deneyimi",
+      "shortDefinition": "Müşterilerin markayı başkalarına tavsiye etme olasılığını 0-10 ölçeğinde değerlendiren sadakat metriği.",
+      "definition": "## NPS Nedir?\n\nNPS (Net Promoter Score), Fred Reichheld tarafından 2003 yılında geliştirilen ve tek bir soruyla müşteri sadakatini ölçen güçlü bir metriktir:\n\n> \"Bu markayı/mağazayı bir tanıdığınıza tavsiye etme olasılığınız nedir? (0-10)\"\n\n## Müşteri Segmentasyonu\n\nCevaplara göre müşteriler üç gruba ayrılır:\n- **Promoters (Destekçiler) — 9-10 puan:** Sadık müşteriler, aktif olarak markayı tavsiye eder, tekrar alışveriş yapar\n- **Passives (Pasifler) — 7-8 puan:** Memnun ama coşkusuz, rakip tekliflere açık\n- **Detractors (Eleştirmenler) — 0-6 puan:** Mutsuz müşteriler, olumsuz ağızdan ağıza yayılım yapabilir\n\n## Hesaplama\n\n**NPS = % Promoters - % Detractors**\n\nSonuç -100 ile +100 arasında bir değerdir. Passives hesaplamaya dahil edilmez ancak toplam ankete katılan sayısını etkiler.\n\n## Yorumlama Ölçeği\n\n- **70+:** Mükemmel — dünya sınıfı müşteri deneyimi\n- **50-69:** Çok iyi — güçlü müşteri sadakati\n- **30-49:** İyi — iyileştirme alanları mevcut\n- **0-29:** Geliştirilmeli — ciddi sorunlar var\n- **Negatif:** Kritik — acil müdahale gerekli\n\n## Perakendede NPS Ortalamaları\n\n- Lüks perakende: 50-70\n- Süpermarket: 30-50\n- Elektronik: 25-45\n- Fast fashion: 15-35\n- E-ticaret: 35-55\n\n## NPS'in Ötesi — Kapalı Döngü Feedback\n\nNPS'in gerçek gücü, skorun kendisi değil, ardından gelen aksiyon planındadır:\n1. Detractor'lara 24-48 saat içinde ulaşarak sorun çözme\n2. Promoter'ları referans programına dahil etme\n3. Kök neden analizi ile sistemik sorunları tespit etme\n4. Departman bazlı NPS izleme ile sorumluluk atama\n\n## Transactional vs Relational NPS\n\n- **Transactional NPS (tNPS):** Her işlem sonrası anlık ölçüm (ör: kasa sonrası SMS)\n- **Relational NPS (rNPS):** Periyodik genel marka algısı ölçümü (ör: çeyreklik anket)",
+      "whyImportant": "NPS, müşteri sadakatinin en yaygın kabul görmüş barometresidir ve gelecekteki büyümeyi tahmin etmede güçlü bir öncü göstergedir. Yüksek NPS, organik büyüme, düşük pazarlama maliyeti ve güçlü müşteri tutma ile doğrudan ilişkilidir. NPS ayrıca departmanlar ve mağazalar arası performans karşılaştırması için ortak bir dil oluşturur.",
+      "realLifeExample": "Bir elektronik market zinciri, mağaza bazlı NPS takibi başlattı. En düşük NPS'e sahip 5 mağazada kök neden analizi yapıldığında, ortak sorunun kasa bekleme süresi ve ürün bilgisi eksikliği olduğu tespit edildi. Self-checkout kasası eklenmesi ve satış ekibine ürün eğitimi verilmesi sonrasında, bu mağazaların ortalama NPS'i 6 ayda 22'den 41'e yükseldi ve aynı dönemde aynı mağazalarda satışlar %11 arttı.",
+      "formula": "NPS = (Promoter Sayısı / Toplam Yanıt) × 100 - (Detractor Sayısı / Toplam Yanıt) × 100",
+      "formulaExample": "1000 müşteri ankete katıldı: 450 kişi 9-10 puan (Promoter), 300 kişi 7-8 puan (Passive), 250 kişi 0-6 puan (Detractor) → NPS = %45 - %25 = +20",
+      "managerTip": "NPS skorunuza değil, detractor yorumlarına odaklanın; her detractor geri bildiriminde tekrarlayan bir tema varsa, o konuyu çözmek NPS'i en hızlı yükseltecek kaldıraçtır.",
+      "segments": [
+        "Tüm Perakende Segmentleri",
+        "E-Ticaret",
+        "Hizmet Sektörü"
+      ],
+      "departments": [
+        "Müşteri Deneyimi",
+        "Mağaza Operasyonları",
+        "Pazarlama",
+        "Üst Yönetim",
+        "Kalite"
+      ],
+      "confusedTerms": [
+        {
+          "term": "CSAT (Müşteri Memnuniyet Skoru)",
+          "diff": "CSAT, belirli bir işlem veya deneyimden duyulan memnuniyeti ölçer (genellikle 1-5 ölçek); NPS ise genel marka sadakatini ve tavsiye eğilimini ölçer."
+        },
+        {
+          "term": "CES (Müşteri Efor Skoru)",
+          "diff": "CES, müşterinin sorununu çözmek için harcadığı eforu ölçer; NPS ise tavsiye etme olasılığını ölçen genel bir sadakat metriğidir."
+        }
+      ],
+      "relatedTerms": [
+        "churn-rate",
+        "clv",
+        "loyalty-programi",
+        "kpi",
+        "crm",
+        "hedef-kitle"
+      ]
+    },
+    {
+      "slug": "omnichannel",
+      "term": "Omnichannel (Çok Kanallı Perakende)",
+      "termEn": "Omnichannel Retail",
+      "abbr": "",
+      "letter": "O",
+      "category": "Dijital/AI",
+      "shortDefinition": "Fiziksel mağaza, web, mobil ve sosyal medya gibi tüm satış kanallarını entegre eden bütünleşik perakende stratejisi.",
+      "definition": "## Omnichannel Nedir?\n\nOmnichannel, müşterinin tüm temas noktalarında — fiziksel mağaza, web sitesi, mobil uygulama, sosyal medya, çağrı merkezi, kiosk — kesintisiz, tutarlı ve kişiselleştirilmiş bir deneyim yaşamasını sağlayan bütünleşik perakende stratejisidir.\n\n## Multichannel vs Omnichannel\n\n| Özellik | Multichannel | Omnichannel |\n|---------|-------------|-------------|\n| Kanallar | Bağımsız çalışır, ayrı ekipler | Entegre çalışır, merkezi strateji |\n| Müşteri verisi | Kanal bazlı silolar | Birleşik 360° müşteri profili |\n| Stok görünürlüğü | Kanal bazlı ayrı envanter | Birleşik envanter, tüm kanallarda görünür |\n| Deneyim | Kanalda farklılaşır | Kanal geçişlerinde tutarlı ve sürekli |\n| Fiyatlandırma | Kanal bazlı farklı olabilir | Tüm kanallarda tutarlı |\n\n## Temel Omnichannel Senaryolar\n\n- **BOPIS (Buy Online, Pick-up In Store):** Online satın al, mağazadan teslim al — hızlı teslimat + mağaza trafiği\n- **Ship from Store:** Mağaza stoğundan online siparişi kargola — envanter verimliliği\n- **Showrooming:** Mağazada dene ve doku, online satın al — bilgi toplama + fiyat karşılaştırma\n- **Webrooming:** Online araştır, inceleme oku, mağazada satın al — en yaygın davranış\n- **Endless Aisle:** Mağazada bulunmayan ürünü dijital kiosk veya satış danışmanı tableti üzerinden sipariş et\n- **Return Anywhere:** Online alınan ürünü mağazada iade et veya tersini yap\n\n## Teknoloji Altyapısı\n\n- **OMS (Order Management System):** Birleşik sipariş yönetimi\n- **Merkezi CRM:** Tüm kanallardan gelen müşteri verisi\n- **Gerçek zamanlı stok görünürlüğü:** Mağaza, depo ve transit stok\n- **Kişiselleştirme motoru:** AI destekli öneri ve iletişim\n- **Entegre ödeme altyapısı:** POS, e-ticaret ve mobil ödeme uyumu\n- **CDP (Customer Data Platform):** Müşteri verisi birleştirme ve aktivasyon\n\n## Omnichannel İstatistikler\n\n- Omnichannel müşteriler tek kanallı müşterilere göre **%30 daha yüksek** yaşam boyu değer üretir\n- BOPIS kullanan müşterilerin **%49'u** mağazadan ekstra ürün satın alır\n- Omnichannel stratejiye sahip perakendeciler **%91** daha yüksek müşteri tutma oranı gösterir",
+      "whyImportant": "Günümüz tüketicisi kanallar arasında kesintisiz geçiş yapmayı bekler; omnichannel deneyim sunamayan perakendeciler müşteri kaybeder ve rekabette geride kalır. Omnichannel strateji, envanter verimliliğini artırarak stok maliyetini düşürür (ship from store, endless aisle). Müşteri verisinin tüm kanallardan birleştirilmesi, kişiselleştirme ve hedefli pazarlama için benzersiz bir avantaj yaratır.",
+      "realLifeExample": "Bir giyim perakendecisi, mağaza içi stok görünürlüğünü web sitesine entegre etti. Müşteriler online olarak ürünün hangi mağazada, hangi bedende mevcut olduğunu görebildi ve BOPIS ile 2 saatte teslim alabildi. İlk yılda online trafiğin %28'i BOPIS siparişine dönüştü ve bu müşterilerin %42'si mağazada ek alışveriş yaptı. Ayrıca mağaza iade opsiyonu sunulmasıyla online iade maliyeti %35 azaldı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Omnichannel yolculuğuna büyük teknoloji yatırımıyla değil, mağaza stok görünürlüğünü online'a açmakla başlayın; \"mağazada var mı?\" sorusunu web sitenizde yanıtlamak, en hızlı ROI getiren ilk adımdır.",
+      "segments": [
+        "Giyim",
+        "Elektronik",
+        "Süpermarket",
+        "Kozmetik",
+        "Ev Mobilya",
+        "E-Ticaret",
+        "Lüks Perakende"
+      ],
+      "departments": [
+        "Dijital/E-Ticaret",
+        "IT",
+        "Mağaza Operasyonları",
+        "Lojistik",
+        "Pazarlama",
+        "CRM",
+        "Üst Yönetim"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Multichannel (Çok Kanallı)",
+          "diff": "Multichannel'da her kanal bağımsız çalışır ve müşteri verisi paylaşılmaz; omnichannel'da tüm kanallar entegre çalışır ve müşteri deneyimi kesintisiz geçiş sağlar."
+        },
+        {
+          "term": "E-Ticaret",
+          "diff": "E-ticaret, online satış kanalının kendisini ifade eder; omnichannel ise e-ticaret dahil tüm kanalların entegre bir bütün olarak yönetildiği stratejidir."
+        }
+      ],
+      "relatedTerms": [
+        "crm",
+        "loyalty-programi",
+        "pos",
+        "rfid",
+        "dijital-ikiz",
+        "conversion-rate",
+        "clv",
+        "hedef-kitle"
+      ]
+    },
+    {
+      "slug": "planogram",
+      "term": "Planogram",
+      "termEn": "Planogram",
+      "abbr": "",
+      "letter": "P",
+      "category": "Operasyon",
+      "shortDefinition": "Ürünlerin raf üzerindeki optimal yerleşimini gösteren görsel diyagram; raf yönetiminin temel aracı.",
+      "definition": "Planogram, bir mağazadaki raf, gondol veya teşhir ünitelerinde ürünlerin tam olarak nereye, kaç yüzey (facing) ile ve hangi düzende yerleştirileceğini gösteren detaylı görsel şemadır. Kategori yönetimi stratejisiyle uyumlu şekilde hazırlanan planogramlar; ürün boyutu, ağırlığı, satış hızı, kâr marjı ve müşteri alışveriş davranışı gibi verileri temel alır. Günümüzde planogramlar özel yazılımlar (space planning software) aracılığıyla oluşturulur ve merkezi olarak tüm mağazalara dağıtılır. Doğru uygulandığında stok devir hızını artırır, raf dışı kalma oranını düşürür ve görsel düzeni standartlaştırır.",
+      "whyImportant": "Planogram uyumu doğrudan satış performansını etkiler; araştırmalar gösteriyor ki doğru uygulanan planogramlar satışları %15-20 oranında artırabilir. Perakende yöneticileri için raf alanı en değerli gayrimenkuldür ve her santimetrekarenin verimli kullanılması kârlılığı belirler. Ayrıca tedarikçi müzakerelerinde ve raf kirası anlaşmalarında planogram verileri kritik bir pazarlık aracıdır.",
+      "realLifeExample": "Bir süpermarket zinciri, atıştırmalık kategorisinde planogram revizyonu yaparak yüksek marjlı ürünleri göz hizasına, düşük marjlı ürünleri alt raflara taşıdı. Ayrıca çikolata barlarının facing sayısını satış hızına göre yeniden düzenledi. Üç ay sonunda kategori cirosu %12 artarken, raf dışı kalma (out-of-stock) oranı %8'den %3'e düştü.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Planogram uyumunu haftalık olarak sahada denetleyin; uyum oranı %90'ın altına düşerse, ekibin eğitim ihtiyacını veya lojistik darboğazları araştırın.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Giyim Perakendesi",
+        "Elektronik Mağazaları",
+        "Eczane",
+        "Baumarkt"
+      ],
+      "departments": [
+        "Kategori Yönetimi",
+        "Mağaza Operasyonları",
+        "Merchandising",
+        "Satın Alma"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Gondol",
+          "diff": "Gondol, ürünlerin sergilendiği fiziksel raf ünitesidir; planogram ise o gondol üzerindeki ürün yerleşim şemasıdır."
+        },
+        {
+          "term": "Visual Merchandising",
+          "diff": "Visual merchandising mağazanın genel görsel tasarımını ve ambiyansını kapsar; planogram yalnızca raf düzeyinde ürün yerleşim düzenini tanımlar."
+        }
+      ],
+      "relatedTerms": [
+        "gondol",
+        "kategori-yonetimi",
+        "visual-merchandising",
+        "sku",
+        "endcap",
+        "merchandising"
+      ]
+    },
+    {
+      "slug": "pos",
+      "term": "POS (Satış Noktası)",
+      "termEn": "Point of Sale",
+      "abbr": "POS",
+      "letter": "P",
+      "category": "Operasyon",
+      "shortDefinition": "Müşteri satın alma işlemlerinin gerçekleştirildiği kasa sistemi; ödeme, stok ve raporlama entegrasyonu sağlar.",
+      "definition": "POS (Point of Sale — Satış Noktası), perakende ortamında müşterinin ödeme işlemini tamamladığı donanım ve yazılım bileşenlerinin bütünüdür. Modern POS sistemleri yalnızca kasa işlevi görmez; barkod okuyucu, ödeme terminali, yazarkasa, müşteri ekranı gibi donanımların yanı sıra stok takibi, müşteri sadakat programı entegrasyonu, personel yetkilendirme, anlık satış raporlama, fatura kesimi ve CRM bağlantısı gibi yazılım modüllerini de içerir. Bulut tabanlı (cloud POS) çözümler sayesinde çok şubeli işletmeler tüm mağazalardan merkezi veri toplayabilir ve gerçek zamanlı karar alabilir.",
+      "whyImportant": "POS sistemi perakendecinin sinir merkezidir; satış verisi, stok hareketleri ve müşteri bilgileri tek bir noktada buluşur. Yöneticiler POS raporları sayesinde anlık ciro, en çok satan ürünler, saatlik trafik yoğunluğu ve personel performansı gibi kritik KPI'lara erişir. Yanlış yapılandırılmış veya yavaş bir POS sistemi kasa kuyruklarını uzatarak müşteri memnuniyetini ciddi şekilde düşürür.",
+      "realLifeExample": "Bir giyim mağazası zinciri eski kasa yazılımından bulut tabanlı POS sistemine geçiş yaptı. Yeni sistem müşterinin sadakat kartını otomatik tanıyıp kişiselleştirilmiş indirimler sunmaya başladı. Aynı zamanda stok bilgisi anlık güncellenerek online sipariş ile mağaza stoğu entegre edildi ve omnichannel deneyim sağlandı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "POS sisteminizin günlük kapanış raporlarını mutlaka kontrol edin; nakit sayım farkları, iptal edilen işlemler ve iade oranlarındaki ani artışlar operasyonel sorunların erken sinyalleridir.",
+      "segments": [
+        "Süpermarket",
+        "Giyim Perakendesi",
+        "Restoran",
+        "Elektronik Mağazaları",
+        "Eczane",
+        "E-Ticaret",
+        "Hızlı Tüketim"
+      ],
+      "departments": [
+        "Mağaza Operasyonları",
+        "Bilgi Teknolojileri",
+        "Finans",
+        "Satış"
+      ],
+      "confusedTerms": [
+        {
+          "term": "ESL (Elektronik Raf Etiketi)",
+          "diff": "ESL raf üzerindeki fiyat etiketidir ve POS ile entegre çalışır; POS ise ödeme ve satış işlem sistemidir."
+        },
+        {
+          "term": "CRM",
+          "diff": "CRM müşteri ilişkileri yönetim yazılımıdır; POS ise satış işlemlerinin gerçekleştiği noktadır. POS verileri CRM'e beslenir."
+        }
+      ],
+      "relatedTerms": [
+        "barkod",
+        "crm",
+        "loyalty-programi",
+        "omnichannel",
+        "sku",
+        "esl"
+      ]
+    },
+    {
+      "slug": "rfm-analizi",
+      "term": "RFM Analizi",
+      "termEn": "RFM Analysis",
+      "abbr": "RFM",
+      "letter": "R",
+      "category": "Pazarlama",
+      "shortDefinition": "Müşterileri son alışveriş zamanı, alışveriş sıklığı ve harcama tutarına göre segmentleyen analiz yöntemi.",
+      "definition": "RFM Analizi, müşteri tabanını üç temel metriğe göre skorlayan ve segmentlere ayıran veri odaklı bir pazarlama yöntemidir: **Recency (Yenilik)** — müşterinin en son ne zaman alışveriş yaptığı, **Frequency (Sıklık)** — belirli dönemde kaç kez alışveriş yaptığı, **Monetary (Parasal Değer)** — toplam ne kadar harcama yaptığı. Her müşteriye genellikle 1-5 arası bir skor atanır ve bu üç skor birleştirilerek müşteri segmentleri oluşturulur (örn. 5-5-5: şampiyon müşteri, 1-1-1: kayıp riski). Bu segmentasyon sayesinde her gruba özel pazarlama stratejileri geliştirilir.",
+      "whyImportant": "RFM analizi, sınırlı pazarlama bütçesini en yüksek getiriyi sağlayacak müşteri gruplarına yönlendirmenin en etkili yollarından biridir. Perakende yöneticileri bu analiz sayesinde hangi müşterilerin elde tutulmaya değer, hangilerinin geri kazanılması gerektiğini ve hangi segmentin büyüme potansiyeli taşıdığını net olarak görür. Kampanya maliyetlerini düşürürken dönüşüm oranlarını önemli ölçüde artırır.",
+      "realLifeExample": "Bir kozmetik perakendecisi RFM analizi sonucu '5-5-5' skorlu 2.000 şampiyon müşterisine özel erken erişim kampanyası gönderdi ve %38 dönüşüm oranı elde etti. Aynı zamanda '1-3-4' skorlu (eskiden çok harcayan ama uzun süredir gelmeyen) 5.000 müşteriye geri kazanım kuponu gönderdi ve %12'sini tekrar mağazaya çekmeyi başardı.",
+      "formula": "Her müşteri için R, F ve M skorları 1-5 arası atanır. Recency: Son alışverişten bugüne geçen gün sayısına göre (az gün = yüksek skor). Frequency: Belirli dönemdeki işlem sayısına göre (çok işlem = yüksek skor). Monetary: Toplam harcama tutarına göre (yüksek harcama = yüksek skor).",
+      "formulaExample": "Müşteri A: Son alışveriş 5 gün önce (R=5), son 12 ayda 18 işlem (F=5), toplam harcama 12.500 TL (M=4). RFM Skoru: 5-5-4 → Segment: 'Sadık Müşteri'. Müşteri B: Son alışveriş 200 gün önce (R=1), son 12 ayda 2 işlem (F=1), toplam harcama 450 TL (M=1). RFM Skoru: 1-1-1 → Segment: 'Kayıp Müşteri'.",
+      "managerTip": "RFM segmentlerini çeyreklik olarak güncelleyin ve her segment için farklı iletişim stratejisi belirleyin; şampiyon müşterilere ayrıcalık sunun, kayıp riski taşıyanlara proaktif geri kazanım kampanyaları başlatın.",
+      "segments": [
+        "Süpermarket",
+        "Giyim Perakendesi",
+        "E-Ticaret",
+        "Elektronik Mağazaları",
+        "Kozmetik",
+        "Hızlı Tüketim"
+      ],
+      "departments": [
+        "Pazarlama",
+        "CRM",
+        "Veri Analitiği",
+        "Satış"
+      ],
+      "confusedTerms": [
+        {
+          "term": "CLV (Müşteri Yaşam Boyu Değeri)",
+          "diff": "CLV müşterinin gelecekteki toplam değerini tahmin eder; RFM ise müşterinin mevcut davranış kalıplarına göre anlık segmentasyon yapar."
+        },
+        {
+          "term": "Churn Rate",
+          "diff": "Churn rate müşteri kaybının genel oranını gösterir; RFM ise her müşteriyi bireysel olarak skorlayarak detaylı segmentasyon sağlar."
+        }
+      ],
+      "relatedTerms": [
+        "crm",
+        "clv",
+        "churn-rate",
+        "loyalty-programi",
+        "hedef-kitle",
+        "basket-analizi"
+      ]
+    },
+    {
+      "slug": "rfid",
+      "term": "RFID (Radyo Frekansı ile Tanımlama)",
+      "termEn": "Radio-Frequency Identification",
+      "abbr": "RFID",
+      "letter": "R",
+      "category": "Dijital/AI",
+      "shortDefinition": "Ürünlere yapıştırılan küçük etiketlerle kablosuz olarak otomatik tanımlama ve stok takibi yapan teknoloji.",
+      "definition": "RFID (Radio-Frequency Identification), ürünlere veya ambalajlara iliştirilen küçük elektronik etiketler (tag) aracılığıyla radyo dalgaları kullanarak nesneleri uzaktan ve toplu olarak tanımlayan teknolojidir. Barkoddan farklı olarak görüş hattı gerektirmez ve saniyeler içinde yüzlerce ürünü aynı anda okuyabilir. Perakendede pasif RFID etiketler yaygın olarak kullanılır; bu etiketler okuyucunun yaydığı enerjiyle çalışır ve pil gerektirmez. Stok sayımını saatlerden dakikalara indirir, envanter doğruluğunu %95+ seviyeye çıkarır ve kayıp önleme sistemleriyle entegre çalışarak hırsızlığı azaltır.",
+      "whyImportant": "Envanter doğruluğu perakendeciler için en büyük operasyonel zorluklardan biridir ve RFID bu sorunu kökten çözer. Geleneksel barkod sayımı günler sürerken RFID ile tam mağaza sayımı birkaç saatte tamamlanabilir. Yüksek envanter doğruluğu sayesinde raf dışı kalma oranları düşer, omnichannel siparişler sorunsuz karşılanır ve müşteri memnuniyeti artar.",
+      "realLifeExample": "Bir hazır giyim zinciri tüm ürünlerine RFID etiketi uygulamasına geçti. Haftalık stok sayım süresi mağaza başına 40 saatten 2 saate düştü. Envanter doğruluğu %70'ten %98'e yükseldi ve 'online sipariş — mağazadan teslim' siparişlerinin karşılanma oranı %65'ten %95'e çıktı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "RFID yatırımının geri dönüşünü hızlandırmak için önce yüksek değerli veya yüksek kayıp oranına sahip kategorilerden başlayın; giyim ve elektronik kategorileri genellikle en hızlı ROI sağlar.",
+      "segments": [
+        "Giyim Perakendesi",
+        "Elektronik Mağazaları",
+        "Lojistik",
+        "Süpermarket",
+        "Lüks Perakende",
+        "Depo/Dağıtım Merkezi"
+      ],
+      "departments": [
+        "Bilgi Teknolojileri",
+        "Mağaza Operasyonları",
+        "Envanter Yönetimi",
+        "Kayıp Önleme",
+        "Lojistik"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Barkod",
+          "diff": "Barkod optik tarama gerektirir ve tek tek okunur; RFID radyo dalgalarıyla çalışır, görüş hattı gerektirmez ve toplu okuma yapabilir."
+        },
+        {
+          "term": "ESL (Elektronik Raf Etiketi)",
+          "diff": "ESL raftaki fiyat etiketidir ve müşteriye bilgi gösterir; RFID ise ürün takip ve envanter yönetimi için kullanılır."
+        }
+      ],
+      "relatedTerms": [
+        "barkod",
+        "sku",
+        "esl",
+        "tedarik-zinciri",
+        "shrinkage",
+        "loss-prevention",
+        "omnichannel"
+      ]
+    },
+    {
+      "slug": "sku",
+      "term": "SKU (Stok Tutma Birimi)",
+      "termEn": "Stock Keeping Unit",
+      "abbr": "SKU",
+      "letter": "S",
+      "category": "Envanter Yönetimi",
+      "shortDefinition": "Her ürün varyantına atanan benzersiz alfanumerik tanımlama kodu; envanter yönetiminin temel birimi.",
+      "definition": "SKU (Stock Keeping Unit — Stok Tutma Birimi), perakende ve depo yönetiminde her benzersiz ürün varyantına atanan alfanumerik tanımlama kodudur. Aynı ürünün farklı rengi, bedeni, ambalaj boyutu veya modeli ayrı SKU'lar olarak tanımlanır. Örneğin, bir tişörtün beyaz/M bedeni ile mavi/L bedeni iki farklı SKU'dur. SKU kodları genellikle hiyerarşik yapıda tasarlanır ve kategori, marka, ürün tipi, varyant gibi bilgileri kodlar. Barkoddan farklı olarak SKU her işletmeye özgüdür ve standart bir format zorunluluğu yoktur. SKU yönetimi; envanter takibi, satış analizi, yeniden sipariş, planogram oluşturma ve kategori yönetiminin temelidir.",
+      "whyImportant": "SKU, perakendecinin envanter yönetim sisteminin DNA'sıdır; doğru SKU yapılandırması olmadan stok takibi, satış analizi ve talep tahmini yapılamaz. Yöneticiler SKU bazlı verilerle hangi varyantların iyi sattığını, hangilerinin dead stock olduğunu tespit eder ve ürün gamını optimize eder. SKU sayısının kontrolsüz büyümesi (SKU proliferation) ise raf verimliliğini düşürür ve stok maliyetlerini artırır.",
+      "realLifeExample": "Bir elektronik market zinciri 45.000 aktif SKU'sunu analiz etti ve satış hızı düşük olan 8.000 SKU'yu (toplam cironun yalnızca %2'sini oluşturan) kademeli olarak sortimandan çıkardı. Kalan ürünlerin raf alanı genişledi, stok devir hızı %20 arttı ve depo maliyetleri yıllık 1,2 milyon TL azaldı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "SKU rasyonalizasyonunu yılda en az bir kez yapın; ABC analizini kullanarak C grubu SKU'ları sorgulayın ve düşük performanslı ürünleri sortimandan çıkararak raf verimliliğini artırın.",
+      "segments": [
+        "Süpermarket",
+        "Giyim Perakendesi",
+        "Elektronik Mağazaları",
+        "E-Ticaret",
+        "Eczane",
+        "Hızlı Tüketim",
+        "Depo/Dağıtım Merkezi"
+      ],
+      "departments": [
+        "Envanter Yönetimi",
+        "Satın Alma",
+        "Kategori Yönetimi",
+        "Lojistik",
+        "Bilgi Teknolojileri"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Barkod",
+          "diff": "Barkod evrensel bir ürün tanımlama standardıdır (EAN/UPC); SKU ise her işletmenin kendi oluşturduğu dahili tanımlama kodudur."
+        },
+        {
+          "term": "UPC (Universal Product Code)",
+          "diff": "UPC üretici tarafından atanan ve tüm perakendecilerde aynı olan koddur; SKU ise perakendeciye özgüdür ve farklı mağazalarda aynı ürün için farklı SKU olabilir."
+        }
+      ],
+      "relatedTerms": [
+        "barkod",
+        "abc-analizi",
+        "dead-stock",
+        "planogram",
+        "rfid",
+        "envanter-yonetimi"
+      ]
+    },
+    {
+      "slug": "shrinkage",
+      "term": "Shrinkage (Envanter Kaybı)",
+      "termEn": "Shrinkage",
+      "abbr": "",
+      "letter": "S",
+      "category": "Finans",
+      "shortDefinition": "Kayıtlardaki stok ile fiziksel sayım arasındaki fark; hırsızlık, hasar, operasyonel hata gibi kaynaklardan oluşan kayıp.",
+      "definition": "Shrinkage (Envanter Kaybı/Fire), perakende işletmelerinde sistemde kayıtlı stok miktarı ile fiziksel sayımda tespit edilen gerçek stok miktarı arasındaki olumsuz farktır. Bu kayıp dört ana kaynaktan oluşur: **dış hırsızlık** (müşteri hırsızlığı), **iç hırsızlık** (çalışan hırsızlığı), **idari ve operasyonel hatalar** (yanlış sayım, hatalı fiyatlandırma, kayıt hataları) ve **tedarikçi dolandırıcılığı** (eksik teslimat, sahte fatura). Gıda perakendeciliğinde ayrıca bozulma ve son kullanma tarihi geçmesi de önemli bir kayıp kaynağıdır. Global perakende sektöründe shrinkage oranı ortalama %1,4-1,8 civarında olup, büyük zincirler için milyonlarca liralık kayba karşılık gelir.",
+      "whyImportant": "Shrinkage doğrudan kâr marjını eritir; %1'lik bir shrinkage oranı yıllık 100 milyon TL cirolu bir mağaza için 1 milyon TL net kayıp demektir. Yöneticiler shrinkage kaynaklarını doğru analiz ederse, hedefe yönelik kayıp önleme stratejileri geliştirerek kârlılığı önemli ölçüde artırabilir. Kontrol altına alınamayan shrinkage, mağaza kapatma kararlarını bile tetikleyebilir.",
+      "realLifeExample": "Bir süpermarket zinciri yıllık envanter sayımında %2,3 shrinkage oranı tespit etti. Detaylı analiz, kaybın %40'ının kasa hatalarından, %35'inin dış hırsızlıktan ve %25'inin bozulmadan kaynaklandığını gösterdi. Kasa eğitim programı, güvenlik kamerası optimizasyonu ve soğuk zincir iyileştirmesi ile 12 ayda shrinkage oranı %1,1'e düşürüldü.",
+      "formula": "Shrinkage Oranı (%) = ((Kayıtlardaki Stok Değeri - Fiziksel Sayım Değeri) / Kayıtlardaki Stok Değeri) × 100",
+      "formulaExample": "Kayıtlardaki stok değeri: 5.000.000 TL, Fiziksel sayımda tespit edilen stok değeri: 4.910.000 TL. Shrinkage Oranı = ((5.000.000 - 4.910.000) / 5.000.000) × 100 = %1,8. Yani 90.000 TL'lik envanter kaybı yaşanmış.",
+      "managerTip": "Yılda en az iki kez tam sayım yapın ve yüksek riskli kategorilerde (kozmetik, alkol, elektronik aksesuar) döngüsel sayım programı uygulayın; kayıp trendlerini aylık takip ederek anormalliklere hızlı müdahale edin.",
+      "segments": [
+        "Süpermarket",
+        "Giyim Perakendesi",
+        "Elektronik Mağazaları",
+        "Eczane",
+        "Baumarkt",
+        "Hızlı Tüketim"
+      ],
+      "departments": [
+        "Kayıp Önleme",
+        "Mağaza Operasyonları",
+        "Finans",
+        "Envanter Yönetimi",
+        "Güvenlik"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Dead Stock",
+          "diff": "Dead stock satılmayan ama fiziksel olarak mevcut olan üründür; shrinkage ise fiziksel olarak kayıp olan, bulunamayan stoktur."
+        },
+        {
+          "term": "Markdown",
+          "diff": "Markdown bilinçli yapılan fiyat indirimidir; shrinkage ise istem dışı yaşanan envanter kaybıdır."
+        }
+      ],
+      "relatedTerms": [
+        "loss-prevention",
+        "rfid",
+        "fifo",
+        "dead-stock",
+        "sku",
+        "gmroi"
+      ]
+    },
+    {
+      "slug": "tedarik-zinciri",
+      "term": "Tedarik Zinciri Yönetimi",
+      "termEn": "Supply Chain Management",
+      "abbr": "SCM",
+      "letter": "T",
+      "category": "Operasyon",
+      "shortDefinition": "Hammaddeden son tüketiciye kadar ürünlerin akışını, depolanmasını ve dağıtımını koordine eden uçtan uca yönetim süreci.",
+      "definition": "Tedarik Zinciri Yönetimi (Supply Chain Management — SCM), bir ürünün hammadde aşamasından üretim, depolama, dağıtım ve son tüketiciye ulaşımına kadar tüm süreçlerin stratejik koordinasyonudur. Perakende bağlamında tedarikçi seçimi, sipariş yönetimi, lojistik planlama, depo operasyonları, mağaza ikmal sistemi ve iade yönetimini kapsar. Modern tedarik zinciri yönetimi; talep tahmini, envanter optimizasyonu, tedarikçi ilişkileri yönetimi (SRM) ve lojistik ağ tasarımını entegre eden dijital platformlar kullanır. Pandemi sonrası dönemde tedarik zinciri dayanıklılığı (resilience) ve çeşitlendirme stratejileri önem kazanmıştır.",
+      "whyImportant": "Perakende maliyetlerinin önemli bir bölümü tedarik zincirinde oluşur; etkin SCM doğrudan fiyat rekabetçiliğini ve kârlılığı belirler. Tedarik zinciri aksaklıkları (stok tükenmesi, gecikmeler) müşteri kaybına ve marka itibar hasarına yol açar. Yöneticiler, tedarik zinciri görünürlüğünü artırarak riskleri proaktif yönetmeli ve alternatif kaynak stratejileri geliştirmelidir.",
+      "realLifeExample": "Bir zincir market, ana sebze tedarikçisinin sel nedeniyle üretim yapamaz hale gelmesi üzerine daha önce onaylanmış alternatif tedarikçi havuzundan hızla ikame sağladı. Ayrıca bölgesel depo ağını optimize ederek ortalama teslimat süresini 48 saatten 24 saate indirdi ve mağaza bazında stok tükenmesini %35 azalttı.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Kritik kategorilerde en az iki alternatif tedarikçi bulundurun ve tedarik süresi (lead time) performansını haftalık takip edin; tek kaynak bağımlılığı en büyük tedarik zinciri riskidir.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "E-Ticaret",
+        "Giyim Perakendesi",
+        "Elektronik Mağazaları",
+        "Hızlı Tüketim",
+        "Lojistik"
+      ],
+      "departments": [
+        "Lojistik",
+        "Satın Alma",
+        "Depo Operasyonları",
+        "Planlama",
+        "Kalite Kontrol"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Lojistik",
+          "diff": "Lojistik yalnızca ürünlerin fiziksel taşınması ve depolanmasını kapsar; tedarik zinciri yönetimi ise tedarikçi ilişkilerinden müşteriye teslimatıa kadar tüm süreçlerin stratejik koordinasyonudur."
+        },
+        {
+          "term": "Satın Alma (Procurement)",
+          "diff": "Satın alma tedarikçiden ürün/hizmet temini sürecidir; tedarik zinciri yönetimi ise satın almayı da içine alan uçtan uca süreç yönetimidir."
+        }
+      ],
+      "relatedTerms": [
+        "talep-tahmini",
+        "fifo",
+        "rfid",
+        "dijital-ikiz",
+        "sku",
+        "dead-stock"
+      ]
+    },
+    {
+      "slug": "talep-tahmini",
+      "term": "Talep Tahmini (Demand Forecasting)",
+      "termEn": "Demand Forecasting",
+      "abbr": "",
+      "letter": "T",
+      "category": "Dijital/AI",
+      "shortDefinition": "Geçmiş satış verileri ve dış faktörleri analiz ederek gelecekteki ürün talebini öngören analitik süreç.",
+      "definition": "Talep Tahmini (Demand Forecasting), geçmiş satış verileri, mevsimsellik, promosyon takvimleri, ekonomik göstergeler, hava durumu ve rekabet koşulları gibi çok sayıda değişkeni analiz ederek gelecekteki ürün talebini öngören istatistiksel ve yapay zekâ destekli analitik süreçtir. Geleneksel yöntemler (hareketli ortalama, üstel düzleştirme, ARIMA) ile modern makine öğrenmesi modelleri (gradient boosting, derin öğrenme) birlikte kullanılır. Talep tahmini; satın alma kararları, üretim planlama, envanter optimizasyonu, personel planlaması ve promosyon stratejilerinin temelini oluşturur. Tahmin doğruluğu genellikle MAPE (Ortalama Mutlak Yüzde Hata) ile ölçülür.",
+      "whyImportant": "Doğru talep tahmini perakendecinin en kritik rekabet avantajlarından biridir; fazla stok tutma maliyetini düşürürken stok tükenmesi kayıplarını da önler. Yöneticiler güvenilir tahminlerle promosyon zamanlamasını optimize edebilir, tedarikçi siparişlerini proaktif verebilir ve nakit akışını daha iyi yönetebilir. Yanlış tahminler ise ya raf boşluğuna ya da markdown baskısına yol açar.",
+      "realLifeExample": "Bir süpermarket zinciri, yapay zekâ tabanlı talep tahmin sistemi kurarak 500 mağazada 50.000 SKU için haftalık tahminler üretmeye başladı. Sistem hava durumu, yerel etkinlikler ve kampanya takvimini de modele dahil etti. İlk yılda tahmin doğruluğu %68'den %85'e çıktı, gıda israfı %22 azaldı ve stok tükenmesi %30 düştü.",
+      "formula": "MAPE (Tahmin Doğruluğu) = (1/n) × Σ|Gerçek Satış - Tahmini Satış| / Gerçek Satış × 100",
+      "formulaExample": "3 haftalık tahmin: Hafta 1 → Tahmin: 100, Gerçek: 110 (|hata|=%9,1). Hafta 2 → Tahmin: 150, Gerçek: 140 (|hata|=%7,1). Hafta 3 → Tahmin: 130, Gerçek: 135 (|hata|=%3,7). MAPE = (9,1 + 7,1 + 3,7) / 3 = %6,6. Tahmin doğruluğu = %93,4.",
+      "managerTip": "Tahmin modelinizi yalnızca geçmiş satışlara değil, promosyon takvimi, hava durumu ve yerel etkinlik verilerine de besleyin; dış faktörler tahmin doğruluğunu %10-15 artırabilir.",
+      "segments": [
+        "Süpermarket",
+        "E-Ticaret",
+        "Giyim Perakendesi",
+        "Hızlı Tüketim",
+        "Elektronik Mağazaları",
+        "Lojistik"
+      ],
+      "departments": [
+        "Planlama",
+        "Satın Alma",
+        "Veri Analitiği",
+        "Kategori Yönetimi",
+        "Lojistik"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Bütçe/Hedef",
+          "diff": "Bütçe yönetimin belirlediği satış hedefidir; talep tahmini ise veriye dayalı objektif bir öngörüdür ve hedeften bağımsızdır."
+        },
+        {
+          "term": "ABC Analizi",
+          "diff": "ABC analizi ürünleri mevcut satış performansına göre sınıflandırır; talep tahmini ise gelecekteki satışları öngörür."
+        }
+      ],
+      "relatedTerms": [
+        "abc-analizi",
+        "tedarik-zinciri",
+        "dead-stock",
+        "dinamik-fiyatlandirma",
+        "dijital-ikiz",
+        "fifo"
+      ]
+    },
+    {
+      "slug": "upselling",
+      "term": "Upselling (Üst Satış)",
+      "termEn": "Upselling",
+      "abbr": "",
+      "letter": "U",
+      "category": "Satış",
+      "shortDefinition": "Müşteriyi daha yüksek değerli veya premium bir ürün/hizmete yönlendirerek ortalama sipariş değerini artırma tekniği.",
+      "definition": "Upselling (Üst Satış), müşterinin ilgilendiği veya satın almak üzere olduğu ürünün yerine daha üst seviye, daha kapsamlı özellikli veya daha yüksek fiyatlı bir alternatifi önererek birim satış değerini artırma tekniğidir. Perakendede upselling; satış danışmanının yönlendirmesi (face-to-face), e-ticaret sitelerinde 'daha iyi sürümü keşfet' önerileri, kasa önü ekranlarındaki premium seçenekler ve abonelik yükseltme teklifleri gibi farklı kanallarda uygulanır. Başarılı upselling, müşteriye gerçek bir değer sunduğunda etkilidir; agresif yaklaşımlar müşteri kaybına yol açabilir.",
+      "whyImportant": "Upselling, mevcut müşterilere daha fazla satış yapmanın en düşük maliyetli yoludur çünkü yeni müşteri edinme maliyeti mevcut müşteriye satışın 5-7 katıdır. Perakende yöneticileri upselling ile AOV'yi (ortalama sipariş değeri) artırırken müşteri memnuniyetini de koruyabilir — doğru ürün önerisi müşteriye değer katar. Ekibin upselling becerileri doğrudan mağaza kârlılığını etkiler.",
+      "realLifeExample": "Bir elektronik mağazasında müşteri 5.000 TL'lik bir dizüstü bilgisayar almak istedi. Satış danışmanı, 6.500 TL'lik daha hızlı işlemci ve daha geniş ekrana sahip modeli gösterdi ve farkın performans avantajını somut örneklerle açıkladı. Müşteri üst modeli tercih etti; böylece birim satış değeri %30 arttı ve müşteri daha uzun ömürlü bir ürün aldığı için memnun ayrıldı.",
+      "formula": "Upselling Başarı Oranı (%) = (Üst Modele Yönlenen Müşteri Sayısı / Toplam Upselling Teklifi Yapılan Müşteri Sayısı) × 100",
+      "formulaExample": "Bir ayda 200 müşteriye upselling teklifi sunuldu ve 54 müşteri üst modeli satın aldı. Upselling Başarı Oranı = (54 / 200) × 100 = %27.",
+      "managerTip": "Satış ekibinize ürün bilgisi eğitimi verin ve upselling senaryoları üzerinde rol yapma (roleplay) çalışmaları yapın; müşteriye değer sunan doğal bir yaklaşım, basınçlı satıştan çok daha etkilidir.",
+      "segments": [
+        "Elektronik Mağazaları",
+        "Giyim Perakendesi",
+        "E-Ticaret",
+        "Restoran",
+        "Lüks Perakende",
+        "Otomotiv"
+      ],
+      "departments": [
+        "Satış",
+        "E-Ticaret",
+        "Pazarlama",
+        "Eğitim"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Cross-Selling (Çapraz Satış)",
+          "diff": "Cross-selling mevcut ürüne tamamlayıcı farklı bir ürün önerir (örn. telefona kılıf); upselling ise aynı kategoride daha üst/premium bir versiyon önerir (örn. daha iyi bir telefon)."
+        },
+        {
+          "term": "Impulse Buying",
+          "diff": "Impulse buying müşterinin anlık dürtüyle planlanmamış bir ürün satın almasıdır; upselling ise satış ekibinin bilinçli yönlendirmesiyle gerçekleşir."
+        }
+      ],
+      "relatedTerms": [
+        "cross-selling",
+        "aov",
+        "conversion-rate",
+        "impulse-buying",
+        "clv"
+      ]
+    },
+    {
+      "slug": "visual-merchandising",
+      "term": "Visual Merchandising (Görsel Mağazacılık)",
+      "termEn": "Visual Merchandising",
+      "abbr": "VM",
+      "letter": "V",
+      "category": "Pazarlama",
+      "shortDefinition": "Mağaza vitrinleri, iç mekan düzeni, aydınlatma ve ürün sunumu ile müşteri deneyimini ve satışı artıran görsel tasarım disiplini.",
+      "definition": "Visual Merchandising (Görsel Mağazacılık), perakende ortamında ürünlerin ve mağaza alanının estetik, stratejik ve psikolojik ilkeler doğrultusunda tasarlanarak müşteri deneyimini zenginleştiren ve satın alma davranışını yönlendiren çok disiplinli bir alandır. Vitrin tasarımı, mağaza içi yerleşim planı (layout), aydınlatma, renk kullanımı, POP (Point of Purchase) materyalleri, manken ve ürün teşhir teknikleri, sezon tema değişimleri ve dijital ekran entegrasyonlarını kapsar. İyi visual merchandising, müşterinin mağazada geçirdiği süreyi uzatır, ürün keşfini kolaylaştırır ve marka algısını güçlendirir.",
+      "whyImportant": "Müşterilerin satın alma kararlarının büyük çoğunluğu mağaza içinde, görsel etkileşimle şekillenir. Etkili visual merchandising mağaza trafiğini artırır, ortalama sepet değerini yükseltir ve marka kimliğini güçlendirir. Perakende yöneticileri VM yatırımlarının ROI'sini satış artışı ve müşteri geri bildirimlerinden ölçerek strateji optimizasyonu yapabilir.",
+      "realLifeExample": "Bir moda perakendecisi, giriş alanını yeniden tasarlayarak 'deceleration zone' konseptini uyguladı — müşterilerin hızını yavaşlatacak dikkat çekici bir tema köşesi oluşturdu. Vitrin temasını her 15 günde yenileyerek geçiş trafiğinden mağazaya giriş oranını %18 artırdı. İç mekanda ikincil ürün teşhir noktaları ile çapraz satış fırsatları yarattı ve ortalama sepet değeri %14 yükseldi.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "VM standartlarınızı bir checklist haline getirip günlük mağaza açılış rutinine dahil edin; özellikle vitrin ve giriş alanı her zaman mükemmel görünmeli çünkü müşterinin mağaza hakkındaki ilk izlenimi burada oluşur.",
+      "segments": [
+        "Giyim Perakendesi",
+        "Lüks Perakende",
+        "Kozmetik",
+        "Elektronik Mağazaları",
+        "Ev/Yaşam",
+        "Mücevherat"
+      ],
+      "departments": [
+        "Visual Merchandising",
+        "Pazarlama",
+        "Mağaza Operasyonları",
+        "Marka Yönetimi"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Merchandising",
+          "diff": "Merchandising ürün seçimi, fiyatlandırma ve tedarik dahil tüm ürün yönetim sürecini kapsar; visual merchandising yalnızca ürünlerin görsel sunumu ve mağaza tasarımı ile ilgilenir."
+        },
+        {
+          "term": "Planogram",
+          "diff": "Planogram raf düzeyinde ürün yerleşim şemasıdır; visual merchandising ise vitrin, aydınlatma, tema ve genel mağaza atmosferi dahil bütünsel görsel deneyimdir."
+        }
+      ],
+      "relatedTerms": [
+        "planogram",
+        "merchandising",
+        "endcap",
+        "gondol",
+        "impulse-buying",
+        "conversion-rate"
+      ]
+    },
+    {
+      "slug": "yil-ustu-yil-buyume",
+      "term": "YoY Büyüme (Yıldan Yıla)",
+      "termEn": "Year-over-Year Growth",
+      "abbr": "YoY",
+      "letter": "Y",
+      "category": "Finans",
+      "shortDefinition": "Bir metriğin bu yılki değerinin geçen yılın aynı dönemiyle karşılaştırılarak hesaplanan büyüme oranı.",
+      "definition": "YoY Büyüme (Year-over-Year Growth), belirli bir performans metriğinin bu yılki değerini geçen yılın aynı dönemiyle karşılaştırarak yüzdesel değişimi ölçen finansal göstergedir. Mevsimsellik etkisini ortadan kaldırdığı için perakende sektöründe en güvenilir karşılaştırma yöntemlerinden biridir. Ciro, müşteri sayısı, sepet büyüklüğü, kâr marjı, mağaza trafiği gibi hemen her metrik için YoY hesaplanabilir. 'Aynı mağaza satış büyümesi' (same-store sales growth / comp sales) özellikle yatırımcılar ve üst yönetim tarafından yakından takip edilen bir YoY metriğidir.",
+      "whyImportant": "YoY büyüme, perakendecinin gerçek organik performansını gösterir çünkü mevsimsel dalgalanmaları elimine eder. Yöneticiler YoY verileriyle bir mağazanın veya kategorinin gerçekten büyüyüp büyümediğini, sektör ortalamasının üstünde mi altında mı olduğunu net olarak değerlendirir. Yatırımcılar ve yönetim kurulları da şirket performansını öncelikle YoY bazında değerlendirir.",
+      "realLifeExample": "Bir giyim zincirinin Ocak 2025 cirosu 45 milyon TL, Ocak 2024 cirosu ise 38 milyon TL'ydi. YoY büyüme %18,4 olarak hesaplandı. Ancak enflasyon %25 olduğundan reel büyüme aslında negatifti. Yönetim bu analiz sayesinde fiyat artışlarının organik büyümeyi maskelediğini fark etti ve müşteri sayısı büyümesine odaklanan yeni strateji geliştirdi.",
+      "formula": "YoY Büyüme (%) = ((Bu Yılki Değer - Geçen Yılki Değer) / Geçen Yılki Değer) × 100",
+      "formulaExample": "Mart 2025 aylık ciro: 12.000.000 TL, Mart 2024 aylık ciro: 10.500.000 TL. YoY Büyüme = ((12.000.000 - 10.500.000) / 10.500.000) × 100 = %14,3 büyüme.",
+      "managerTip": "YoY büyümeyi nominal ve reel (enflasyondan arındırılmış) olarak ayrı ayrı takip edin; yüksek enflasyon dönemlerinde nominal büyüme yanıltıcı olabilir, asıl performansı reel büyüme gösterir.",
+      "segments": [
+        "Süpermarket",
+        "Giyim Perakendesi",
+        "E-Ticaret",
+        "Elektronik Mağazaları",
+        "Hızlı Tüketim",
+        "Lüks Perakende"
+      ],
+      "departments": [
+        "Finans",
+        "Üst Yönetim",
+        "Planlama",
+        "Veri Analitiği",
+        "Yatırımcı İlişkileri"
+      ],
+      "confusedTerms": [
+        {
+          "term": "MoM (Aydan Aya Büyüme)",
+          "diff": "MoM bir önceki ayla karşılaştırır ve mevsimsellikten etkilenir; YoY ise geçen yılın aynı dönemiyle karşılaştırarak mevsimselliği elimine eder."
+        },
+        {
+          "term": "CAGR (Bileşik Yıllık Büyüme)",
+          "diff": "CAGR birden fazla yılı kapsayan ortalama yıllık büyüme oranıdır; YoY ise yalnızca ardışık iki yılı karşılaştırır."
+        }
+      ],
+      "relatedTerms": [
+        "kpi",
+        "gmroi",
+        "aov",
+        "conversion-rate",
+        "clv"
+      ]
+    },
+    {
+      "slug": "zero-waste",
+      "term": "Zero Waste (Sıfır Atık)",
+      "termEn": "Zero Waste",
+      "abbr": "",
+      "letter": "Z",
+      "category": "Operasyon",
+      "shortDefinition": "Perakende operasyonlarında ürün israfını, ambalaj atığını ve gıda kaybını minimuma indirmeyi hedefleyen sürdürülebilirlik yaklaşımı.",
+      "definition": "Zero Waste (Sıfır Atık), perakende işletmelerinde üretimden satışa kadar tüm süreçlerde oluşan atığı — gıda israfı, ambalaj atığı, ürün hasarı, iade kaynaklı kayıplar — sistematik olarak azaltmayı ve idealde sıfıra yaklaştırmayı hedefleyen sürdürülebilirlik stratejisidir. Bu yaklaşım; son kullanma tarihi yönetimi, dinamik fiyatlandırma ile bozulma öncesi ürün satışı, ambalaj optimizasyonu, geri dönüşüm programları, bağış ortaklıkları, kompostlama ve döngüsel ekonomi uygulamalarını içerir. Yasal düzenlemeler (AB gıda israfı direktifi, Türkiye sıfır atık yönetmeliği) ve tüketici bilinci perakendecileri bu alanda yatırım yapmaya zorlamaktadır.",
+      "whyImportant": "Gıda perakendecilerinde israf oranı %2-5 arasında olup, bu doğrudan kâr kaybıdır. Sıfır atık uygulamaları hem maliyetleri düşürür hem de sürdürülebilirlik odaklı tüketicilerin marka tercihini olumlu etkiler. Ayrıca Türkiye'deki sıfır atık yönetmeliği uyumu yasal zorunluluk haline gelmiştir ve uyumsuzluk ciddi cezai yaptırımlar doğurur.",
+      "realLifeExample": "Bir süpermarket zinciri, son kullanma tarihine 2 gün kalan ürünlere otomatik %50 indirim uygulayan dinamik fiyatlandırma sistemi kurdu. Ayrıca satılamayan ancak tüketilebilir gıdaları yerel gıda bankalarına bağışlayan bir ortaklık programı başlattı. İlk yılda gıda israfı %40 azaldı, bağış programı sayesinde vergi avantajı elde edildi ve marka algısı sürdürülebilirlik endeksinde 12 sıra yükseldi.",
+      "formula": "Atık Oranı (%) = (Atık Miktarı (kg veya TL) / Toplam Tedarik Miktarı (kg veya TL)) × 100",
+      "formulaExample": "Bir mağaza aylık 100.000 kg ürün tedarik etti ve 3.200 kg ürün atık olarak ayrıldı (bozulma, hasar, son kullanma tarihi). Atık Oranı = (3.200 / 100.000) × 100 = %3,2. Hedef: %1,5'in altına düşürmek.",
+      "managerTip": "FIFO uygulamasını titizlikle denetleyin ve son kullanma tarihi yaklaşan ürünleri erken tespit eden dijital uyarı sistemi kurun; gıda israfının büyük kısmı yetersiz raf rotasyonundan kaynaklanır.",
+      "segments": [
+        "Süpermarket",
+        "Hipermarket",
+        "Restoran",
+        "Hızlı Tüketim",
+        "Gıda Perakendesi",
+        "Baumarkt"
+      ],
+      "departments": [
+        "Mağaza Operasyonları",
+        "Kalite Kontrol",
+        "Sürdürülebilirlik",
+        "Lojistik",
+        "Satın Alma"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Shrinkage (Envanter Kaybı)",
+          "diff": "Shrinkage hırsızlık ve sayım hataları dahil tüm envanter kayıplarını kapsar; zero waste ise yalnızca israf ve atık azaltmaya odaklanır."
+        },
+        {
+          "term": "Dead Stock",
+          "diff": "Dead stock satılamayan stoktur; zero waste ise bozulma, son kullanma tarihi ve ambalaj atığı gibi fiziksel israfın önlenmesini hedefler."
+        }
+      ],
+      "relatedTerms": [
+        "fifo",
+        "shrinkage",
+        "dead-stock",
+        "dinamik-fiyatlandirma",
+        "tedarik-zinciri"
+      ]
+    },
+    {
+      "slug": "conversion-rate",
+      "term": "Conversion Rate (Dönüşüm Oranı)",
+      "termEn": "Conversion Rate",
+      "abbr": "CR",
+      "letter": "C",
+      "category": "Satış",
+      "shortDefinition": "Mağazayı ziyaret eden veya web sitesine giren müşterilerin satın alma gerçekleştirme yüzdesi.",
+      "definition": "Conversion Rate (Dönüşüm Oranı), belirli bir dönemde mağazayı (fiziksel veya dijital) ziyaret eden kişi sayısı içinde fiili satın alma gerçekleştirenlerin yüzdesel oranıdır. Fiziksel mağazada sayaç (people counter) ile ölçülen giriş trafiği ve POS işlem sayısı kullanılarak hesaplanır. E-ticarette ise web sitesi/uygulama oturum sayısı ve sipariş sayısı temel alınır. Perakende sektöründe fiziksel mağaza dönüşüm oranı genellikle %20-40, e-ticarette ise %1-4 aralığındadır. Dönüşüm oranı; mağaza düzeni, personel kalitesi, ürün bulunabilirliği, fiyatlandırma ve müşteri deneyiminin bütünsel bir performans göstergesidir.",
+      "whyImportant": "Dönüşüm oranı, pazarlama ve mağaza operasyonlarının etkinliğinin en net göstergelerinden biridir. Yüksek trafik ama düşük dönüşüm oranı, ciddi operasyonel sorunlara işaret eder: yanlış ürün gamı, yetersiz personel veya kötü müşteri deneyimi gibi. Yöneticiler dönüşüm oranını %1 bile artırarak — yeni müşteri çekmeden — ciddi ciro artışı sağlayabilir.",
+      "realLifeExample": "Bir ayakkabı mağazasının aylık trafiği 15.000 kişi ama dönüşüm oranı %18'di. Yönetici, beden bulunamama sorununu çözmek için stok çeşitliliğini artırdı ve satış danışmanlarına aktif karşılama eğitimi verdi. İki ay sonra dönüşüm oranı %24'e çıktı — trafik aynı kalsa bile aylık 900 ek satış işlemi elde edildi.",
+      "formula": "Conversion Rate (%) = (Satın Alma Gerçekleştiren Müşteri Sayısı / Toplam Ziyaretçi Sayısı) × 100",
+      "formulaExample": "Bir mağazaya haftalık 5.000 kişi girdi (people counter verisi) ve POS'tan 1.250 satış işlemi gerçekleşti. Conversion Rate = (1.250 / 5.000) × 100 = %25.",
+      "managerTip": "Dönüşüm oranını saat dilimlerine göre analiz edin; yoğun saatlerde düşen dönüşüm oranı genellikle yetersiz personel sayısına işaret eder ve vardiya planlaması ile çözülebilir.",
+      "segments": [
+        "Giyim Perakendesi",
+        "E-Ticaret",
+        "Elektronik Mağazaları",
+        "Süpermarket",
+        "Kozmetik",
+        "Lüks Perakende"
+      ],
+      "departments": [
+        "Satış",
+        "Mağaza Operasyonları",
+        "E-Ticaret",
+        "Pazarlama",
+        "Veri Analitiği"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Trafik (Footfall)",
+          "diff": "Trafik mağazaya giren toplam kişi sayısıdır; dönüşüm oranı ise bu trafiğin ne kadarının satışa dönüştüğünü gösterir."
+        },
+        {
+          "term": "AOV (Ortalama Sipariş Değeri)",
+          "diff": "AOV satın alan müşterilerin ortalama harcama tutarıdır; dönüşüm oranı ise ziyaretçilerin kaçının satın alma yaptığını ölçer."
+        }
+      ],
+      "relatedTerms": [
+        "aov",
+        "kpi",
+        "upselling",
+        "cross-selling",
+        "visual-merchandising",
+        "clv"
+      ]
+    },
+    {
+      "slug": "clv",
+      "term": "CLV (Müşteri Yaşam Boyu Değeri)",
+      "termEn": "Customer Lifetime Value",
+      "abbr": "CLV",
+      "letter": "C",
+      "category": "Finans",
+      "shortDefinition": "Bir müşterinin işletmeyle olan tüm ilişkisi boyunca yaratacağı tahmini toplam gelir; müşteri yatırımlarının temel kararlaştırıcısı.",
+      "definition": "CLV (Customer Lifetime Value — Müşteri Yaşam Boyu Değeri), bir müşterinin işletmeyle ilk etkileşiminden ilişkinin sona erdiği ana kadar yaratacağı toplam net gelirin bugünkü değeridir. Hesaplanmasında ortalama sipariş değeri, alışveriş sıklığı, müşteri ömrü (retention süresi) ve kâr marjı temel parametrelerdir. Gelişmiş modellerde iskonto oranı (paranın zaman değeri) ve müşteri edinme/elde tutma maliyetleri de dahil edilir. CLV, pazarlama bütçesi tahsisi, müşteri segmentasyonu, sadakat programı tasarımı ve fiyatlandırma stratejileri için kritik bir karar verme metriğidir. CLV/CAC (müşteri edinme maliyeti) oranı işletmenin sürdürülebilirliğinin en önemli göstergelerinden biridir.",
+      "whyImportant": "CLV bilmeden doğru müşteri yatırımı yapılamaz; bir müşteriye ne kadar harcama yapılabileceğini ancak o müşterinin yaşam boyu değeri belirler. Yöneticiler CLV verisiyle yüksek değerli müşterilere özel deneyim sunabilir, düşük CLV segmentlerindeki gereksiz harcamaları kesebilir ve pazarlama ROI'sini dramatik şekilde artırabilir. CLV odaklı yönetim, kısa vadeli ciro takibinden uzun vadeli kârlılık stratejisine geçişi temsil eder.",
+      "realLifeExample": "Bir online moda perakendecisi CLV analizinde, sadakat programı üyelerinin ortalama CLV'sinin 8.500 TL, üye olmayanların ise 1.200 TL olduğunu keşfetti. Bu bilgiyle sadakat programına kaydı teşvik etmek için ilk alışverişte %15 indirim kuponu sunmaya başladı. Üyelik oranı %35'ten %58'e çıktı ve ortalama CLV şirket genelinde %42 arttı.",
+      "formula": "CLV = Ortalama Sipariş Değeri × Yıllık Alışveriş Sıklığı × Ortalama Müşteri Ömrü (yıl) × Kâr Marjı",
+      "formulaExample": "Ortalama sipariş değeri: 350 TL, Yıllık alışveriş sıklığı: 8, Ortalama müşteri ömrü: 4 yıl, Kâr marjı: %30. CLV = 350 × 8 × 4 × 0,30 = 3.360 TL. Bu müşteriye 3.360 TL'ye kadar edinme ve elde tutma yatırımı yapılabilir.",
+      "managerTip": "CLV'yi müşteri edinme maliyeti (CAC) ile birlikte değerlendirin; CLV/CAC oranı 3:1'in altındaysa müşteri edinme stratejinizi gözden geçirin çünkü sürdürülebilir büyüme tehlikededir.",
+      "segments": [
+        "E-Ticaret",
+        "Giyim Perakendesi",
+        "Süpermarket",
+        "Kozmetik",
+        "Lüks Perakende",
+        "Abonelik Perakendesi"
+      ],
+      "departments": [
+        "Pazarlama",
+        "CRM",
+        "Finans",
+        "Veri Analitiği",
+        "Üst Yönetim"
+      ],
+      "confusedTerms": [
+        {
+          "term": "AOV (Ortalama Sipariş Değeri)",
+          "diff": "AOV tek bir işlemin ortalama değerini ölçer; CLV ise müşterinin tüm yaşam döngüsü boyunca yaratacağı toplam değeri hesaplar."
+        },
+        {
+          "term": "RFM Analizi",
+          "diff": "RFM müşterinin mevcut davranışını skorlar; CLV ise geçmiş verilere dayanarak gelecekteki toplam değeri tahmin eder."
+        }
+      ],
+      "relatedTerms": [
+        "rfm-analizi",
+        "aov",
+        "churn-rate",
+        "loyalty-programi",
+        "crm",
+        "conversion-rate"
+      ]
+    },
+    {
+      "slug": "cross-selling",
+      "term": "Cross-Selling (Çapraz Satış)",
+      "termEn": "Cross-Selling",
+      "abbr": "",
+      "letter": "C",
+      "category": "Satış",
+      "shortDefinition": "Müşterinin satın aldığı ürünle ilişkili veya tamamlayıcı ek ürünler önererek sepet değerini artırma stratejisi.",
+      "definition": "Cross-Selling (Çapraz Satış), müşterinin satın almakta olduğu veya ilgilendiği ana ürüne tamamlayıcı, ilişkili veya uyumlu ek ürünler önererek toplam sepet değerini artırma stratejisidir. Fiziksel mağazada satış danışmanlarının önerileri, ilişkili ürünlerin yan yana konumlandırılması ve kasa önü ürünleri; e-ticarette ise 'bu ürünle birlikte alınan', 'bunu alanlar şunu da aldı' ve 'sepetini tamamla' algoritmaları cross-selling araçlarıdır. Basket analizi (market sepet analizi) ile hangi ürünlerin birlikte satın alındığı tespit edilerek cross-selling stratejileri veri odaklı optimize edilir.",
+      "whyImportant": "Cross-selling, müşteri başına geliri artırmanın en doğal ve müşteri dostu yollarından biridir çünkü müşterinin zaten ihtiyaç duyduğu tamamlayıcı ürünler sunulur. Perakende yöneticileri etkili cross-selling ile AOV'yi %10-30 artırabilir. Ayrıca müşterinin ihtiyaç duyduğu her şeyi tek noktadan temin etmesi sadakati de güçlendirir.",
+      "realLifeExample": "Bir spor mağazası koşu ayakkabısı satın alan müşterilere otomatik olarak koşu çorabı, su matarası ve diz bandajı önerileri sunan bir çapraz satış programı uyguladı. POS ekranında satış danışmanına bu öneriler otomatik gösterildi. Program sonrasında koşu ayakkabısı satışlarına eklenen ortalama çapraz ürün sayısı 0,4'ten 1,2'ye çıktı ve kategori AOV'si %26 arttı.",
+      "formula": "Çapraz Satış Oranı (%) = (Çapraz Ürün Eklenen İşlem Sayısı / Toplam İşlem Sayısı) × 100",
+      "formulaExample": "Bir ayda 3.000 satış işlemi yapıldı ve bunların 840'ında müşteri ana ürüne ek olarak en az bir çapraz ürün aldı. Çapraz Satış Oranı = (840 / 3.000) × 100 = %28.",
+      "managerTip": "Basket analizi verilerini kullanarak en güçlü ürün eşleştirmelerini belirleyin ve bu eşleştirmeleri hem mağaza içi ürün konumlandırmasında hem de POS öneri ekranlarında kullanın.",
+      "segments": [
+        "Elektronik Mağazaları",
+        "E-Ticaret",
+        "Giyim Perakendesi",
+        "Süpermarket",
+        "Spor Perakendesi",
+        "Kozmetik"
+      ],
+      "departments": [
+        "Satış",
+        "Pazarlama",
+        "E-Ticaret",
+        "Kategori Yönetimi",
+        "Veri Analitiği"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Upselling (Üst Satış)",
+          "diff": "Upselling aynı kategoride daha pahalı/premium bir versiyon önerir; cross-selling ise farklı kategoriden tamamlayıcı bir ürün önerir."
+        },
+        {
+          "term": "Bundling (Paket Satış)",
+          "diff": "Bundling ürünleri sabit bir paket ve fiyatla sunar; cross-selling ise müşteriye bireysel ürün önerileri yaparak esnek bir satış artırma yaklaşımıdır."
+        }
+      ],
+      "relatedTerms": [
+        "upselling",
+        "basket-analizi",
+        "aov",
+        "impulse-buying",
+        "conversion-rate",
+        "clv"
+      ]
+    },
+    {
+      "slug": "dijital-ikiz",
+      "term": "Dijital İkiz (Digital Twin)",
+      "termEn": "Digital Twin",
+      "abbr": "",
+      "letter": "D",
+      "category": "Dijital/AI",
+      "shortDefinition": "Fiziksel mağaza veya tedarik zincirinin sanal ortamda birebir kopyasını oluşturarak simülasyon ve optimizasyon yapan teknoloji.",
+      "definition": "Dijital İkiz (Digital Twin), fiziksel bir mağazanın, deponun veya tedarik zinciri ağının sensörler, IoT cihazları ve veri entegrasyonları aracılığıyla sanal ortamda birebir kopyasının oluşturulmasıdır. Bu sanal kopya gerçek zamanlı verilerle sürekli güncellenir ve gerçek dünya koşullarını yansıtır. Perakendeciler dijital ikiz üzerinde mağaza düzeni değişiklikleri, personel planlaması, raf yerleşimi, müşteri akış optimizasyonu ve tedarik zinciri senaryolarını gerçek ortamda hiçbir risk almadan simüle edebilir. Yapay zekâ ve makine öğrenmesi algoritmalarıyla entegre çalışarak what-if analizleri ve prediktif optimizasyon imkânı sağlar.",
+      "whyImportant": "Fiziksel mağazada yapılacak her değişiklik maliyetli ve risklidir; dijital ikiz bu riskleri sanal ortamda test etme imkânı verir. Yöneticiler yeni mağaza açılışı öncesinde düzeni optimize edebilir, promosyon senaryolarını simüle edebilir ve tedarik zinciri kesintilerine proaktif hazırlık yapabilir. Bu teknoloji karar alma hızını artırır ve hatalı yatırımları önler.",
+      "realLifeExample": "Bir hipermarket zinciri, dijital ikiz platformu kullanarak 3 mağazasının sanal kopyasını oluşturdu. Kasa sayısını 12'den 8'e düşürüp self-checkout eklemek istediklerinde, önce dijital ikiz üzerinde müşteri akışını simüle etti. Simülasyon, yoğun saatlerde kuyruk süresinin kabul edilemez seviyelere çıkacağını gösterdi. Bunun üzerine 10 kasa + 4 self-checkout modeline geçtiler ve gerçek uygulamada müşteri memnuniyet skoru korundu.",
+      "formula": "",
+      "formulaExample": "",
+      "managerTip": "Dijital ikiz teknolojisine geçişi büyük bütçelerle değil, tek bir mağaza veya depo pilot projesiyle başlatın; küçük ölçekte kanıtlanan ROI, yönetim kurulu onayı için en güçlü argüman olacaktır.",
+      "segments": [
+        "Hipermarket",
+        "Süpermarket",
+        "Lojistik",
+        "E-Ticaret",
+        "Depo/Dağıtım Merkezi",
+        "Alışveriş Merkezi"
+      ],
+      "departments": [
+        "Bilgi Teknolojileri",
+        "Mağaza Planlama",
+        "Lojistik",
+        "Veri Analitiği",
+        "Üst Yönetim"
+      ],
+      "confusedTerms": [
+        {
+          "term": "Simülasyon",
+          "diff": "Simülasyon belirli bir senaryo için tek seferlik model çalıştırır; dijital ikiz ise gerçek zamanlı verilerle sürekli güncellenen, canlı bir sanal kopyadır."
+        },
+        {
+          "term": "ERP (Kurumsal Kaynak Planlama)",
+          "diff": "ERP iş süreçlerini yöneten kurumsal yazılımdır; dijital ikiz ise fiziksel varlıkların sanal kopyasını oluşturarak simülasyon ve optimizasyon yapan teknolojidir."
+        }
+      ],
+      "relatedTerms": [
+        "talep-tahmini",
+        "tedarik-zinciri",
+        "rfid",
+        "planogram",
+        "omnichannel"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-02-02",
+  "brand": "retailor.com.tr",
+  "total_prompts": 12,
+  "note": "Birleştirilmiş Retailor Prompt Kütüphanesi - Referans Kaynak Destekli, Karma Common Questions",
+  "common_questions": [
+    {
+      "type": "dropdown",
+      "key": "magaza_tipi",
+      "label": "Mağaza Tipiniz?",
+      "options": [
+        "Giyim/Moda",
+        "Süpermarket",
+        "Elektronik",
+        "Kozmetik",
+        "Ev/Dekorasyon",
+        "Lüks Mağazacılık",
+        "Diğer"
+      ]
+    },
+    {
+      "type": "dropdown",
+      "key": "rol",
+      "label": "Rolünüz?",
+      "options": [
+        "Mağaza Müdürü",
+        "Bölge Müdürü",
+        "Satın Alma Uzmanı",
+        "İK Müdürü",
+        "Pazarlama Sorumlusu",
+        "Satış Danışmanı"
+      ]
+    },
+    {
+      "type": "dropdown",
+      "key": "lokasyon",
+      "label": "Mağaza Lokasyonu?",
+      "options": [
+        "AVM",
+        "Cadde/Ana Arter",
+        "Outlet",
+        "Havalimanı",
+        "E-Ticaret"
+      ]
+    },
+    {
+      "type": "dropdown",
+      "key": "buyukluk",
+      "label": "Mağaza Büyüklüğü?",
+      "options": [
+        "Küçük (< 100 m²)",
+        "Orta (100-500 m²)",
+        "Büyük (500-2000 m²)",
+        "Çok Büyük (> 2000 m²)"
+      ]
+    },
+    {
+      "type": "dropdown",
+      "key": "sube_sayisi",
+      "label": "Kaç şubeniz var?",
+      "options": [
+        "Tek şube/mağaza",
+        "2-5 şube",
+        "6-10 şube",
+        "11-20 şube",
+        "21-50 şube",
+        "50+ şube"
+      ]
+    },
+    {
+      "type": "text",
+      "key": "uygulama_kapsami",
+      "label": "Bu çalışmayı hangi şube/şubelerde uygulayacaksınız?"
+    }
+  ],
+  "category_specific_questions": {
+    "Saha ve Mağaza Operasyonları": [
+      {
+        "type": "dropdown",
+        "key": "saha_magaza_tipi",
+        "label": "Operasyon Odağınız?",
+        "options": [
+          "Günlük Satış Takibi",
+          "Müşteri Deneyimi",
+          "Görsel Mağazacılık",
+          "Kampanya Uygulama"
+        ]
+      }
+    ],
+    "Personel Yönetimi ve Liderlik": [
+      {
+        "type": "dropdown",
+        "key": "yonetim_tarzi",
+        "label": "Yönetim Tarzınız?",
+        "options": [
+          "Destekleyici/Koçluk",
+          "Sonuç Odaklı/Otoriter",
+          "Demokratik/Katılımcı"
+        ]
+      },
+      {
+        "type": "dropdown",
+        "key": "ekip_buyuklugu",
+        "label": "Ekip Büyüklüğü?",
+        "options": [
+          "1-5 Kişi",
+          "6-15 Kişi",
+          "16-50 Kişi",
+          "50+ Kişi"
+        ]
+      }
+    ],
+    "Stok Yönetimi ve Lojistik": [
+      {
+        "type": "dropdown",
+        "key": "envanter_sistemi",
+        "label": "Envanter Sisteminiz?",
+        "options": [
+          "ERP (SAP, Logo, Nebim)",
+          "Excel/Manuel Takip",
+          "Bulut Tabanlı Stok Yazılımı"
+        ]
+      },
+      {
+        "type": "dropdown",
+        "key": "stok_sorunu",
+        "label": "Temel Stok Probleminiz?",
+        "options": [
+          "Aşırı Stok (Overstock)",
+          "Stoksuz Kalma (Out of Stock)",
+          "Envanter Kayıpları/Sayım Farkı",
+          "Yavaş Devir Hızı"
+        ]
+      }
+    ],
+    "Pazarlama ve Kampanya Yönetimi": [
+      {
+        "type": "dropdown",
+        "key": "pazarlama_kanali",
+        "label": "Ana Pazarlama Kanalınız?",
+        "options": [
+          "Mağaza İçi (POS)",
+          "Instagram/Sosyal Medya",
+          "SMS/WhatsApp",
+          "E-posta Pazarlama"
+        ]
+      },
+      {
+        "type": "dropdown",
+        "key": "hedef_kitle",
+        "label": "Hedef Müşteri Grubu?",
+        "options": [
+          "Mevcut Sadık Müşteriler",
+          "Yeni Müşteriler (Kazanım)",
+          "Kaybedilen/Uykudaki Müşteriler",
+          "Z Kuşağı/Genç Kitle"
+        ]
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": "CAT-01",
+      "name": "Saha ve Mağaza Operasyonları",
+      "description": "Günlük mağaza operasyonları, satış hedefleri, müşteri deneyimi ve görsel mağazacılık",
+      "prompts": [
+        {
+          "id": "RTL-FIELD-001",
+          "category": "Saha ve Mağaza Operasyonları",
+          "task": "Satış Hedefi ve Aksiyon Planı",
+          "title": "Mağaza Satış Hedefi Sihirbazı",
+          "description": "Chet Holmes ve Rick Segel metodolojileriyle mağaza hedeflerini somut bir planına dönüştürür.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "hedef_ciro",
+              "label": "Bu dönem için hedeflenen toplam ciro nedir?"
+            },
+            {
+              "type": "dropdown",
+              "key": "oncelik",
+              "label": "Stratejik Öncelik?",
+              "options": [
+                "Sepet Ortalamasını Artırmak (UP-Sell)",
+                "Müşteri Sayısını Artırmak (Trafik)",
+                "Eski Stokları Eritmek",
+                "Yeni Koleksiyon Tanıtımı"
+              ]
+            }
+          ],
+          "full_prompt": "Sen Türkiye perakende pazarında uzman bir Strateji Danışmanısın. Rick Segel'in 'The Retail Sales Bible' ve Chet Holmes'un 'The Ultimate Sales Machine' kitaplarındaki prensipleri kullanarak bir Satış Hedefleri Belgesi oluşturmanı istiyorum.\n\n### BAĞLAM\n- Mağaza Tipi: {{magaza_tipi}}\n- Rol: {{rol}}\n- Lokasyon: {{lokasyon}}\n- Büyüklük: {{buyukluk}}\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n- Hedef Ciro: {{hedef_ciro}}\n- Odak Noktası: {{oncelik}}\n\n### TALİMATLAR\n1. Rick Segel'in G.R.E.A.T. Selling modeline dayanarak ekibin müşteriyle nasıl bağ kurması gerektiğini açıkla.\n2. Chet Holmes'un 'Dream 100' mantığını mağaza içi sadık müşterilere uyarla; sepet ortalamasını artıracak 3 somut taktik ver.\n3. {{oncelik}} hedefine ulaşmak için ekip liderine sabah toplantısında (morning huddle) vereceği 3 kilit mesaj öner.\n4. Çıktıyı bir tablo formatında; 'Hedef', 'Eylem' ve 'Başarı Göstergesi' sütunlarıyla sun.\n\n### DEĞERLENDİRME KURALLARI\n- Yanıtın sonunda planın gerçekçiliğini 'Target Accuracy' ve 'Strategic Alignment' kriterlerine göre 10 üzerinden puanla.\n- Değerlendirme sonucunda bir 'CHANGE LOG 📝' ekleyerek yapılan optimizasyonları belirt.",
+          "expert_question": "Hedefleri çalışanlara dağıtırken hangi motivasyon tekniklerini kullanmalıyım?",
+          "expert_advice": "Uzman Görüşü: Hedefleri sadece ciro olarak değil, 'Kişi Başı Ürün Adedi' (UPT) olarak da ekibe dağıtın. Sepete eklenen her bir yan ürün, karlılığınızı doğrudan artıracaktır."
+        },
+        {
+          "id": "RTL-FIELD-002",
+          "category": "Saha ve Mağaza Operasyonları",
+          "task": "Müşteri Deneyimi ve Şikayet Yönetimi",
+          "title": "Gerçek Anı (Moments of Truth) Deneyim Tasarımı",
+          "description": "Jan Carlzon felsefesiyle, müşteriyle temas edilen kritik anları iyileştirir.",
+          "questions": [
+            {
+              "type": "textarea",
+              "key": "sorun_senaryosu",
+              "label": "Müşterinin yaşadığı temel sorun veya şikayet nedir?"
+            }
+          ],
+          "full_prompt": "Sen Jan Carlzon'un 'Moments of Truth' felsefesiyle eğitilmiş bir Müşteri Deneyimi Uzmanısın. Retailor.com.tr adına, mağaza içindeki bir 'kriz anını' bir 'sadakat anına' dönüştürmen gerekiyor.\n\n### SENARYO\n- Mağaza: {{magaza_tipi}} ({{lokasyon}})\n- Rol: {{rol}}\n- Büyüklük: {{buyukluk}}\n- Sorun: {{sorun_senaryosu}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Müşterinin ilk 15 saniyede duyacağı 'profesyonel ve empatik' karşılama cümlesini yaz.\n2. Sorunu çözmek için personele 'yetkilendirme' (empowerment) kapsamında verebileceğin 2 opsiyonel çözüm sun.\n3. Bu deneyimin tekrarlanmaması için operasyonel bir iyileştirme önerisi geliştir.\n\n### FORMAT\n- Müşteri Diyaloğu\n- Personel Aksiyon Planı\n- Uzman Değerlendirmesi\n\nBu işi 10 üzerinden puanla ve nedenini açıkla.",
+          "expert_question": "Şikayet yönetime nasıl raporlanmalı? Takip sistemi kurmalı mıyım?",
+          "expert_advice": "Uzman Görüşü: Unutmayın, şikayet eden müşteri aslında markanıza bir şans daha vermiştir. Sorunu hızla çözerken müşteriye 'değerli hissettirmek', o müşterinin ömür boyu değerini (LTV) artırır."
+        },
+        {
+          "id": "RTL-FIELD-003",
+          "category": "Saha ve Mağaza Operasyonları",
+          "task": "Görsel Mağazacılık (VM) Denetimi",
+          "title": "Görsel Satış ve Vitrin Stratejisi",
+          "description": "Tony Morgan prensipleriyle mağaza içi müşteri trafiğini ve ürün görünürlüğünü optimize eder.",
+          "questions": [
+            {
+              "type": "dropdown",
+              "key": "vm_odak",
+              "label": "Geliştirilecek Alan?",
+              "options": [
+                "Vitrin Tasarımı",
+                "Sıcak Nokta (Hot Spot) Yönetimi",
+                "Kasa Önü Satış",
+                "Kampanya Alanı Düzenlemesi"
+              ]
+            }
+          ],
+          "full_prompt": "Sen Tony Morgan'ın 'Visual Merchandising' prensiplerini uygulayan profesyonel bir Visual Merchandiser'sın.\n\n### BAĞLAM\n- Mağaza Tipi: {{magaza_tipi}}\n- Lokasyon: {{lokasyon}}\n- Büyüklük: {{buyukluk}}\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n- Odak Alanı: {{vm_odak}}\n\n### TALİMATLAR\n1. {{vm_odak}} alanında müşteri trafiğini durduracak 'Odak Noktası' (Focal Point) kuralını nasıl uygulayacağımızı açıkla.\n2. Ürünlerin 'Renklendirme' ve 'Gruplandırma' kurallarını Türkiye'deki güncel trendlere göre uyarla.\n3. Mağaza personeli için bu düzenlemeyi koruyacak 3 maddelik bir günlük kontrol listesi oluştur.\n\nYanıtı bitirdiğinde '🤖 Bu Çalışmayı Değerlendirmemi ve İyileştirme Seçenekleri Sunmamı İster misiniz? ☑' sorusunu sor.",
+          "expert_question": "Vitrini ne sıklıkla değiştirmeliyim? Sezonluk mu, aylık mı?",
+          "expert_advice": "Uzman Görüşü: 'Göz hizası, satış hizasıdır.' En yüksek marjlı ürünlerinizi müşterinin doğrudan göz kontağı kurduğu orta raflarda konumlandırın."
+        }
+      ]
+    },
+    {
+      "id": "CAT-02",
+      "name": "Personel Yönetimi ve Liderlik",
+      "description": "Performans yönetimi, eğitim, işe alım ve liderlik becerileri",
+      "prompts": [
+        {
+          "id": "RTL-HR-001",
+          "category": "Personel Yönetimi ve Liderlik",
+          "task": "Performans Geri Bildirimi",
+          "title": "Bir Dakika Yöneticisi: Geri Bildirim Sihirbazı",
+          "description": "Ken Blanchard'ın metodolojisiyle, personeli kırmadan motive eden etkili geri bildirimler oluşturur.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "personel_isim",
+              "label": "Geri bildirim verilecek personelin adı/pozisyonu?"
+            },
+            {
+              "type": "dropdown",
+              "key": "geri_bildirim_tipi",
+              "label": "Geri Bildirim Amacı?",
+              "options": [
+                "Takdir/Övgü",
+                "Gelişim/Düzeltme",
+                "Disiplin/Uyarı"
+              ]
+            },
+            {
+              "type": "textarea",
+              "key": "olay_detayi",
+              "label": "Geri bildirime konu olan olay veya davranış nedir?"
+            }
+          ],
+          "full_prompt": "Sen Ken Blanchard'ın 'The One Minute Manager' (Bir Dakika Yöneticisi) kitabındaki prensipleri özümsemiş profesyonel bir Perakende İK Danışmanısın.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}} ({{lokasyon}})\n- Yönetici Tarzı: {{yonetim_tarzi}}\n- Ekip Büyüklüğü: {{ekip_buyuklugu}}\n- Personel: {{personel_isim}}\n- Durum: {{geri_bildirim_tipi}}\n- Detay: {{olay_detayi}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Eğer durum 'Takdir' ise, 'Bir Dakika Övgüsü' (One Minute Praisings) tekniğini kullanarak; davranışın neden doğru olduğunu ve mağazaya katkısını açıkla.\n2. Eğer durum 'Düzeltme' ise, 'Bir Dakika Yeniden Yönlendirme' (One Minute Re-Directs) tekniğini kullan. Önce hatayı belirt, ardından kişiye olan güvenini vurgulayarak konuşmayı pozitif bitir.\n3. Diyaloğu Türkiye perakende jargonuna (Satış danışmanı, hedef, mağaza disiplini vb.) uygun şekilde yapılandır.\n\n### DEĞERLENDİRME\nÇıktıyı 'Empathy' ve 'Clarity' kriterlerine göre 10 üzerinden puanla. Sonuna 'CHANGE LOG 📝' ekle.\n\n🤖 Bu Çalışmayı Değerlendirmemi ve İyileştirme Seçenekleri Sunmamı İster misiniz? ☑",
+          "expert_question": "Geri bildirimi yazılı mı yoksa sözlü mü yapmalıyım? Kayıt tutmalı mıyım?",
+          "expert_advice": "Uzman Görüşü: Geri bildirimi asla ertelemeyin. Olayın üzerinden 24 saat geçmeden yapılan geri bildirim, davranış değişikliği yaratmada en etkili yöntemdir."
+        },
+        {
+          "id": "RTL-HR-002",
+          "category": "Personel Yönetimi ve Liderlik",
+          "task": "Eğitim ve Gelişim Planı",
+          "title": "Perakende Yetkinlik Geliştirme Planı",
+          "description": "Satış ekibinin teknik ve sosyal becerilerini artırmak için 4 haftalık bir gelişim yolu çizer.",
+          "questions": [
+            {
+              "type": "dropdown",
+              "key": "gelisim_alani",
+              "label": "Geliştirilecek Yetkinlik?",
+              "options": [
+                "Çapraz Satış (Cross-sell) Teknikleri",
+                "Zor Müşteri Yönetimi",
+                "Ürün Bilgisi",
+                "Kasa Operasyon Hızı"
+              ]
+            }
+          ],
+          "full_prompt": "Sen perakende akademisi konusunda uzman bir Eğitim Koordinatörüsün. Hedefimiz {{gelisim_alani}} konusunda ekibi geliştirmek.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}}\n- Rol: {{rol}}\n- Yönetim Tarzı: {{yonetim_tarzi}}\n- Ekip: {{ekip_buyuklugu}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. 70-20-10 öğrenme modeline (İş başında, sosyal, resmi eğitim) uygun 4 haftalık bir takvim oluştur.\n2. Her hafta için ekibin mağaza içinde uygulayabileceği 1 adet 'Günün Görevi' belirle.\n3. Başarıyı ölçmek için eğitimin başında ve sonunda sorulacak 3'er adet soru hazırla.\n\nMetodoloji olarak 'The Retail Sales Bible' kitabındaki eğitim modüllerini temel al.",
+          "expert_question": "Eğitimi kimler vermeli? Dış eğitmen mi, iç eğitmen mi?",
+          "expert_advice": "Uzman Görüşü: Eğitimleri sınıf ortamından ziyade 'mağaza sahasında' (On-the-job training) verin. Gerçek müşteri karşısında yapılan deneme-yanılmalar en kalıcı öğrenmeyi sağlar."
+        },
+        {
+          "id": "RTL-HR-003",
+          "category": "Personel Yönetimi ve Liderlik",
+          "task": "İşe Alım Mülakat Soruları",
+          "title": "Perakende Odaklı Mülakat Rehberi",
+          "description": "Adayın perakende temposuna uygunluğunu ölçen yetkinlik bazlı sorular hazırlar.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "pozisyon",
+              "label": "Adayın başvuracağı pozisyon? (Örn: Satış Danışmanı, Kasiyer)"
+            }
+          ],
+          "full_prompt": "Sen profesyonel bir Perakende İşe Alım Uzmanısın. {{pozisyon}} pozisyonu için mülakat yapacaksın.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}} ({{lokasyon}})\n- Ekip Büyüklüğü: {{ekip_buyuklugu}}\n- Pozisyon: {{pozisyon}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. STAR (Situation, Task, Action, Result) tekniğine uygun 5 adet davranışsal soru hazırla.\n2. Bu soruların her biri için 'Beklenen İdeal Cevap' kriterlerini belirt.\n3. Adayın kriz yönetimi ve takım çalışması becerilerini ölçecek 1 adet perakende senaryosu (Vaka analizi) kurgula.\n\nMetodoloji: Retailor.com.tr işe alım standartları ve davranışsal mülakat teknikleri.",
+          "expert_question": "Referans kontrolü nasıl yapmalıyım? Hangi soruları sormalıyım?",
+          "expert_advice": "Uzman Görüşü: Adayın geçmişteki başarılarından ziyade, zor bir müşteri karşısında nasıl sakin kaldığını veya yoğun tempoda önceliklendirmeyi nasıl yaptığını sorgulayın."
+        }
+      ]
+    },
+    {
+      "id": "CAT-03",
+      "name": "Stok Yönetimi ve Lojistik",
+      "description": "Envanter optimizasyonu, kayıp önleme ve tedarikçi ilişkileri",
+      "prompts": [
+        {
+          "id": "RTL-LOG-001",
+          "category": "Stok Yönetimi ve Lojistik",
+          "task": "Stok Optimizasyonu ve Devir Hızı",
+          "title": "Stok Devir Hızı ve Verimlilik Sihirbazı",
+          "description": "Eliyahu M. Goldratt'ın Kısıtlar Teorisi ile darboğazları tespit eder ve stok maliyetini düşürür.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "kritik_kategori",
+              "label": "Stok sorunu yaşanan ana kategori?"
+            },
+            {
+              "type": "text",
+              "key": "teslimat_suresi",
+              "label": "Tedarikçiden ürün gelme süresi (Lead Time)? (Gün bazında)"
+            }
+          ],
+          "full_prompt": "Sen Eliyahu M. Goldratt'ın 'The Goal' kitabındaki Kısıtlar Teorisi (TOC) konusunda uzman bir Tedarik Zinciri Danışmanısın.\n\n### BAĞLAM\n- Mağaza Tipi: {{magaza_tipi}}\n- Envanter Sistemi: {{envanter_sistemi}}\n- Ana Sorun: {{stok_sorunu}}\n- Kategori: {{kritik_kategori}}\n- Tedarik Süresi: {{teslimat_suresi}} gün\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. {{stok_sorunu}} problemini çözmek için 'Darboğaz' (Bottleneck) analizi yap ve sürecin nerede tıkandığını belirle.\n2. James P. Womack'ın 'Yalın Düşünce' prensiplerine göre, depoda ve rafta oluşan 3 temel israfı (muda) tanımla.\n3. {{kritik_kategori}} için stok devir hızını artıracak 5 adımlık bir iyileştirme planı hazırla.\n4. ABC Analizi (A: Çok satan, B: Orta, C: Yavaş) mantığına göre bir sipariş periyodu önerisi sun.\n\n### FORMAT\n- Darboğaz Analizi\n- Yalın İyileştirme Önerileri\n- Aksiyon Planı Tablosu\n\nYanıtın sonunda '🤖 Bu Çalışmayı Değerlendirmemi ve İyileştirme Seçenekleri Sunmamı İster misiniz? ☑' sorusunu ekle.",
+          "expert_question": "ABC analizini hangi sıklıkla yapmalıyım? Aylık mı, çeyreklik mi?",
+          "expert_advice": "Uzman Görüşü: 'Stok, gizlenen paradır.' C grubu (yavaş satan) ürünlerdeki nakit bağınızı çözüp, bu kaynağı A grubu (hızlı satan) ürünlerin sürekliliğine aktarın. Karlılık depoda değil, raftaki akışta gizlidir."
+        },
+        {
+          "id": "RTL-LOG-002",
+          "category": "Stok Yönetimi ve Lojistik",
+          "task": "Kayıp Önleme ve Envanter Doğruluğu",
+          "title": "Envanter Güvenliği ve Kayıp Önleme Stratejisi",
+          "description": "Read Hayes'in metodolojisiyle mağaza içi hırsızlık ve envanter açıklarını minimize eder.",
+          "questions": [
+            {
+              "type": "dropdown",
+              "key": "kayip_turu",
+              "label": "En çok karşılaşılan kayıp türü?",
+              "options": [
+                "Müşteri Hırsızlığı",
+                "Personel Hatası/Suistimali",
+                "Sevkiyat Hataları",
+                "İmha/Bozyılma"
+              ]
+            }
+          ],
+          "full_prompt": "Sen Read Hayes'in 'Retail Theft Control' kitabındaki prensiplerle çalışan bir Perakende Güvenlik ve Kayıp Önleme Uzmanısın.\n\n### DURUM\n- Mağaza: {{magaza_tipi}} ({{lokasyon}})\n- Envanter: {{envanter_sistemi}}\n- Odak: {{kayip_turu}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. {{kayip_turu}} riskini azaltmak için 'CRAVED' (Concealable, Removable, Available, Valuable, Enjoyable, Disposable) modeline göre bir risk analizi yap.\n2. Mağaza yerleşimi ve personel gözetimi açısından 3 fiziksel önlem öner.\n3. Sayım doğruluğunu %99 üzerine çıkarmak için 'Kısmi Sayım' (Cycle Counting) prosedürü oluştur.\n\nÇıktıyı 'Target Accuracy' ve 'Feasibility' kriterlerine göre puanla.",
+          "expert_question": "CCTV kayıtlarını ne kadar süre saklamalıyım? KVKK uyumu nasıl sağlanır?",
+          "expert_advice": "Uzman Görüşü: Kayıpların büyük çoğunluğu kasıtlı hırsızlıktan ziyade 'operasyonel hatalardan' kaynaklanır. Kabul süreçlerindeki ve iade işlemlerindeki kontrol noktalarını sıkılaştırmak, envanter doğruluğunuzu hemen artıracaktır."
+        },
+        {
+          "id": "RTL-LOG-003",
+          "category": "Stok Yönetimi ve Lojistik",
+          "task": "Tedarikçi İlişkileri ve Pazarlık",
+          "title": "Tedarikçi Müzakere ve Satın Alma Rehberi",
+          "description": "Christopher Voss'un 'Hiçbir Zaman Bölüşme' prensipleriyle tedarikçi görüşmelerini yönetir.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "tedarikci_tipi",
+              "label": "Görüşülecek tedarikçi/üretici tipi?"
+            },
+            {
+              "type": "text",
+              "key": "pazarlik_konusu",
+              "label": "Müzakere edilecek ana konu? (Örn: Vade, İskonto, Lojistik Maliyeti)"
+            }
+          ],
+          "full_prompt": "Sen eski bir FBI müzakerecisi olan Chris Voss'un 'Never Split the Difference' (Hiçbir Zaman Bölüşme) kitabındaki teknikleri perakendeye uyarlayan bir Satın Alma Uzmanısın.\n\n### MÜZAKERE DETAYLARI\n- Mağaza: {{magaza_tipi}}\n- Tedarikçi: {{tedarikci_tipi}}\n- Konu: {{pazarlik_konusu}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Görüşmeye başlarken kullanılacak bir 'Aynalama' (Mirroring) ve 'Etiketleme' (Labeling) cümlesi hazırla.\n2. 'Hayır' cevabını almaktan korkmadan, karşı tarafın gerçek niyetini anlamanı sağlayacak 2 kalibre edilmiş soru oluştur.\n3. Retailor.com.tr adına, uzun vadeli bir kazan-kazan (win-win) senaryosu kurgula.\n\nYanıtı profesyonel bir müzakere akış şeması olarak sun.",
+          "expert_question": "Tedarikçi değişikliği yaparken hangi risklere dikkat etmeliyim?",
+          "expert_advice": "Uzman Görüşü: Müzakerede sadece fiyata odaklanmak bir tuzaktır. Ödeme vadesi, lojistik teslim noktası ve iade garantisi gibi şartlar, nakit akışınız için fiyattan çok daha değerli olabilir."
+        }
+      ]
+    },
+    {
+      "id": "CAT-04",
+      "name": "Pazarlama ve Kampanya Yönetimi",
+      "description": "Kampanya tasarımı, farklılaşma stratejileri ve müşteri sadakati",
+      "prompts": [
+        {
+          "id": "RTL-MKT-001",
+          "category": "Pazarlama ve Kampanya Yönetimi",
+          "task": "Kampanya Kurgusu ve İkna Stratejisi",
+          "title": "İkna Odaklı Kampanya Tasarımcısı",
+          "description": "Robert Cialdini'nin ikna prensipleriyle (Azlık, Sosyal Kanıt vb.) yüksek dönüşümlü kampanya kurguları oluşturur.",
+          "questions": [
+            {
+              "type": "text",
+              "key": "kampanya_konusu",
+              "label": "Kampanya hangi ürün veya etkinlik için? (Örn: Sezon Sonu İndirimi, Anneler Günü)"
+            },
+            {
+              "type": "text",
+              "key": "teklif_detayi",
+              "label": "Müşteriye sunacağınız ana avantaj nedir? (Örn: %30 indirim, 3 al 2 öde)"
+            }
+          ],
+          "full_prompt": "Sen Robert Cialdini'nin 'Influence' (İkna) kitabındaki psikolojik tetikleyiciler konusunda uzman bir Pazarlama Stratejistisin.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}}\n- Kanal: {{pazarlama_kanali}}\n- Hedef Kitle: {{hedef_kitle}}\n- Kampanya: {{kampanya_konusu}}\n- Ana Teklif: {{teklif_detayi}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Cialdini'nin 6 ikna prensibinden (Karşılık Verme, Azlık, Otorite, Bağlılık, Beğeni, Sosyal Kanıt) en uygun olan 3 tanesini bu kampanyaya entegre et.\n2. Seçilen kanala ({{pazarlama_kanali}}) uygun, müşteride 'kaçırma korkusu' (FOMO) yaratacak 2 farklı başlık/metin varyasyonu yaz.\n3. Kampanyanın başarı metriklerini (Dönüşüm oranı, sepet ortalaması vb.) belirle.\n\n### FORMAT\n- Psikolojik Strateji Notları\n- Metin Varyasyonları (A/B Testi için)\n- Uygulama Adımları\n\nYanıtın sonunda '🤖 Bu Çalışmayı Değerlendirmemi ve İyileştirme Seçenekleri Sunmamı İster misiniz? ☑' sorusunu sor.",
+          "expert_question": "A/B testini nasıl yapmalıyım? Hangi metriklere bakmalıyım?",
+          "expert_advice": "Uzman Görüşü: Sadece indirim yapmak 'kar marjınızı' eritir. İndirimi 'Azlık' (Sınırlı adet) veya 'Zaman Kısıtı' (Sadece 48 saat) ile birleştirerek müşterinin karar verme sürecini hızlandırın."
+        },
+        {
+          "id": "RTL-MKT-002",
+          "category": "Pazarlama ve Kampanya Yönetimi",
+          "task": "Mor İnek (Farklılaşma) Stratejisi",
+          "title": "Farklılaşma ve 'Mor İnek' Atölyesi",
+          "description": "Seth Godin felsefesiyle, mağazanızı rakiplerden ayıran 'sıra dışı' bir özellik geliştirir.",
+          "questions": [
+            {
+              "type": "textarea",
+              "key": "rakip_durumu",
+              "label": "Rakipleriniz genellikle neyi iyi yapıyor veya neyi eksik bırakıyor?"
+            }
+          ],
+          "full_prompt": "Sen Seth Godin'in 'Purple Cow' (Mor İnek) felsefesini benimsemiş bir Marka Danışmanısın. Hedefimiz {{magaza_tipi}} pazarında 'fark edilmemesi imkansız' bir değer önerisi yaratmak.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}}\n- Lokasyon: {{lokasyon}}\n- Hedef Kitle: {{hedef_kitle}}\n- Rakip Analizi: {{rakip_durumu}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Rakiplerin yaptığı 'sıradan' uygulamaları listele.\n2. Mağazan için 'Mor İnek' olabilecek, insanların birbirine anlatacağı 2 adet 'sıra dışı' hizmet veya deneyim fikri geliştir.\n3. Bu fikrin hayata geçmesi için personelin takınması gereken 'farklı' tavrı tanımla.\n\nÇıktıyı 'Innovation' ve 'Market Alignment' kriterlerine göre puanla.",
+          "expert_question": "Farklılaşma fikrim pahalıya mal olacaksa ne yapmalıyım?",
+          "expert_advice": "Uzman Görüşü: 'Güvenli oynamak' perakendedeki en riskli stratejidir. Herkesin yaptığı reklamı yapmak yerine, mağaza girişinde veya paketlemede yaratacağınız küçük bir 'şaşırtma anı', binlerce liralık reklamdan daha etkilidir."
+        },
+        {
+          "id": "RTL-MKT-003",
+          "category": "Pazarlama ve Kampanya Yönetimi",
+          "task": "Müşteri Sadakat Programı Tasarımı",
+          "title": "Sadakat ve VIP Müşteri Kurgulayıcı",
+          "description": "Nir Eyal'ın 'Hooked' (Bağımlılık Yapan) modeliyle müşterinin mağazaya geri gelme döngüsünü tasarlar.",
+          "questions": [
+            {
+              "type": "dropdown",
+              "key": "odul_tipi",
+              "label": "Müşteriye verilecek ödül türü?",
+              "options": [
+                "Puan/Para Puan",
+                "Deneyim/Etkinlik",
+                "Statü/VIP İndirim",
+                "Sürpriz Hediyeler"
+              ]
+            }
+          ],
+          "full_prompt": "Sen Nir Eyal'ın 'Hooked' modelinde uzman bir Sadakat Programı Tasarımcısısın. Hedefimiz {{hedef_kitle}} grubunu mağazanın müdavimi yapmak.\n\n### BAĞLAM\n- Mağaza: {{magaza_tipi}}\n- Hedef Kitle: {{hedef_kitle}}\n- Ödül Tipi: {{odul_tipi}}\n\n- Şube Sayısı: {{sube_sayisi}}\n- Uygulama Kapsamı: {{uygulama_kapsami}}\n\n### TALİMATLAR\n1. Kancayı Tasarla: Tetikleyici (Trigger), Eylem (Action), Değişken Ödül (Variable Reward) ve Yatırım (Investment) adımlarını bu program için kurgula.\n2. Müşterinin mağazaya her gelişinde 'ne kazanacağını' net bir şekilde formüle et.\n3. Retailor.com.tr vizyonuyla, bu sadakat programını dijital (App/WhatsApp) ve fiziksel (Mağaza) kanallarda nasıl birleştireceğimizi açıkla.\n\nYanıtı bir kullanıcı yolculuğu haritası (Customer Journey Map) olarak sun.",
+          "expert_question": "Sadakat programını hangi yazılım/platform ile yönetmeliyim?",
+          "expert_advice": "Uzman Görüşü: En iyi sadakat programı 'puan' veren değil, müşteriye 'kendini özel hissettiren' programdır. VIP müşterilerinize isimleriyle hitap etmek veya onlara özel 'erken erişim' günleri düzenlemek, indirimden daha kalıcı bir bağ kurar."
+        }
+      ]
+    }
+  ]
+}

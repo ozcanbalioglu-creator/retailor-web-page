@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İnteraktif Eğitim Videoları | Retailor</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: #475569;
+      line-height: 1.7;
+      background: #f8fafc;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+      padding: 8rem 2rem 6rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      opacity: 0.95;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+    }
+
+    /* SECTION */
+    .section {
+      padding: 6rem 2rem;
+      background: white;
+    }
+
+    .section:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-overline {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #0ea5e9;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: #64748b;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* PROBLEM CARDS */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .problem-card {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .problem-card:hover {
+      border-color: #ef4444;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.1);
+    }
+
+    .problem-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .problem-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .problem-card li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .problem-card li:last-child {
+      border-bottom: none;
+    }
+
+    /* SOLUTION STEPS */
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .solution-card {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .solution-card:hover {
+      border-color: #0ea5e9;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(14, 165, 233, 0.15);
+    }
+
+    .solution-number {
+      position: absolute;
+      top: -1rem;
+      left: 2rem;
+      width: 3rem;
+      height: 3rem;
+      background: linear-gradient(135deg, #0ea5e9, #0c4a6e);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+    }
+
+    .solution-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .solution-card p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #64748b;
+    }
+
+    .solution-card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 1rem;
+    }
+
+    .solution-card li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+      color: #475569;
+    }
+
+    /* HIGHLIGHT BOX */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.05), rgba(12, 74, 110, 0.05));
+      border: 2px solid #0ea5e9;
+      border-radius: 1rem;
+      padding: 3rem;
+      margin: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .highlight-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg, #0ea5e9, #0c4a6e);
+    }
+
+    .highlight-box h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-box p {
+      font-size: 1.125rem;
+      color: #475569;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    /* PROJECT CARDS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .project-card {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      border-color: #0ea5e9;
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1);
+    }
+
+    .project-label {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(14, 165, 233, 0.1);
+      color: #0ea5e9;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid #f1f5f9;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .project-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: #64748b;
+    }
+
+    /* TARGET AUDIENCE */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .audience-card {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .audience-card:hover {
+      border-color: #0ea5e9;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.1);
+    }
+
+    .audience-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .audience-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .audience-card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .audience-card li {
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+      color: #64748b;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    /* PROCESS TIMELINE */
+    .process-timeline {
+      max-width: 900px;
+      margin: 3rem auto 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .process-step::after {
+      content: '';
+      position: absolute;
+      left: 40px;
+      top: 80px;
+      width: 2px;
+      height: calc(100% + 3rem);
+      background: #e2e8f0;
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    .process-number {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #0ea5e9, #0c4a6e);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      box-shadow: 0 5px 20px rgba(14, 165, 233, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-content {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    .process-content h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+    }
+
+    .process-duration {
+      font-size: 0.875rem;
+      color: #0ea5e9;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .process-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .process-content li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.9375rem;
+      color: #64748b;
+    }
+
+    /* PRICING INFO */
+    .pricing-info {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-info h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-factors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .pricing-factor {
+      padding: 1.5rem;
+      background: #f8fafc;
+      border-radius: 0.75rem;
+    }
+
+    .pricing-factor h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pricing-factor ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .pricing-factor li {
+      padding: 0.5rem 0;
+      font-size: 0.875rem;
+      color: #64748b;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      font-size: 1.125rem;
+      opacity: 0.95;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button-primary {
+      display: inline-block;
+      padding: 1.25rem 3rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+    }
+
+    .cta-button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(245, 158, 11, 0.4);
+    }
+
+    .cta-button-secondary {
+      display: inline-block;
+      padding: 1.25rem 3rem;
+      background: transparent;
+      color: white;
+      text-decoration: none;
+      border: 2px solid white;
+      border-radius: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button-secondary:hover {
+      background: white;
+      color: #0c4a6e;
+    }
+
+    /* CONTACT INFO */
+    .contact-info {
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .contact-info p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-link:hover {
+      opacity: 0.8;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .problem-grid,
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-grid,
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight-content {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        grid-template-columns: 60px 1fr;
+        gap: 1rem;
+      }
+
+      .process-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.25rem;
+      }
+
+      .process-step::after {
+        left: 30px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Avatar Destekli<br>
+        İnteraktif Eğitim Videoları
+      </h1>
+      <p>
+        Oryantasyon ve ürün eğitimlerini mikro modüller halinde hazırlayın.<br>
+        Bir kez üretin, defalarca kullanın. Personel kendi hızında öğrenir.
+      </p>
+      <a href="#demo" class="hero-cta">📹 Demo Videoyu İzle</a>
+    </div>
+  </section>
+
+  <!-- PROBLEM SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">SORUN ANALİZİ</span>
+        <h2 class="section-title">Perakende Sektöründe Eğitim Sorunu</h2>
+        <p class="section-subtitle">
+          Perakende sektöründe en büyük maliyet kalemlerinden biri: Personel eğitimi.
+          Her yeni çalışan için eğitimler tekrarlanır, hem maliyet hem de birçok kişinin zamanını alıyor.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        <!-- Problem 1: Klasik Eğitim -->
+        <div class="problem-card">
+          <h3>❌ Klasik Yüz Yüze Eğitimler</h3>
+          <ul>
+            <li>
+              <span><strong>Eğitmen/yönetici zamanı harcanır:</strong> Her yeni personel için aynı eğitim
+                tekrarlanır</span>
+            </li>
+            <li>
+              <span><strong>Verimsiz öğrenme:</strong> Yeni personel öğrenme sürecinde yavaş kalır</span>
+            </li>
+            <li>
+              <span><strong>Tutarsız kalite:</strong> Her eğitmen farklı anlatır, standart sağlanamaz</span>
+            </li>
+            <li>
+              <span><strong>Zaman kaybı:</strong> Hem eğitmen hem de personel günlük işlerden kopar</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Problem 2: Video Eğitim -->
+        <div class="problem-card">
+          <h3>❌ Standart Videolu Eğitimler</h3>
+          <ul>
+            <li>
+              <span>😴</span>
+              <span><strong>Statik ve sıkıcı:</strong> Uzun, tek düze videolar ilgi görmez</span>
+            </li>
+            <li>
+              <span>👀</span>
+              <span><strong>Sahte katılım:</strong> Video açık ama personel başka iş yapar</span>
+            </li>
+            <li>
+              <span>📊</span>
+              <span><strong>Yanıltıcı raporlar:</strong> İK katılım oranı raporlar ama gerçek öğrenme düşük</span>
+            </li>
+            <li>
+              <span>🔧</span>
+              <span><strong>Güncelleme zorluğu:</strong> Tek bir bilgi değişse bile tüm video yeniden çekilir</span>
+            </li>
+            <svg width="24" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">ÇÖZÜM</span>
+        <h2 class="section-title">5 Adımda Modern Eğitim Çözümü</h2>
+        <p class="section-subtitle">
+          İnteraktif mikro eğitimler + yapay zeka ile hızlı üretim = Verimli ve kalıcı öğrenme
+        </p>
+      </div>
+
+      <div class="solution-grid">
+        <!-- Solution 1 -->
+        <div class="solution-card">
+          <div class="solution-number">1</div>
+          <h3>Mikro Eğitimler</h3>
+          <p>Tüm bilgiler küçük parçalara ayrılır. Her video 3-5 dakika. Personel sıkılmaz, odaklanır.</p>
+          <ul>
+            <li>✅ İlgi artar, izlenme artar</li>
+            <li>✅ Kısa molalarda izlenebilir</li>
+            <li>✅ Belirli konuya odaklanır</li>
+            <li>✅ Tekrar izlemek kolay</li>
+          </ul>
+        </div>
+
+        <!-- Solution 2 -->
+        <div class="solution-card">
+          <div class="solution-number">2</div>
+          <h3>İnteraktif Öğrenme</h3>
+          <p>Personel pasif izleyici değil, aktif katılımcı. Seçim yapar, quiz çözer, kendi hızında ilerler.</p>
+          <ul>
+            <li>✅ Senaryolar arası seçim</li>
+            <li>✅ Mini quizler ve testler</li>
+            <li>✅ Kendi hızında öğrenme</li>
+            <li>✅ Gerçek zamanlı geri bildirim</li>
+          </ul>
+        </div>
+
+        <!-- Solution 3 -->
+        <div class="solution-card">
+          <div class="solution-number">3</div>
+          <h3>AI ile Hızlı Üretim</h3>
+          <p>Klasik video üretimi 3-4 hafta sürerdi. AI destekli üretim ile 1 hafta. Güncelleme 1 gün!</p>
+          <ul>
+            <li>✅ Senaryo + avatar = hızlı video</li>
+            <li>✅ Düşük maliyet</li>
+            <li>✅ Anında güncelleme</li>
+            <li>✅ Oyuncu/çekim gerektirmez</li>
+          </ul>
+        </div>
+
+        <!-- Solution 4 -->
+        <div class="solution-card">
+          <div class="solution-number">4</div>
+          <h3>LMS Entegrasyonu</h3>
+          <p>SCORM ile herhangi bir LMS platformuna bağlanır. Kullanıcı ilerlemesi, tamamlama oranları takip edilir.</p>
+          <ul>
+            <li>✅ Merkezi eğitim platformu</li>
+            <li>✅ Kullanıcı bazlı takip</li>
+            <li>✅ Otomatik hatırlatmalar</li>
+            <li>✅ Departman raporları</li>
+          </ul>
+        </div>
+
+        <!-- Solution 5 -->
+        <div class="solution-card">
+          <div class="solution-number">5</div>
+          <h3>AI Analizleri</h3>
+          <p>Hangi modül zorlanıyor? Hangi şubede tamamlama düşük? AI raporlar analiz eder, öneriler sunar.</p>
+          <ul>
+            <li>✅ Şirket/şube/kişi bazlı rapor</li>
+            <li>✅ Zorluk tespiti</li>
+            <li>✅ Gelişim öngörüleri</li>
+            <li>✅ Otomatik uyarılar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORIENTATION HIGHLIGHT -->
+  <section class="section">
+    <div class="container">
+      <div class="highlight-box">
+        <h3>🎯 Perakendenin En Büyük İhtiyacı: Otomatik Oryantasyon</h3>
+        <p>
+          Perakende sektöründe <strong>yüksek personel devir hızı</strong> var.
+          Her ay onlarca yeni çalışan işe başlıyor. İK ekipleri sürekli aynı bilgileri anlatıyor.
+        </p>
+
+        <div class="highlight-content">
+          <div>
+            <h4
+              style="font-family: 'Space Grotesk', sans-serif; font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">
+              ❌ Sorun:</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>•</span>
+                <span>İK ekipleri sürekli tekrar yapıyor</span>
+              </li>
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>•</span>
+                <span>Evrak hazırlığı 2-3 gün sürüyor</span>
+              </li>
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>•</span>
+                <span>Yeni personel ilk günü boşta bekliyor</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4
+              style="font-family: 'Space Grotesk', sans-serif; font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-bottom: 1rem;">
+              ✅ Çözüm:</h4>
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>✓</span>
+                <span>Şirket hakkında temel bilgiler</span>
+              </li>
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>✓</span>
+                <span>Çalışma kuralları ve etik</span>
+              </li>
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>✓</span>
+                <span>İş sağlığı ve güvenliği</span>
+              </li>
+              <li style="padding: 0.5rem 0; display: flex; gap: 0.5rem;">
+                <span>✓</span>
+                <span>Mağaza prosedürleri</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 1.125rem; color: #0f172a; font-weight: 600;">
+          📈 Sonuç: Personel ilk günü <strong>hazır</strong> başlıyor. İK ekipleri tekrar anlatmak yerine
+          <strong>strateji</strong> yapıyor.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REAL PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">GERÇEK PROJELER</span>
+        <h2 class="section-title">Başarılı Uygulama Örnekleri</h2>
+        <p class="section-subtitle">
+          Perakende ve cafe sektörlerinde gerçekleştirdiğimiz projeler
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 1: Penguen -->
+        <div class="project-card">
+          <span class="project-label">✅ Tamamlandı</span>
+          <h3>🐧 Penguen Kitabevi - Oryantasyon Eğitimi</h3>
+          <p>
+            İşe giriş evrakları hazırlanana kadar şirket hakkında en önemli bilgiler
+            aktarılır hale gelip, İK ekiplerinin işlerini ciddi şekilde kolaylaştırdı.
+          </p>
+
+          <div class="project-meta">
+            <div class="project-meta-item">
+              <span>📦</span>
+              <span><strong>8 modül</strong></span>
+            </div>
+            <div class="project-meta-item">
+              <span>⏱️</span>
+              <span><strong>25 dakika</strong></span>
+            </div>
+            <div class="project-meta-item">
+              <span>📊</span>
+              <span><strong>%70 zaman tasarrufu</strong></span>
+            </div>
+          </div>
+
+          <details style="margin-top: 1rem;">
+            <summary style="cursor: pointer; font-weight: 600; color: #0ea5e9; padding: 0.5rem 0;">
+              📋 Eğitim Modülleri
+            </summary>
+            <ul style="list-style: none; padding: 1rem 0 0 0; margin: 0;">
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">1. Penguen Kitabevi Hikayesi (3 dk)
+              </li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">2. Çalışan Hakları ve Sorumlulukları
+                (4 dk)</li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">3. Mağaza Turu (Sanal) (5 dk)</li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">4. Kasa ve Ödeme Sistemleri (4 dk)
+              </li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">5. Müşteri Karşılama (3 dk)</li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">6. İlk Gün Checklist (2 dk)</li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">7. İş Sağlığı ve Güvenliği (3 dk)
+              </li>
+              <li style="padding: 0.5rem 0; color: #64748b; font-size: 0.9375rem;">8. İletişim ve Destek (1 dk)</li>
+            </ul>
+          </details>
+        </div>
+
+        <!-- Project 2: Barista -->
+        <div class="project-card">
+          <span class="project-label">🔄 Devam Ediyor</span>
+          <h3>☕ Barista Akademisi</h3>
+          <p>
+            Cafe zincirleri ve bağımsız cafeler için kapsamlı barista eğitim programı.
+            Avatar destekli, interaktif modüllerle kahve hazırlama tekniklerinden müşteri hizmetlerine kadar.
+          </p>
+
+          <div class="project-meta">
+            <div class="project-meta-item">
+              <span>📦</span>
+              <span><strong>10 modül</strong></span>
+            </div>
+            <div class="project-meta-item">
+              <span>🎬</span>
+              <span><strong>800+ video</strong></span>
+            </div>
+            <div class="project-meta-item">
+              <span>🎯</span>
+              <span><strong>Cafe zincirleri</strong></span>
+            </div>
+          </div>
+
+          <p
+            style="margin-top: 1rem; padding: 1rem; background: #f8fafc; border-radius: 0.5rem; font-size: 0.875rem; color: #64748b;">
+            <strong>Format:</strong> Hızlı başlangıç + ileri seviye modüller.
+            Kahve çekirdek seçiminden latte art'a, müşteri hizmetlerinden hijyen standartlarına kadar tüm konular.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET AUDIENCE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">HEDEFiMİZ</span>
+        <h2 class="section-title">Kimler İçin İdeal?</h2>
+        <p class="section-subtitle">
+          İnteraktif eğitim videoları hangi sektörler ve şirketler için uygun?
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <!-- Audience 1 -->
+        <div class="audience-card">
+          <div class="audience-icon">🏬</div>
+          <h3>Perakende Zincirleri</h3>
+          <ul>
+            <li><span>•</span><span>Çok şubeli yapılar</span></li>
+            <li><span>•</span><span>Yüksek personel devir hızı</span></li>
+            <li><span>•</span><span>Standart eğitim ihtiyacı</span></li>
+            <li><span>•</span><span>Sürekli güncelleme</span></li>
+          </ul>
+        </div>
+
+        <!-- Audience 2 -->
+        <div class="audience-card">
+          <div class="audience-icon">🏪</div>
+          <h3>Franchise Markaları</h3>
+          <ul>
+            <li><span>•</span><span>Yeni franchise açılışları</span></li>
+            <li><span>•</span><span>Franchise sahibi eğitimleri</span></li>
+            <li><span>•</span><span>Standart operasyon</span></li>
+            <li><span>•</span><span>Marka tutarlılığı</span></li>
+          </ul>
+        </div>
+
+        <!-- Audience 3 -->
+        <div class="audience-card">
+          <div class="audience-icon">🏭</div>
+          <h3>Üretici Firmalar</h3>
+          <ul>
+            <li><span>•</span><span>Saha ekipleri (Field Sales)</span></li>
+            <li><span>•</span><span>Ürün bilgisi güncellemeleri</span></li>
+            <li><span>•</span><span>Satış tekniği eğitimleri</span></li>
+            <li><span>•</span><span>Müşteri itirazları</span></li>
+          </ul>
+        </div>
+
+        <!-- Audience 4 -->
+        <div class="audience-card">
+          <div class="audience-icon">🛒</div>
+          <h3>E-ticaret Şirketleri</h3>
+          <ul>
+            <li><span>•</span><span>Depo operasyonları</span></li>
+            <li><span>•</span><span>Müşteri hizmetleri</span></li>
+            <li><span>•</span><span>Paketleme ve lojistik</span></li>
+            <li><span>•</span><span>İade süreçleri</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">SÜREÇ</span>
+        <h2 class="section-title">Sizin İçin Nasıl Hazırlarız?</h2>
+        <p class="section-subtitle">
+          6 adımda eğitim videolarınız hazır. Standart projeler 4-6 hafta,
+          özel içerikler 6-10 hafta sürer.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <div class="process-content">
+            <h3>İhtiyaç Analizi</h3>
+            <p class="process-duration">⏱️ 1 Hafta</p>
+            <ul>
+              <li><span>•</span><span>İlgili departmanlarla görüşme</span></li>
+              <li><span>•</span><span>Mevcut eğitim materyalleri inceleme</span></li>
+              <li><span>•</span><span>Hedef ve beklentileri netleştirme</span></li>
+              <li><span>•</span><span><strong>Çıktı:</strong> İhtiyaç analizi raporu</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <div class="process-content">
+            <h3>İçerik ve Senaryo Hazırlığı</h3>
+            <p class="process-duration">⏱️ 1-2 Hafta</p>
+            <ul>
+              <li><span>•</span><span>Çalışma grubu oluşturma (sizin ekibiniz + biz)</span></li>
+              <li><span>•</span><span>Modül yapısı belirleme</span></li>
+              <li><span>•</span><span>Senaryo yazımı</span></li>
+              <li><span>•</span><span>Onay süreci</span></li>
+              <li><span>•</span><span><strong>Çıktı:</strong> Onaylı eğitim senaryoları</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <div class="process-content">
+            <h3>Video Üretimi</h3>
+            <p class="process-duration">⏱️ 1-2 Hafta</p>
+            <ul>
+              <li><span>•</span><span>Avatar ile video üretimi</span></li>
+              <li><span>•</span><span>Görseller ve animasyonlar</span></li>
+              <li><span>•</span><span>Voiceover ve müzik</span></li>
+              <li><span>•</span><span>İlk kontrol ve onay</span></li>
+              <li><span>•</span><span><strong>Çıktı:</strong> Ham video modülleri</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <div class="process-content">
+            <h3>İnteraktif Öğeler</h3>
+            <p class="process-duration">⏱️ 1 Hafta</p>
+            <ul>
+              <li><span>•</span><span>Quiz ve senaryo dallanmaları</span></li>
+              <li><span>•</span><span>Kullanıcı seçimleri</span></li>
+              <li><span>•</span><span>Geri bildirim mekanizmaları</span></li>
+              <li><span>•</span><span><strong>Çıktı:</strong> İnteraktif eğitim modülleri</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-step">
+          <div class="process-number">5</div>
+          <div class="process-content">
+            <h3>LMS Entegrasyonu ve Test</h3>
+            <p class="process-duration">⏱️ 3-5 Gün</p>
+            <ul>
+              <li><span>•</span><span>LMS platformuna yükleme</span></li>
+              <li><span>•</span><span>SCORM entegrasyonu</span></li>
+              <li><span>•</span><span>Test kullanıcılarla deneme</span></li>
+              <li><span>•</span><span>Son düzeltmeler</span></li>
+              <li><span>•</span><span><strong>Çıktı:</strong> Yayına hazır eğitim</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="process-step">
+          <div class="process-number">6</div>
+          <div class="process-content">
+            <h3>Canlıya Alma ve Destek</h3>
+            <p class="process-duration">⏱️ Devam Eden</p>
+            <ul>
+              <li><span>•</span><span>Kullanıcı erişimi açılır</span></li>
+              <li><span>•</span><span>İlk hafta yakın destek</span></li>
+              <li><span>•</span><span>Kullanım raporları analizi</span></li>
+              <li><span>•</span><span><strong>Devam:</strong> Sürekli güncelleme desteği</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="background: #f8fafc; border-left: 4px solid #0ea5e9; padding: 2rem; border-radius: 0.5rem; margin-top: 3rem;">
+        <p style="font-size: 1.125rem; color: #0f172a; font-weight: 600; margin-bottom: 1rem;">
+          ⚡ Hızlı Seçenek:
+        </p>
+        <p style="color: #64748b;">
+          <strong>Oryantasyon</strong> gibi standart yapıda eğitimleri <strong>daha hızlı</strong> hazırlayabiliriz (3-4
+          hafta).
+          Bunun nedeni sektörel tecrübemiz ve hazır şablonlarımız.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING INFO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-overline">FİYATLANDIRMA</span>
+        <h2 class="section-title">Size Özel Teklif Hazırlıyoruz</h2>
+        <p class="section-subtitle">
+          Her projenin kapsamı farklı. Bu nedenle sabit fiyat yerine
+          ihtiyaçlarınıza özel teklif hazırlıyoruz.
+        </p>
+      </div>
+
+      <div class="pricing-info">
+        <h3>💡 Teklif Hazırlarken Değerlendirdiğimiz Faktörler</h3>
+
+        <div class="pricing-factors">
+          <!-- Factor 1 -->
+          <div class="pricing-factor">
+            <h4>📊 Proje Kapsamı</h4>
+            <ul>
+              <li><span>•</span><span>Modül sayısı (5-50+ modül)</span></li>
+              <li><span>•</span><span>İçerik uzunluğu (her modül kaç dakika)</span></li>
+              <li><span>•</span><span>Güncelleme sıklığı (yılda kaç kez)</span></li>
+            </ul>
+          </div>
+
+          <!-- Factor 2 -->
+          <div class="pricing-factor">
+            <h4>🎨 İçerik Karmaşıklığı</h4>
+            <ul>
+              <li><span>•</span><span>Senaryo hazır mı, sıfırdan mı yazılacak</span></li>
+              <li><span>•</span><span>Mevcut görseller var mı, yeni mi üretilecek</span></li>
+              <li><span>•</span><span>Basit mi, ileri seviye animasyon mu</span></li>
+              <li><span>•</span><span>Quiz mi, yoksa senaryo dallanması mı</span></li>
+            </ul>
+          </div>
+
+          <!-- Factor 3 -->
+          <div class="pricing-factor">
+            <h4>🛠️ Teknik Gereksinimler</h4>
+            <ul>
+              <li><span>•</span><span>Mevcut LMS platformunuz var mı</span></li>
+              <li><span>•</span><span>Hangi SCORM standardı</span></li>
+              <li><span>•</span><span>Özel entegrasyon gerekiyor mu</span></li>
+            </ul>
+          </div>
+
+          <!-- Factor 4 -->
+          <div class="pricing-factor">
+            <h4>👥 İşgücü ve Süre</h4>
+            <ul>
+              <li><span>•</span><span>Normal mi, acil mi</span></li>
+              <li><span>•</span><span>Kaç tur revizyon</span></li>
+              <li><span>•</span><span>Kullanım eğitimi gerekiyor mu</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          style="background: rgba(14, 165, 233, 0.1); border: 2px solid #0ea5e9; border-radius: 0.75rem; padding: 2rem; margin-top: 2rem; text-align: center;">
+          <p style="font-size: 1.125rem; color: #0f172a; font-weight: 600; margin-bottom: 1rem;">
+            📞 Size Özel Teklif Almak İçin
+          </p>
+          <p style="color: #64748b; margin-bottom: 1.5rem;">
+            Projenizi anlatalım, 24 saat içinde detaylı teklif gönderelim
+          </p>
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:ozcan@retailor.com.tr"
+              style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: #0ea5e9; color: white; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease;">
+              📧 ozcan@retailor.com.tr
+            </a>
+            <a href="tel:+905453830018"
+              style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; background: white; color: #0ea5e9; text-decoration: none; border: 2px solid #0ea5e9; border-radius: 0.5rem; font-weight: 600; transition: all 0.3s ease;">
+              📞 +90 545 383 0018
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>
+        Eğitim Maliyetinizi %70 Düşürün<br>
+        Personel Devir Hızınızı Azaltın
+      </h2>
+      <p>
+        İlk projeniz için ücretsiz danışmanlık ve demo video hazırlayalım.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#demo" class="cta-button-primary">🎬 Demo İste</a>
+        <a href="#contact" class="cta-button-secondary">📝 Teklif Al</a>
+      </div>
+
+      <div class="contact-info">
+        <p>Hemen iletişime geçin, projenizi konuşalım</p>
+        <div class="contact-links">
+          <a href="mailto:ozcan@retailor.com.tr" class="contact-link">
+            📧 ozcan@retailor.com.tr
+          </a>
+          <a href="tel:+905453830018" class="contact-link">
+            📞 +90 545 383 0018
+          </a>
+          <a href="https://linkedin.com/in/ozcanbalioglu" class="contact-link" target="_blank">
+            💼 LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
