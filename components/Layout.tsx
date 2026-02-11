@@ -82,7 +82,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="max-w-[1400px] mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 group">
             <img
-              src={isScrolled ? "/assets/RetailorLogo-RedBlack.png" : "/assets/RetailorLogo-RedWhiteD.png"}
+              src={isScrolled ? "assets/RetailorLogo-RedBlack.png" : "assets/RetailorLogo-RedWhiteD.png"}
               alt="Retailor Logo"
               className="h-10 md:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
             />
@@ -137,7 +137,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* Dynamic Page Header */}
       {location.pathname !== '/' && (
-        <div className="w-full h-[200px] md:h-[300px] bg-[url('/assets/header.webp')] bg-cover bg-center mt-20 md:mt-0">
+        <div className="w-full h-[200px] md:h-[300px] bg-[url('assets/header.webp')] bg-cover bg-center mt-20 md:mt-0">
           <div className="w-full h-full flex items-center justify-center">
             <h2 className="text-3xl md:text-5xl font-heading text-white uppercase tracking-tighter text-center px-6 drop-shadow-lg">
               {getPageTitle(location.pathname)}
@@ -212,7 +212,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-8">
               <img
-                src="/assets/RetailorLogo-RedBlack.png"
+                src="assets/RetailorLogo-RedBlack.png"
                 alt="Retailor Logo"
                 className="h-12 md:h-14 w-auto object-contain"
               />

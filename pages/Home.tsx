@@ -9,7 +9,7 @@ const Hero = () => (
     {/* Background Image and Overlay */}
     <div className="absolute inset-0 z-0 overflow-hidden">
       <img
-        src="/assets/retailorHero.webp"
+        src="assets/retailorHero.webp"
         alt="Retailor Hero"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -115,7 +115,7 @@ const ClientLogos = () => (
         ).map((logo, i) => (
           <img
             key={i}
-            src={`/assets/${logo}`}
+            src={`assets/${logo}`}
             alt={`Client Logo ${logo}`}
             className="h-12 object-contain mx-8"
           />

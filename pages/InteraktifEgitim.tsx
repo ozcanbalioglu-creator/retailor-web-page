@@ -11,8 +11,8 @@ const InteraktifEgitim = () => {
     const [currentImgIndex, setCurrentImgIndex] = useState(0);
     const [isVideoPlaying, setIsVideoPlaying] = useState(false);
     const images = [
-        '/assets/InteraktifEgitim1.webp',
-        '/assets/InteraktifEgitim2.webp'
+        'assets/InteraktifEgitim1.webp',
+        'assets/InteraktifEgitim2.webp'
     ];
 
     useEffect(() => {
@@ -310,7 +310,7 @@ const InteraktifEgitim = () => {
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-[#0c4a6e]/80 to-transparent z-10"></div>
                                     <img
-                                        src="/assets/InteraktifEgitim1.webp"
+                                        src="assets/InteraktifEgitim1.webp"
                                         alt="Video Cover"
                                         className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
                                     />
@@ -326,7 +326,7 @@ const InteraktifEgitim = () => {
                                     className="w-full h-full object-cover"
                                     controls
                                     autoPlay
-                                    src="/assets/EgitimTanitimVideosu.mp4"
+                                    src="assets/EgitimTanitimVideosu.mp4"
                                 >
                                     Tarayıcınız video etiketini desteklemiyor.
                                 </video>
