@@ -12,7 +12,7 @@ image: "assets/2026-perakende-ai-rekabet.webp"
 
 İlk mağaza geriye bakarken, ikincisi geleceği tahmin ediyor. Tahmin edin, müşteri hangisini tercih edecek?
 
-Bu senaryonun 2026'da gerçekleşme ihtimali %87. Çünkü perakendecilerin bu oranda zaten yapay zekadan gelir artışı elde ettiğini bildiriyor. [^1]
+Bu senaryonun 2026'da gerçekleşme ihtimali %87. Çünkü perakendecilerin bu oranda zaten yapay zekadan gelir artışı elde ettiğini bildiriyor.
 
 ---
 
@@ -28,22 +28,22 @@ Bu senaryonun 2026'da gerçekleşme ihtimali %87. Çünkü perakendecilerin bu o
 - Perakendecilerin **%87'si** AI'dan gelir artışı görüyor
 - **%94'ü** operasyonel maliyetlerinde azalma kaydediyor
 - AI kullanan perakendeciler ortalama **%20 gelir artışı** elde ediyor
-- Sadece **%1'lik fiyat optimizasyonu bile %8,7 kar artışı** sağlayabiliyor [^2]
+- Sadece **%1'lik fiyat optimizasyonu bile %8,7 kar artışı** sağlayabiliyor
 
 **Yatırım ve Benimseme:**
 - Perakende şirketlerinin **%90'ı** AI kullanıyor veya değerlendiriyor
 - **%97'si** gelecek yıl AI harcamasını artıracak
-- Ortalama çalışan başına yıllık AI yatırımı: **590-1.400 dolar** [^3]
+- Ortalama çalışan başına yıllık AI yatırımı: **590-1.400 dolar**
 
 **Rekabet Avantajı:**
 Envanter yönetiminde AI kullanan perakendeciler:
 - **%15-25 lojistik maliyet tasarrufu**
 - **%60** operasyonel verimlilik artışı
-- Haftada ortalama **4 saat insan emeği** tasarrufu [^4]
+- Haftada ortalama **4 saat insan emeği** tasarrufu
 
 ### Türkiye'nin Gizli Avantajı
 
-Ve işte en heyecan verici kısım: Türkiye, ChatGPT kullanımında **%94,49 oranla dünya birincisi!** [^5] Bu, Türk perakendecilerin ve tüketicilerin AI teknolojilerine son derece açık olduğunu gösteriyor.
+Ve işte en heyecan verici kısım: Türkiye, ChatGPT kullanımında **%94,49 oranla dünya birincisi!** Bu, Türk perakendecilerin ve tüketicilerin AI teknolojilerine son derece açık olduğunu gösteriyor.
 
 Ancak soru şu: Bu potansiyeli iş sonuçlarına dönüştürebiliyor muyuz?
 
@@ -57,11 +57,11 @@ Ancak soru şu: Bu potansiyeli iş sonuçlarına dönüştürebiliyor muyuz?
 
 **AI Çözümü:** Yapay zeka, her mağazanın geçmiş satışlarını, mevsimsel trendleri, yerel etkinlikleri ve hatta hava durumunu analiz ederek şube bazında envanter önerisi yapıyor.
 
-**Gerçek Örnek - Global:** Shopify kullanan Doe Beauty, AI destekli envanter yönetimiyle **haftada 30.000 dolar tasarruf** ediyor ve **4 saat insan emeği** kazanıyor. [^4]
+**Gerçek Örnek - Global:** Shopify kullanan Doe Beauty, AI destekli envanter yönetimiyle **haftada 30.000 dolar tasarruf** ediyor ve **4 saat insan emeği** kazanıyor.
 
-**Türkiye'den Örnek:** Teknosa ve Vatan Bilgisayar gibi perakende zincirleri, tedarik zincirlerini AI ile optimize ederek stok devir hızlarını artırıyor. [^6]
+**Türkiye'den Örnek:** Teknosa ve Vatan Bilgisayar gibi perakende zincirleri, tedarik zincirlerini AI ile optimize ederek stok devir hızlarını artırıyor.
 
-**Sonuç:** Araştırmalar, 2026'da tedarik zinciri organizasyonlarının **%50'den fazlasının** AI ile karar alma süreçlerini güçlendireceğini gösteriyor. [^7]
+**Sonuç:** Araştırmalar, 2026'da tedarik zinciri organizasyonlarının **%50'den fazlasının** AI ile karar alma süreçlerini güçlendireceğini gösteriyor.
 
 > **💡 RETAILOR ile Harekete Geçin:** Sale Pro Mentor AI sistemimiz, ürün bilgilerinizi, satış verilerinizi ve pazar trendlerinizi analiz ederek size gerçek zamanlı envanter önerileri sunar. 15 dakikalık bir demo ile kendi verilerinizde nasıl çalıştığını görebilirsiniz. **[Demo Talep Edin](#)**
 
@@ -76,11 +76,11 @@ Ancak soru şu: Bu potansiyeli iş sonuçlarına dönüştürebiliyor muyuz?
 **Global Trendler:**
 - **%55** perakendeci 2026'da dinamik fiyatlandırma kullanmayı planlıyor
 - **%85** perakendeci AI tabanlı fiyat optimizasyonundan net fayda görüyor
-- **%1 fiyat artışı** bile **%8,7 kar artışı** sağlayabiliyor [^8]
+- **%1 fiyat artışı** bile **%8,7 kar artışı** sağlayabiliyor
 
 **Gerçek Örnekler:**
 - **Wendy's:** 2026'da 20 milyon dolarlık yatırımla dijital menü panolarında AI destekli dinamik fiyatlandırma başlatıyor
-- **Kroger:** Yüzlerce mağazada elektronik raf etiketleriyle gerçek zamanlı fiyat güncellemesi yapıyor [^8]
+- **Kroger:** Yüzlerce mağazada elektronik raf etiketleriyle gerçek zamanlı fiyat güncellemesi yapıyor
 
 **KOBİ'ler İçin Uygulaması:** 12 şubeli bir tekstil zinciriyseniz, AI sayesinde:
 - Şube bazında farklı fiyatlandırma (AVM içi vs. cadde mağazası)
@@ -100,14 +100,14 @@ Ancak soru şu: Bu potansiyeli iş sonuçlarına dönüştürebiliyor muyuz?
 **İstatistikler:**
 - **%70** müşteri zaten AI asistanları kullanıyor
 - 2026'da AI, müşteri etkileşimlerinin **%95'ini** yönetecek
-- Müşteri hizmetlerinde AI kullanan firmalar **%50 çözüm süresi azalması** görüyor [^9]
+- Müşteri hizmetlerinde AI kullanan firmalar **%50 çözüm süresi azalması** görüyor
 
 **Başarı Hikayeleri:**
 - **OPPO:** AI chatbot ile **%83 çözüm oranı** ve **%57 tekrar satın alma artışı** elde etti
 - **Sephora:** AI öneri motoru ile müşterilere kişiselleştirilmiş ürün önerileri sunuyor
-- **Zalando:** ChatGPT destekli moda asistanı ile müşteri deneyimini güçlendirdi [^10]
+- **Zalando:** ChatGPT destekli moda asistanı ile müşteri deneyimini güçlendirdi
 
-**Türkiye'den Örnek:** AloTech gibi yerli AI çözüm sağlayıcıları, e-ticaret ve perakende sektörü için müşteri hizmetleri otomasyonu sunuyor. [^11]
+**Türkiye'den Örnek:** AloTech gibi yerli AI çözüm sağlayıcıları, e-ticaret ve perakende sektörü için müşteri hizmetleri otomasyonu sunuyor.
 
 **KOBİ İçin Pratik Uygulama:**
 Bir 10 şubeli kozmetik zinciri için AI asistanı:
@@ -136,7 +136,7 @@ gibi soruları 7/24 yanıtlıyor ve satış ekibini yüksek değerli işlere oda
 **Rakamlarla Etki:**
 - Kişiselleştirmede başarılı perakendeciler **%40'a kadar gelir artışı** görüyor
 - **%64** tüketici kişiselleştirilmiş deneyimleri tercih ediyor
-- **%42** perakendeci AI destekli kişiselleştirilmiş pazarlama kullanıyor [^12]
+- **%42** perakendeci AI destekli kişiselleştirilmiş pazarlama kullanıyor
 
 **Gerçek Dünya Örneği:**
 15 şubeli bir spor giyim mağazası, AI ile:
@@ -144,9 +144,9 @@ gibi soruları 7/24 yanıtlıyor ve satış ekibini yüksek değerli işlere oda
 - İstanbul'da yağmur yağacağı gün, yağmurluk ve şemsiye kampanyası
 - Spor salonlarına yakın şubelerde fitness kıyafetleri öne çıkarma
 
-**Önemli Not:** Türk tüketicilerin %64'ü kişiselleştirmeyi seviyor ama sadece %39'u gizlilik karşılığında buna değer diyor. [^12] Yani şeffaflık ve güven şart!
+**Önemli Not:** Türk tüketicilerin %64'ü kişiselleştirmeyi seviyor ama sadece %39'u gizlilik karşılığında buna değer diyor. Yani şeffaflık ve güven şart!
 
-**Türkiye'den Bakış:** MediaMarkt gibi perakende zincirleri, startup ekosistemiyle işbirliği yaparak müşteri deneyimini kişiselleştirme konusunda yenilikçi çözümler geliştiriyor. [^13]
+**Türkiye'den Bakış:** MediaMarkt gibi perakende zincirleri, startup ekosistemiyle işbirliği yaparak müşteri deneyimini kişiselleştirme konusunda yenilikçi çözümler geliştiriyor.
 
 ---
 
@@ -158,7 +158,7 @@ gibi soruları 7/24 yanıtlıyor ve satış ekibini yüksek değerli işlere oda
 
 **İstatistikler:**
 - AI destekli talep tahminini kullanan perakendeciler **%60 operasyonel verimlilik** artışı görüyor
-- **%45** tedarik zinciri maliyetlerini azaltıyor [^7]
+- **%45** tedarik zinciri maliyetlerini azaltıyor
 
 **Pratik Örnek - Türkiye:**
 Ramazan öncesi 8 şubeli bir market zinciri:
@@ -180,7 +180,7 @@ Ramazan öncesi 8 şubeli bir market zinciri:
 - Performansı sürekli ölçülüyor
 
 **Neden Önemli:**
-Kyndryl araştırmasına göre, perakende yöneticilerinin **%89'u** AI'ın 2026'da iş rollerini yeniden şekillendireceğini düşünüyor. [^14] Yani eğitim vermezseniz, ekibiniz geride kalacak.
+Kyndryl araştırmasına göre, perakende yöneticilerinin **%89'u** AI'ın 2026'da iş rollerini yeniden şekillendireceğini düşünüyor. Yani eğitim vermezseniz, ekibiniz geride kalacak.
 
 **Türkiye İçin Fırsat:**
 Türkiye'de AI kullanım oranı yüksek ama perakende çalışanlarının bu teknolojileri etkin kullanması için eğitim açığı var. Bu fırsat!
@@ -201,7 +201,7 @@ Türkiye'de AI kullanım oranı yüksek ama perakende çalışanlarının bu tek
 
 **AI için Hazırlık:**
 - **%47** perakendeci sistem entegrasyonunu en önemli AI faktörü olarak görüyor
-- Veri altyapısı olmadan AI yatırımı boşa gidiyor [^3]
+- Veri altyapısı olmadan AI yatırımı boşa gidiyor
 
 **5-10 Şubeli KOBİ İçin Pratik Adımlar:**
 
@@ -297,7 +297,7 @@ En iyi AI sistemi bile, onu kullanmayı bilmeyen bir ekiple başarısız olur.
 ### Adım 4: Başarıyı Ölçün ve Ölçeklendirin (4-6. Ay)
 
 **Ölçüm Gerçeği:**
-Perakendecilerin %90'ı AI kullanıyor ama sadece **%23'ü ROI ölçüyor**. [^3] Siz bu %23'te olun!
+Perakendecilerin %90'ı AI kullanıyor ama sadece **%23'ü ROI ölçüyor**. Siz bu %23'te olun!
 
 **Ölçülecek Metrikler:**
 
@@ -335,7 +335,7 @@ Perakendecilerin %90'ı AI kullanıyor ama sadece **%23'ü ROI ölçüyor**. [^3
 
 **Unutmayın:**
 - **%93** müşteri insan etkileşimini tercih ediyor
-- **%80** müşteri AI'ın sadece maliyet düşürmek için kullanıldığını düşünüyor [^12]
+- **%80** müşteri AI'ın sadece maliyet düşürmek için kullanıldığını düşünüyor
 
 **Güven İnşa Stratejileri:**
 
@@ -365,7 +365,7 @@ AI rutin işleri otomatikleştirsin, ekibiniz ise müşteri ilişkilerine odakla
 
 ### 1. AI Kullanımında Dünya Lideri Ülkede Faaliyet Gösteriyorsunuz
 
-Türkiye, ChatGPT trafiğinde **%94,49 oranla dünya birincisi**. [^5] Bu ne anlama geliyor?
+Türkiye, ChatGPT trafiğinde **%94,49 oranla dünya birincisi**. Bu ne anlama geliyor?
 
 **Fırsatlar:**
 - Müşterileriniz AI'a aşina ve açık
@@ -388,7 +388,7 @@ Bu momentum'u kaçırmayın. Türk tüketicileri AI deneyimlerine hazır. Siz de
 **Yerli AI Çözüm Sağlayıcıları:**
 - AloTech: Müşteri hizmetleri otomasyonu
 - Çeşitli startuplar: Perakendeye özel AI uygulamaları geliştiriyor
-- MediaMarkt Startup Challenge gibi programlar yeni çözümleri destekliyor [^13]
+- MediaMarkt Startup Challenge gibi programlar yeni çözümleri destekliyor
 
 **Avantajlar:**
 - Türkçe dil desteği
@@ -561,35 +561,22 @@ Cevabımız: **Bugün.**
 
 ---
 
-## Kaynaklar
+## Kaynakça
 
-[^1]: Retail Customer Experience (2026). "Retail AI 2026 predictions: Retailers, consumers driving big growth" - https://www.retailcustomerexperience.com/articles/retail-ai-2026-predictions-retailers-consumers-driving-big-growth/
-
-[^2]: Apexon (2026). "Dynamic Pricing: Fueling Retail Agility in 2026" - https://www.apexon.com/blog/dynamic-pricing-redefining-retail-agility-in-2026-and-beyond/
-
-[^3]: IHP Technologies (2026). "AI Statistics 2026: 77% Are Ahead—Are You Behind?" - https://iphtechnologies.com/ai-statistics-investment-trends-2026/
-
-[^4]: Shopify (2026). "AI in Retail: 10 Use Cases and an Implementation Guide" - https://www.shopify.com/enterprise/blog/ai-in-retail
-
-[^5]: Euronews Türkçe (2026). "Türkiye, ChatGPT trafiğinde yüzde 94,49'luk oranla dünya birincisi" - https://tr.euronews.com/next/2026/01/04/turkiye-chatgpt-trafiginde-yuzde-9449luk-oranla-dunya-birincisi
-
-[^6]: Marketing Türkiye (2026). "Perakendenin Geleceği MediaMarkt Startup Challenge" - https://www.marketingturkiye.com.tr/haberler/perakendenin-gelecegi-mediamarkt-startup-challenge-dayde-sahneye-cikiyor/
-
-[^7]: Spinnaker (2026). "Retail's Next Chapter: Supply chain and AI trends for 2026 and beyond" - https://spinnakersca.com/resources/retail-supply-chain-and-ai-trends
-
-[^8]: Research AIM (2026). "Dynamic Pricing Algorithms in 2026: Top 3 Models" - https://research.aimultiple.com/dynamic-pricing-algorithm/
-
-[^9]: Master of Code (2025). "AI in Customer Service Statistics" - https://masterofcode.com/blog/ai-in-customer-service-statistics
-
-[^10]: Master of Code (2026). "Retail Chatbots: Best Practices, 10 Use Cases & Examples" - https://masterofcode.com/blog/retail-chatbot
-
-[^11]: Yeni Çağ Gazetesi (2025). "Yerli teknoloji sağlayıcısı, yapay zekayı işletmelerin kalbine yerleştiriyor" - https://www.yenicaggazetesi.com/yerli-teknoloji-saglayicisi-yapay-zekayi-isletmelerin-kalbine-yerlestiriyor-988272h.htm
-
-[^12]: CX Today (2026). "Customer Experience Predictions for 2026: AI, Data & Personalization" - https://www.cxtoday.com/contact-center/customer-experience-predictions-2026/
-
-[^13]: Marketing Türkiye (2026). "Perakendenin Geleceği MediaMarkt Startup Challenge Day'de Sahneye çıkıyor" - https://www.marketingturkiye.com.tr/haberler/perakendenin-gelecegi-mediamarkt-startup-challenge-dayde-sahneye-cikiyor/
-
-[^14]: Retail Insider (2026). "Kyndryl forecast: 89% of retail executives expect AI to reshape jobs by 2026" - https://retail-insider.com/retail-insider/2026/01/kyndryl-forecast-89-of-retail-executives-expect-ai-to-reshape-jobs-by-2026/
+* Retail Customer Experience (2026). ["Retail AI 2026 predictions: Retailers, consumers driving big growth"](https://www.retailcustomerexperience.com/articles/retail-ai-2026-predictions-retailers-consumers-driving-big-growth/)
+* Apexon (2026). ["Dynamic Pricing: Fueling Retail Agility in 2026"](https://www.apexon.com/blog/dynamic-pricing-redefining-retail-agility-in-2026-and-beyond/)
+* IHP Technologies (2026). ["AI Statistics 2026: 77% Are Ahead—Are You Behind?"](https://iphtechnologies.com/ai-statistics-investment-trends-2026/)
+* Shopify (2026). ["AI in Retail: 10 Use Cases and an Implementation Guide"](https://www.shopify.com/enterprise/blog/ai-in-retail)
+* Euronews Türkçe (2026). ["Türkiye, ChatGPT trafiğinde yüzde 94,49'luk oranla dünya birincisi"](https://tr.euronews.com/next/2026/01/04/turkiye-chatgpt-trafiginde-yuzde-9449luk-oranla-dunya-birincisi)
+* Marketing Türkiye (2026). ["Perakendenin Geleceği MediaMarkt Startup Challenge"](https://www.marketingturkiye.com.tr/haberler/perakendenin-gelecegi-mediamarkt-startup-challenge-dayde-sahneye-cikiyor/)
+* Spinnaker (2026). ["Retail's Next Chapter: Supply chain and AI trends for 2026 and beyond"](https://spinnakersca.com/resources/retail-supply-chain-and-ai-trends)
+* Research AIM (2026). ["Dynamic Pricing Algorithms in 2026: Top 3 Models"](https://research.aimultiple.com/dynamic-pricing-algorithm/)
+* Master of Code (2025). ["AI in Customer Service Statistics"](https://masterofcode.com/blog/ai-in-customer-service-statistics)
+* Master of Code (2026). ["Retail Chatbots: Best Practices, 10 Use Cases & Examples"](https://masterofcode.com/blog/retail-chatbot)
+* Yeni Çağ Gazetesi (2025). ["Yerli teknoloji sağlayıcısı, yapay zekayı işletmelerin kalbine yerleştiriyor"](https://www.yenicaggazetesi.com/yerli-teknoloji-saglayicisi-yapay-zekayi-isletmelerin-kalbine-yerlestiriyor-988272h.htm)
+* CXToday (2026). ["Customer Experience Predictions for 2026: AI, Data & Personalization"](https://www.cxtoday.com/contact-center/customer-experience-predictions-2026/)
+* Marketing Türkiye (2026). ["Perakendenin Geleceği MediaMarkt Startup Challenge Day'de Sahneye çıkıyor"](https://www.marketingturkiye.com.tr/haberler/perkendenin-gelecegi-mediamarkt-startup-challenge-dayde-sahneye-cikiyor/)
+* Retail Insider (2026). ["Kyndryl forecast: 89% of retail executives expect AI to reshape jobs by 2026"](https://retail-insider.com/retail-insider/2026/01/kyndryl-forecast-89-of-retail-executives-expect-ai-to-reshape-jobs-by-2026/)
 
 ---
 

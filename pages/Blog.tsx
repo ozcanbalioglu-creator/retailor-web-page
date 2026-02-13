@@ -1,8 +1,95 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, User, ArrowLeft, ArrowRight, List } from 'lucide-react';
+import { Calendar, User, ArrowLeft, ArrowRight, List, ChevronDown, ChevronUp } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { getAllPosts, getPostBySlug, BlogPost } from '../services/blogService';
+
+const Bibliography = ({ content }: { content: string }) => {
+  if (!content.trim()) return null;
+
+  // Normalize bibliography items: Convert [^n]: to standard markdown list items (*)
+  const normalizedContent = content
+    .replace(/^\[\^\d+\]:\s*/gm, '* ') // Lines starting with [^n]:
+    .replace(/\n\[\^\d+\]:\s*/g, '\n* '); // Mid-content [^n]: cases
+
+  return (
+    <div className="mt-16 pt-12 border-t border-slate-200">
+      <h2 className="text-xl font-heading uppercase tracking-widest text-[#0c4a6e] mb-8 opacity-60">
+        Kaynakça
+      </h2>
+      <div className="bibliography-content text-sm text-[#475569] leading-relaxed italic opacity-80">
+        <ReactMarkdown>{normalizedContent}</ReactMarkdown>
+      </div>
+      <style>{`
+        .bibliography-content ul {
+          list-style: none !important;
+          padding-left: 0 !important;
+          margin-top: 0 !important;
+        }
+        .bibliography-content li {
+          padding-left: 1.5rem !important;
+          position: relative !important;
+          margin-bottom: 0.75rem !important;
+        }
+        .bibliography-content li::before {
+          content: "•" !important;
+          position: absolute !important;
+          left: 0 !important;
+          color: #0ea5e9 !important;
+          font-weight: bold !important;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+const FAQAccordion = ({ items }: { items: { question: string; answer: string }[] }) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="mt-16 pt-16 border-t border-slate-200">
+      <h2 className="text-3xl font-heading uppercase tracking-tighter text-[#0c4a6e] mb-10 flex items-center gap-4">
+        <span className="w-8 h-8 rounded-lg bg-[#f59e0b] flex items-center justify-center text-white text-base">?</span>
+        Sıkça Sorulan Sorular
+      </h2>
+      <div className="space-y-4">
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`group rounded-2xl border transition-all duration-300 ${openIndex === index
+              ? 'bg-white border-[#0ea5e9] shadow-xl shadow-[#0ea5e9]/5'
+              : 'bg-white/50 border-slate-100 hover:border-[#0ea5e9]/30 hover:bg-white'
+              }`}
+          >
+            <button
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="w-full px-8 py-6 flex items-center justify-between text-left"
+            >
+              <span className={`text-lg font-bold uppercase tracking-tight transition-colors duration-300 ${openIndex === index ? 'text-[#0ea5e9]' : 'text-[#0c4a6e]'
+                }`}>
+                {item.question}
+              </span>
+              <div className={`shrink-0 ml-4 transition-transform duration-500 ${openIndex === index ? 'rotate-180 text-[#0ea5e9]' : 'text-slate-400'
+                }`}>
+                <ChevronDown size={24} />
+              </div>
+            </button>
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                }`}
+            >
+              <div className="px-8 pb-8 text-[#475569] leading-relaxed text-lg border-t border-slate-50 pt-4">
+                {item.answer}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const BlogIndex = () => {
   const [posts, setPosts] = useState<BlogPost[]>([]);
@@ -217,14 +304,90 @@ const BlogPostDetail = () => {
             {post.title}
           </h1>
 
-          <img src={post.image} alt={post.title} className="w-full h-[500px] object-cover rounded-xl mb-16 shadow-2xl" />
+          <img src={post.image} alt={post.title} className="w-full h-[300px] md:h-[500px] object-cover rounded-xl mb-16 shadow-2xl" />
 
           <div className="prose prose-lg max-w-none text-[#475569] leading-relaxed font-normal">
             <div className="text-2xl font-heading italic text-[#0c4a6e] border-l-4 border-[#f59e0b] pl-8 mb-12 py-2">
               {post.excerpt}
             </div>
             <div className="markdown-content">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              {(() => {
+                const content = post.content;
+
+                // Başlıkları ve yerlerini bul
+                const faqMatch = content.match(/## Sıkça Sorulan Sorular/i);
+                const resultMatch = content.match(/## Sonuç/i);
+                const bibMatch = content.match(/(##|###) Kaynakça/i);
+
+                // Pozisyonları belirle
+                const faqPos = faqMatch ? faqMatch.index! : content.length;
+                const resultPos = resultMatch ? resultMatch.index! : content.length;
+                const bibPos = bibMatch ? bibMatch.index! : content.length;
+
+                // Bölümleri ayır (Sıralama: Main -> FAQ -> Sonuç -> Kaynakça)
+                // Not: Markdown dosyasındaki gerçek sıraya göre dinamik bölmek daha güvenli
+                const points = [
+                  { type: 'faq', pos: faqPos, heading: faqMatch ? faqMatch[0] : "" },
+                  { type: 'result', pos: resultPos, heading: resultMatch ? resultMatch[0] : "" },
+                  { type: 'bib', pos: bibPos, heading: bibMatch ? bibMatch[0] : "" }
+                ].filter(p => p.pos < content.length).sort((a, b) => a.pos - b.pos);
+
+                let mainContent = content;
+                let faqRaw = "";
+                let resultRaw = "";
+                let bibRaw = "";
+
+                if (points.length > 0) {
+                  mainContent = content.substring(0, points[0].pos);
+
+                  for (let i = 0; i < points.length; i++) {
+                    const start = points[i].pos + points[i].heading.length;
+                    const end = (i + 1 < points.length) ? points[i + 1].pos : content.length;
+                    const sectionContent = content.substring(start, end).trim();
+
+                    if (points[i].type === 'faq') faqRaw = sectionContent;
+                    if (points[i].type === 'result') resultRaw = sectionContent;
+                    if (points[i].type === 'bib') bibRaw = sectionContent;
+                  }
+                }
+
+                // FAQ Item'larını işle
+                const faqItems: { question: string; answer: string }[] = [];
+                if (faqRaw) {
+                  const items = faqRaw.split(/\n(?=\*\*)/);
+                  items.forEach(item => {
+                    const lines = item.trim().split('\n');
+                    if (lines.length >= 2) {
+                      const question = lines[0].replace(/\*\*/g, '').trim();
+                      const answer = lines.slice(1).join('\n').trim();
+                      if (question && answer) {
+                        faqItems.push({ question, answer });
+                      }
+                    }
+                  });
+                }
+
+                return (
+                  <>
+                    <ReactMarkdown>{mainContent}</ReactMarkdown>
+
+                    {faqItems.length > 0 && (
+                      <FAQAccordion items={faqItems} />
+                    )}
+
+                    {resultRaw && (
+                      <div className="mt-16 pt-16 border-t border-slate-200">
+                        <h2 className="text-3xl font-heading uppercase tracking-tighter text-[#0c4a6e] mb-8">Sonuç</h2>
+                        <div className="prose prose-lg max-w-none text-[#475569] leading-relaxed">
+                          <ReactMarkdown>{resultRaw}</ReactMarkdown>
+                        </div>
+                      </div>
+                    )}
+
+                    <Bibliography content={bibRaw} />
+                  </>
+                );
+              })()}
             </div>
           </div>
         </div>
