@@ -12,11 +12,13 @@ import SalesMentorAI from './pages/SalesMentorAI';
 import KurumsalAIEgitimi from './pages/KurumsalAIEgitimi';
 import Glossary from './pages/Glossary';
 import { Contact, Legal } from './pages/StaticPages';
+import { useGoogleAnalytics } from './hooks/useGoogleAnalytics';
 
-const App: React.FC = () => {
+const AppContent: React.FC = () => {
+  useGoogleAnalytics();
+
   return (
-    <Router>
-      <Layout>
+    <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hizmetler/interaktif-egitim" element={<InteraktifEgitim />} />
@@ -34,7 +36,14 @@ const App: React.FC = () => {
           <Route path="/kullanim-kosullari" element={<Legal title="Kullanım Koşulları" />} />
           <Route path="/cerez-politikasi" element={<Legal title="Çerez Politikası" />} />
         </Routes>
-      </Layout>
+    </Layout>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 };
